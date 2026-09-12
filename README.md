@@ -2,65 +2,70 @@
 
 **Scene-grounded multiview world generation.**
 
-面向共享场景的多视角世界生成研究代码库，覆盖数据与相机对齐、地图与场景记忆、条件渲染、模型训练、长时序生成、动力学、多视角评估和 baseline。Interaction 是其中一条条件建模路线。
+A research codebase for generating multiple views of a shared scene. It covers data and camera alignment, map and scene memory, condition rendering, model training, long-horizon generation, dynamics, multiview evaluation, and baselines. Interaction conditioning is one of the supported model variants.
 
-[项目路线图](docs/PROJECT_MAP.md) · [验证结果](docs/VALIDATION.md) · [使用与许可](#许可)
+[Project map](docs/PROJECT_MAP.md) · [Validation results](docs/VALIDATION.md) · [License](#license)
 
-基于项目已有实现整理，保留完整方法链路和逐文件来源记录。模型权重、研究数据和运行产物由外部提供，源码关系与验证边界见下文。
+The repository brings together existing project implementations with their dependencies and file-level provenance. Model weights, research data, and runtime artifacts are supplied separately. Implementation relationships and validation limits are documented below.
 
-## 项目组成
+## Project components
 
-| 环节 | 内容 | 主要入口 |
+| Component | Coverage | Routes |
 |---|---|---|
-| 数据 | 视频切片、相机/帧对齐、match split、latent cache、多视角配对 | `data.*` |
-| 地图与场景 | 静态地图、episode 玩家状态、BSP/mesh 投影、dense 渲染 | `geometry.*` |
-| 条件建模 | Dense、state v2、action 与 interaction sidecar | `conditions.*` |
-| 训练 | Dense、base expert、state、interaction 四套训练入口 | `train.*` |
-| 视频生成 | Dense/state/interaction 采样、跨窗口 AR、history guidance | `infer.*` |
-| 动力学 | v0–v3 玩家动力学、运动参数拟合、长时域评估 | `dynamics.*` |
-| 场景 rollout | 多场景 10 ego、原生动力学 10 视角、SRCDS 引擎 | `rollout.*` |
-| 评估 | 共视一致性、结构遵循、零可见幻觉、AR 漂移、显著性与消融 | `eval.*` |
-| Baseline | LingBot camera-only LoRA、SCOPE action-only bridge | `baseline.*` |
+| Data | Video clips, camera/frame alignment, match splits, latent caches, multiview pairs | `data.*` |
+| Maps and scenes | Static maps, episode player states, BSP/mesh projection, dense rendering | `geometry.*` |
+| Conditioning | Dense, state v2, action caches, interaction sidecars | `conditions.*` |
+| Training | Dense, base-expert, state, and interaction variants | `train.*` |
+| Video generation | Dense/state/interaction sampling, autoregressive windows, history guidance | `infer.*` |
+| Dynamics | Player dynamics v0–v3, motion fitting, long-horizon evaluation | `dynamics.*` |
+| Scene rollout | Multiscene 10-ego generation, native ten-view dynamics, SRCDS integration | `rollout.*` |
+| Evaluation | Co-visibility consistency, structure adherence, zero-visibility hallucination, AR drift, significance, ablations | `eval.*` |
+| Baselines | Camera-only LingBot LoRA and an action-only SCOPE bridge | `baseline.*` |
 
-实际代码关系与尚未接通的部分见 [项目路线图](docs/PROJECT_MAP.md)。入口可导入、组件测试通过、GPU 端到端成功是不同的验证层级，分别记录在 [验证结果](docs/VALIDATION.md)。
+The [project map](docs/PROJECT_MAP.md) describes the implemented connections and remaining gaps. In particular, the multiview pair loader is not yet connected to the current trainers. CLI imports, component tests, and end-to-end GPU execution are tracked separately in the [validation results](docs/VALIDATION.md).
 
-## 目录
+## Repository layout
 
 ```text
-multiview.py                  全项目入口 + interaction 配置入口
-project_routes.py             按功能组织的路线目录与独立进程启动
- tools/                       Xiaoqi 当前数据/几何/训练/推理/评估代码
- pipelines/scene_rollout/      Zhengqi 场景、动力学与配套版本
- baselines/lingbot_cam/        Camera-only baseline
- baselines/scope/              SCOPE bridge 与 action 转换
- vendor/lingbot/               上传中实际使用的 LingBot/Wan 源码及许可证
- configs/interaction/         Interaction 的便携 JSON 配方
- tests/                       跨模块接口、梯度和多视角数据测试
- requirements/                基础、数据评估、CUDA 与测试环境
- docs/                        方法关系、使用方式、验证边界
- provenance/                  逐文件来源、选择依据、原始/整理后哈希
- scripts/                     源码装配、路径迁移和完整性检查
+multiview.py                  Project CLI and interaction configuration entrypoints
+project_routes.py             Route catalog and isolated process launcher
+tools/                        Current data, geometry, training, inference, and evaluation tools
+pipelines/scene_rollout/       Scene and dynamics pipelines with their matching dependencies
+baselines/lingbot_cam/         Camera-only LingBot baseline
+baselines/scope/               SCOPE bridge and action conversion
+vendor/lingbot/                Project-specific LingBot/Wan source and license
+configs/interaction/          Portable interaction JSON recipes
+tests/                        Interface, gradient, and multiview data tests
+requirements/                 Base, data/evaluation, CUDA, and test dependencies
+docs/                         Method relationships, usage, and validation limits
+provenance/                   Source paths, selection records, and file hashes
+scripts/                      Source assembly, path migration, and integrity checks
 ```
 
-同名模块在两套来源中有实质差异，因此保留配套目录和文件名。路线入口在对应目录启动；源码明确引用另一套代码时保留该关系。不要任意交换两套 `state`、renderer 或 checkpoint。
+Some identically named modules differ between source families. Their matching directories and filenames are preserved. Routes start in the appropriate directory, and explicit dependencies across families remain intact. State modules, renderers, and checkpoints must match the protocol expected by each pipeline.
 
-## 环境
+## Environment
 
-Python 3.11+。在独立环境中安装匹配平台的 PyTorch/torchvision，再安装项目依赖：
+Python 3.11 or newer is required. Use a dedicated environment with PyTorch and torchvision appropriate for your platform.
+
+The following profile targets Linux with NVIDIA CUDA 12.4:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-# Linux / NVIDIA 的原项目环境：
 python -m pip install -r requirements/cuda124.txt
 python -m pip install -r requirements/base.txt -r requirements/data-eval.txt -r requirements/dev.txt
-# GPU kernel 按当前机器构建；CPU 组件测试不需要：
+# Build GPU kernels for the target machine; CPU component tests do not need them.
 # python -m pip install flash-attn==2.7.4.post1 --no-build-isolation
 ```
 
-本次验证使用 macOS、Python 3.11、PyTorch 2.6 CPU；Linux GPU 环境尚未重新安装验证。SCOPE 和 LingBot Fast v2 实验各自需要其匹配的外部源码与模型环境，详见 [外部资产](docs/ASSETS.md)。
+For CPU development, install the appropriate CPU/platform builds of PyTorch and torchvision instead of the CUDA profile, then install the base, data/evaluation, and development requirements.
 
-## 使用
+The recorded validation used macOS, Python 3.11, and PyTorch 2.6 on CPU. The Linux GPU environment has not been revalidated. SCOPE and the separate causal LingBot Fast v2 experiments require their matching external source trees and model environments; see [external assets](docs/ASSETS.md).
+
+## Usage
+
+List the available routes and inspect their original arguments:
 
 ```bash
 python multiview.py list
@@ -70,24 +75,24 @@ python multiview.py run rollout.multiscene -- prepare --help
 python multiview.py run baseline.lingbot-train -- --help
 ```
 
-`run 路线 -- 参数` 保留原入口的参数和子命令。包装层的 `--dry-run` 放在分隔符前，仅打印命令。该模式不自动启动多卡；需要分布式训练时使用对应 trainer 的 torchrun 接口。原参数中的相对路径以所选路线目录为基准，建议数据与输出使用绝对路径。
+`run ROUTE -- ARGUMENTS` forwards arguments and subcommands to the selected tool. Place the launcher's `--dry-run` before the separator to print the command without executing it. This mode does not automatically launch multiple GPUs; use the corresponding trainer's torchrun interface for distributed training. Tool arguments containing relative paths are resolved from the selected route directory, so absolute data and output paths are recommended.
 
 ```bash
 python multiview.py run train.state --dry-run -- train --out-dir /absolute/path/run
 python multiview.py run rollout.dynamics -- self-test
 ```
 
-Interaction 另外提供 JSON 配方，路径相对于配置文件目录解析：
+The interaction variant also provides JSON recipes. Paths in these configurations are resolved relative to the configuration file:
 
 ```bash
 cp configs/interaction/smoke.example.json configs/interaction/smoke.local.json
-# 编辑真实资产路径后，先查看启动命令
+# Set the real asset paths, then inspect the launch command.
 python multiview.py interaction-smoke --config configs/interaction/smoke.local.json --dry-run
 ```
 
-完整步骤见 [Interaction 配方](docs/INTERACTION.md)、[各路线输入输出](docs/PROJECT_MAP.md) 和 baseline 目录的 README。模型、训练数据、地图、manifest 及引擎安装由外部提供；可用 `MULTIVIEW_ASSETS` 设置资产根目录。已有 manifest 内部的服务器路径需要在目标机器上可解析。
+See the [interaction guide](docs/INTERACTION.md), [pipeline inputs and outputs](docs/PROJECT_MAP.md), and baseline READMEs for details. Models, training data, maps, manifests, and engine installations must be supplied separately. Set `MULTIVIEW_ASSETS` to override the asset root. Paths embedded in existing manifests must be accessible on the target machine.
 
-## 检查与来源
+## Validation and provenance
 
 ```bash
 python scripts/check_codebase.py --help-smoke
@@ -95,8 +100,12 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q
 python multiview.py run rollout.dynamics -- self-test
 ```
 
-源码来源、选择范围与改动边界见 [来源说明](docs/PROVENANCE.md)。历史实验运行记录没有被当成本仓库的运行证明。
+The recorded checks include 58 passing tests, 53 successful CLI help checks, and four dynamics self-tests. End-to-end GPU training, generation, and research metrics have not been reproduced in this repository.
 
-## 许可
+The [provenance record](docs/PROVENANCE.md) documents source selection and modifications. Historical experiment reports are not treated as evidence that the current codebase has reproduced those runs. Detailed research notes under `docs/` are currently in Chinese.
 
-项目自有代码以 [Apache License 2.0](LICENSE) 开源。第三方代码保留其原有许可和署名，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。其中 `vendor/lingbot/wan/modules/animate/motion_encoder.py` 标注衍生自 LIA，保留 CC BY-NC 4.0 的非商业许可边界；该可选动画模块不属于本项目注册的多视角运行路线。模型权重与外部数据适用各自条款。
+## License
+
+Original project contributions are released under the [Apache License 2.0](LICENSE). Third-party code retains its original licenses and attribution; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+`vendor/lingbot/wan/modules/animate/motion_encoder.py` is attributed to LIA and retains the noncommercial conditions of CC BY-NC 4.0. This optional animation module is not used by the registered multiview routes. Model weights and external datasets are subject to their own terms.
