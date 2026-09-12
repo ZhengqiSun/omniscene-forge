@@ -1,0 +1,291 @@
+{
+  "python_files": 278,
+  "syntax_errors": [],
+  "missing_imported_sources": [],
+  "routes": 53,
+  "cli_help": [
+    {
+      "route": "data.materialize",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.events",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.align",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.manifest",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.multiview",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.inspect-multiview",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.visible-pairs",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "geometry.static",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "geometry.episode",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "geometry.render",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "geometry.mesh",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "geometry.compare",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "conditions.state",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "conditions.interaction",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "conditions.actions",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "train.dense",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "train.base",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "train.state",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "train.interaction",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "infer.dense",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "infer.state",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "infer.interaction",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "infer.ar",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.loss",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.subsets",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.supervision",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.symmvc",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.ablation-rows",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.lingbot-train",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.lingbot-infer",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.lingbot-validate",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.scope-train",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.scope-infer",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.scope-validate",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "baseline.scope-actions",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.latents",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.covis",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "data.heldout-pairs",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.train-v0",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.train-v1",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.train-v2",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.train-v3",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.fit-motion",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "dynamics.evaluate",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "rollout.dynamics",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "rollout.multiscene",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "rollout.native",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "rollout.srcds",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.structure",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.zero-visibility",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.ar-drift",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "eval.significance",
+      "exit_code": 0,
+      "output_tail": ""
+    },
+    {
+      "route": "infer.history-guidance",
+      "exit_code": 0,
+      "output_tail": ""
+    }
+  ],
+  "date": "2026-09-12",
+  "environment": {
+    "platform": "macOS",
+    "python": "3.11",
+    "torch": "2.6.0 CPU"
+  },
+  "pytest": {
+    "passed": 58,
+    "failed": 0
+  },
+  "dynamics_self_test": {
+    "passed": 4
+  },
+  "source_reproduction": {
+    "matched": 268,
+    "mismatches": 0
+  },
+  "gpu_end_to_end": "not_run_external_assets_and_cuda_unavailable"
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "path": "pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py",
+    "line": 34,
+    "literal": "/mnt/workspace/zhengqi/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py",
+    "line": 34,
+    "literal": "/mnt/data/pku/zhengqi/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py",
+    "line": 41,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py",
+    "line": 42,
+    "literal": "/mnt/data/pku/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py",
+    "line": 42,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py",
+    "line": 41,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py",
+    "line": 42,
+    "literal": "/mnt/data/pku/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py",
+    "line": 42,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py",
+    "line": 43,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py",
+    "line": 44,
+    "literal": "/mnt/data/pku/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py",
+    "line": 44,
+    "literal": "/mnt/workspace/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py",
+    "line": 36,
+    "literal": "/mnt/workspace/zhengqi/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  },
+  {
+    "path": "pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py",
+    "line": 36,
+    "literal": "/mnt/data/pku/zhengqi/",
+    "status": "review when migrating legacy assets; may be a prefix matcher or diagnostic"
+  }
+]

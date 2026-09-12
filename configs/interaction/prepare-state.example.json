@@ -1,0 +1,10 @@
+{
+  "args": {
+    "cache-manifest": [
+      "../../assets/prepared/tier69h/cache_manifest.jsonl"
+    ],
+    "out-dir": "../../assets/state-v2",
+    "far": 3000.0,
+    "pitch-sign": 1.0
+  }
+}

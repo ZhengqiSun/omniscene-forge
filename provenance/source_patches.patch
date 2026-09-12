@@ -1,0 +1,1647 @@
+--- a/vendor/lingbot/wan/modules/t5.py
++++ b/vendor/lingbot/wan/modules/t5.py
+@@ -473,11 +473,13 @@
+         self,
+         text_len,
+         dtype=torch.bfloat16,
+-        device=torch.cuda.current_device(),
++        device=None,
+         checkpoint_path=None,
+         tokenizer_path=None,
+         shard_fn=None,
+     ):
++        if device is None:
++            device = torch.cuda.current_device() if torch.cuda.is_available() else torch.device("cpu")
+         self.text_len = text_len
+         self.dtype = dtype
+         self.device = device
+--- a/baselines/lingbot_cam/infer.py
++++ b/baselines/lingbot_cam/infer.py
+@@ -1,4 +1,5 @@
+ from __future__ import annotations
++from tools.runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -24,7 +25,7 @@
+     parser = argparse.ArgumentParser(description="Camera-only LingBot Base Cam standard inference")
+     parser.add_argument("--manifest", type=Path, required=True)
+     parser.add_argument("--checkpoint", type=Path, required=True, help="Official base directory or lingbot_cam_lora_pair_v1.json")
+-    parser.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
++    parser.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
+     parser.add_argument("--sample-id", action="append", default=[])
+     parser.add_argument("--limit", type=int)
+     parser.add_argument("--seeds", type=int, nargs="+", default=[0])
+--- a/baselines/lingbot_cam/train.py
++++ b/baselines/lingbot_cam/train.py
+@@ -1,4 +1,5 @@
+ from __future__ import annotations
++from tools.runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -30,7 +31,7 @@
+     parser = argparse.ArgumentParser(description="Camera-only LingBot Base Cam LoRA trainer")
+     parser.add_argument("--manifest", type=Path, required=True)
+     parser.add_argument("--base-checkpoint", type=Path, required=True)
+-    parser.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
++    parser.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
+     parser.add_argument("--expert", choices=["low", "high"], required=True)
+     parser.add_argument("--lora-rank", type=int, default=64)
+     parser.add_argument("--lora-alpha", type=float, default=64.0)
+--- a/tools/build_condition_probe_batch_v0.py
++++ b/tools/build_condition_probe_batch_v0.py
+@@ -14,6 +14,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import hashlib
+@@ -63,7 +64,7 @@
+     ap.add_argument("--split-key", default="match")
+     ap.add_argument("--require-backend-id", default="bsp_faces_disp_gpu")
+     ap.add_argument("--lingbot-repo", type=Path,
+-                    default=Path("/mnt/data/pku/xiaoqi/lingbot-world"),
++                    default=Path(str(source_path('lingbot', ''))),
+                     help="wan package root (prepare_cam_chunk imports wan.utils.cam_utils)")
+     args = ap.parse_args()
+ 
+--- a/tools/build_memory_dense_aligned_cache_v0.py
++++ b/tools/build_memory_dense_aligned_cache_v0.py
+@@ -8,6 +8,8 @@
+ """
+ 
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ from collections import Counter
+@@ -22,8 +24,8 @@
+ 
+ 
+ DEFAULT_MAP_MANIFEST = Path("docs/assets/memory_dense_dataset_v43_bsp_all5_match_large_h176/manifest.json")
+-DEFAULT_CACHE_MANIFEST = Path("/mnt/workspace/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/latents_full_32f/cache_manifest.jsonl")
+-DEFAULT_SOURCE_MANIFEST = Path("/mnt/workspace/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/manifests/32f_done_train_cache_input_cpfs.jsonl")
++DEFAULT_CACHE_MANIFEST = ASSET_ROOT / "latents/cache_manifest.jsonl"
++DEFAULT_SOURCE_MANIFEST = ASSET_ROOT / "manifests/source_manifest.jsonl"
+ DEFAULT_OUT_JSONL = Path("output/memory_dense_adapter_v0/aligned_cache_v43.jsonl")
+ DEFAULT_OUT_REPORT = Path("output/memory_dense_adapter_v0/aligned_cache_v43_report.json")
+ 
+--- a/tools/build_v2_map_manifest_and_cache_v1.py
++++ b/tools/build_v2_map_manifest_and_cache_v1.py
+@@ -28,6 +28,8 @@
+ via ``target_rgb_available``/``qa_available``.
+ """
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ import hashlib
+@@ -80,7 +82,7 @@
+     ap.add_argument("--dataset-source", default="")
+     ap.add_argument("--pool-name", required=True)
+     ap.add_argument("--out-dir", type=Path, required=True, help="pool subdir is created under here")
+-    ap.add_argument("--zhengqi-root", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0"))
++    ap.add_argument("--zhengqi-root", type=Path, default=ASSET_ROOT)
+     ap.add_argument("--repeat", type=int, default=1, help="duplicate every cache row N times (upweighting)")
+     ap.add_argument("--limit-aligned", type=int, default=0, help="debug: only read the first N aligned rows")
+     ap.add_argument("--positive-min-pixels", type=int, default=1,
+--- a/tools/calibrate_person_detector_on_seg_gt_v0.py
++++ b/tools/calibrate_person_detector_on_seg_gt_v0.py
+@@ -22,6 +22,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -173,14 +174,13 @@
+     ap.add_argument(
+         "--data-root",
+         type=Path,
+-        default=Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d"),
++        default=Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d'))),
+     )
+     ap.add_argument(
+         "--output-dir",
+         type=Path,
+         default=Path(
+-            "/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/"
+-            "qxq_detector_calibration_20260611"
++            str(source_path('project', 'output/qxq_detector_calibration_20260611'))
+         ),
+     )
+     ap.add_argument("--episodes", type=int, default=3)
+--- a/tools/evaluate_memory_dense_adapter_base_v1.py
++++ b/tools/evaluate_memory_dense_adapter_base_v1.py
+@@ -36,6 +36,8 @@
+ 
+ from __future__ import annotations
+ 
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
++
+ import argparse
+ import hashlib
+ import importlib.util
+@@ -49,7 +51,7 @@
+ 
+ TRAINER_PATH = Path(__file__).resolve().parent / "train_memory_dense_adapter_interaction_v1.py"
+ LOW_BOUNDARY_FALLBACK = 0.947
+-S4_DEFAULT = Path("/mnt/workspace/xiaoqi/multigen/s4_train_inputs_v2_20260731")
++S4_DEFAULT = ASSET_ROOT / "prepared"
+ 
+ 
+ def load_trainer_module() -> Any:
+@@ -188,9 +190,9 @@
+     ap.add_argument("--extra-map-manifest", type=Path, action="append", default=None,
+                     help="argparse append semantics: passing this REPLACES the event50h default (default=None resolved post-parse)")
+     ap.add_argument("--extra-cache-manifest", type=Path, action="append", default=None)
+-    ap.add_argument("--state-cache-manifest", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/s6_interaction_sidecar_20260731/full/state_cache_manifest_v1.jsonl"))
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--state-cache-manifest", type=Path, default=ASSET_ROOT / "state/state_cache_manifest_v1.jsonl")
++    ap.add_argument("--lingbot-repo", type=Path, default=LINGBOT_ROOT)
++    ap.add_argument("--ckpt-dir", type=Path, default=ASSET_ROOT / "lingbot-world-base-cam")
+     ap.add_argument("--video-frames", type=int, default=81)
+     ap.add_argument("--raw-stride", type=int, default=2)
+     ap.add_argument("--require-backend-id", default="bsp_faces_disp_gpu")
+--- a/tools/gen_tier69h_seed_v0.py
++++ b/tools/gen_tier69h_seed_v0.py
+@@ -5,6 +5,7 @@
+ # from canonical_match_split_v0 (seed 20260531) with map_memory_split_key='match'.
+ # Report gains split_row_counts / relabelled counts. No other behavior change.
+ """Generate tier69h seed-expanded manifest."""
++from runtime_paths import source_path
+ import collections
+ import hashlib
+ import heapq
+@@ -13,7 +14,7 @@
+ import time
+ from pathlib import Path
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
++ROOT = Path(str(source_path('scene', '')))
+ OUT_DIR = ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0"
+ SUMMARY_PATH = OUT_DIR / "v2_all188_diversity_stride_manifest_summary_v0.json"
+ SEED_MANIFEST = OUT_DIR / "v2_all188_positive_diversity_tier20h_source_manifest_v0.jsonl"
+--- a/tools/gen_tier_seed_v2.py
++++ b/tools/gen_tier_seed_v2.py
+@@ -22,6 +22,7 @@
+ #      fields are kept (seed prefix check is renamed tier20_* -> seed_* because the seed is now
+ #      arbitrary, same semantics).
+ """Generate a seed-expanded v2 tier source manifest (parameterized, select-time exclusion)."""
++from runtime_paths import source_path
+ import argparse
+ import bisect
+ import collections
+@@ -33,7 +34,7 @@
+ import time
+ from pathlib import Path
+ 
+-DEFAULT_MAN = Path("/mnt/workspace/zhengqi/multiview-map-v0/output/memory_v2_all188_diversity_stride_manifest_20260629_v0")
++DEFAULT_MAN = Path(str(source_path('scene', 'output/memory_v2_all188_diversity_stride_manifest_20260629_v0')))
+ DEFAULT_CACHE = DEFAULT_MAN / "candidate_pool_cache_v0.jsonl"
+ DEFAULT_SUMMARY = DEFAULT_MAN / "v2_all188_diversity_stride_manifest_summary_v0.json"
+ 
+--- a/tools/materialize_event50h_clips_v1.py
++++ b/tools/materialize_event50h_clips_v1.py
+@@ -8,6 +8,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -29,12 +30,10 @@
+ PROTOCOL_VERSION = "event50h_processed_clip_v1_tier69h_compatible"
+ PRODUCER = "tools/materialize_event50h_clips_v1.py"
+ REFERENCE_PRODUCER = (
+-    "/mnt/workspace/zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/"
+-    "tools/build_light_dust2_pilot2_source_v0.py"
++    str(source_path('scene', 'tools/build_light_dust2_pilot2_source_v0.py'))
+ )
+ DEFAULT_TIER_MANIFEST = Path(
+-    "/mnt/workspace/xiaoqi/multigen/s4_train_inputs_v2_20260731/"
+-    "tier69h/tier69h_v2_cache_manifest_v1.jsonl"
++    str(source_path('assets', 'prepared/tier69h/tier69h_v2_cache_manifest_v1.jsonl'))
+ )
+ WIDTH = 832
+ HEIGHT = 480
+--- a/tools/qxq_minarea_entry_conflict_v0.py
++++ b/tools/qxq_minarea_entry_conflict_v0.py
+@@ -16,6 +16,7 @@
+ 
+ Read-only on Zhengqi tree; writes only the output JSON under qxq output dir.
+ """
++from runtime_paths import source_path
+ 
+ import json
+ import os
+@@ -25,9 +26,9 @@
+ import numpy as np
+ import cv2
+ 
+-ZQ_ROOT = "/mnt/workspace/zhengqi/multiview-map-v0"
++ZQ_ROOT = str(source_path('scene', ''))
+ RUNS = os.path.join(ZQ_ROOT, "output/memory_dense_adapter_v0/runs/memory_dense_lingbot_fullsubset_large_v0")
+-QXQ_OUT = "/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/qxq_a3_preflight_20260612"
++QXQ_OUT = str(source_path('project', 'output/qxq_a3_preflight_20260612'))
+ AUDIT_SUMMARY = os.path.join(QXQ_OUT, "train_entry_event_audit_v0.json")
+ 
+ LATENT_FRAMES = 21
+--- a/tools/qxq_sample_candidate1_ar_v0.py
++++ b/tools/qxq_sample_candidate1_ar_v0.py
+@@ -6,6 +6,7 @@
+ window generated tail frame as the next window image condition.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -23,8 +24,8 @@
+ import torch
+ from PIL import Image
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
+-QXQ = Path("/mnt/data/pku/xiaoqi/multigen/multiview-map-v0-qxq")
++ROOT = Path(str(source_path('scene', '')))
++QXQ = Path(str(source_path('project', '')))
+ ZH = ROOT
+ 
+ 
+@@ -104,8 +105,8 @@
+                     help="accept a state cache built with the pre-v2 projection contract "
+                          "(pitch_sign=-1 / far=4096) instead of failing; only for deliberate "
+                          "reruns of the old demo caches.")
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--variant", choices=["true_dense"], default="true_dense")
+     ap.add_argument("--latent-frames", type=int, default=21)
+     ap.add_argument("--chunk-size", type=int, default=3)
+@@ -116,7 +117,7 @@
+     ap.add_argument("--size", default="832*480")
+     ap.add_argument("--device-id", type=int, default=0)
+     ap.add_argument("--fps", type=int, default=16)
+-    ap.add_argument("--ffmpeg", default="/root/bin/ffmpeg")
++    ap.add_argument("--ffmpeg", default='ffmpeg')
+     ap.add_argument("--stop-after", type=int, default=0, help="debug: stop after N windows; 0 means all")
+     ap.add_argument("--independent-context", action="store_true", help="use each row's original image instead of AR tail chaining")
+     ap.add_argument("--target-height", type=int, default=480, help="Force generation height. default 480 to fix the 464 floor bug (MAX_AREA_CONFIGS['832*480'] float sqrt//8 floors 480->464); pass explicitly to override.")
+--- a/tools/qxq_sample_valtest_v0.py
++++ b/tools/qxq_sample_valtest_v0.py
+@@ -17,6 +17,7 @@
+ Writes ONLY under --out-dir (caller must keep it under QXQ/output/).
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -29,8 +30,8 @@
+ import torch
+ from PIL import Image
+ 
+-QXQ = Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq")
+-ZH = Path("/mnt/workspace/zhengqi/multiview-map-v0")
++QXQ = Path(str(source_path('project', '')))
++ZH = Path(str(source_path('scene', '')))
+ 
+ 
+ def add_path(p: Path) -> None:
+@@ -74,8 +75,8 @@
+     ap.add_argument("--clip-index", type=int, default=0)
+     ap.add_argument("--adapter-checkpoint-low", type=Path, default=None)
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=None)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/workspace/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--variant", choices=["base", "true_dense", "blank_dense", "shuffled_dense"], default="true_dense")
+     ap.add_argument("--latent-frames", type=int, default=21)
+--- a/tools/run_dense_v2_gpu_v1.py
++++ b/tools/run_dense_v2_gpu_v1.py
+@@ -20,6 +20,8 @@
+ control there; this driver brings the pipeline into the qxq repo).
+ """
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ import argparse, hashlib, importlib.util, json, multiprocessing as mp, os, queue, sys, time, traceback
+ from pathlib import Path
+ from typing import Any
+@@ -32,7 +34,7 @@
+ # qxq tree has no docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz
+ # (checked 2026-07-23; only an output-dir copy exists), so default to the
+ # zhengqi tree asset, read-only.
+-DEFAULT_BSP_FACES_NPZ = Path("/mnt/workspace/zhengqi/multiview-map-v0/docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
++DEFAULT_BSP_FACES_NPZ = ASSET_ROOT / "geometry/de_dust2_bsp_faces_v0.npz"
+ 
+ CHANNELS=["env_depth_norm_from_bsp_faces","env_mesh_hit_mask","env_nav_place_semantic_from_static_memory","other_player_mask_from_memory_player_capsules","other_player_depth_norm_from_memory_capsules","other_player_yaw_sin_relative_to_ego_from_memory","other_player_yaw_cos_relative_to_ego_from_memory"]
+ 
+--- a/tools/run_map_memory_70pct_v0.py
++++ b/tools/run_map_memory_70pct_v0.py
+@@ -11,6 +11,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -21,7 +22,7 @@
+ from typing import Any
+ 
+ 
+-DEFAULT_MATCH_DIR = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee")
++DEFAULT_MATCH_DIR = Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee')))
+ DEFAULT_EPISODE = "Ep_000015"
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ DEFAULT_OUT_ROOT = Path("docs/assets")
+--- a/tools/sample_memory_dense_adapter_interaction_eval_v1.py
++++ b/tools/sample_memory_dense_adapter_interaction_eval_v1.py
+@@ -26,6 +26,8 @@
+ """
+ 
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ import json
+@@ -207,8 +209,8 @@
+                     help="optional; omit for a CLEAN BASE low expert (no adapter, no dense condition)")
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=None,
+                     help="optional; omit for a CLEAN BASE high expert (recorded in the report)")
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=LINGBOT_ROOT)
++    ap.add_argument("--ckpt-dir", type=Path, default=ASSET_ROOT / "lingbot-world-base-cam")
+     ap.add_argument("--clip-root", type=Path, default=None)
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test", choices=["train", "val", "test"])
+--- a/tools/sample_memory_dense_adapter_phase2a_qxq_v0.py
++++ b/tools/sample_memory_dense_adapter_phase2a_qxq_v0.py
+@@ -13,6 +13,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import copy
+@@ -346,9 +347,9 @@
+     ap.add_argument("--phase2a-ego-stem", default=None)
+     ap.add_argument("--phase2a-materialized-root", type=Path, default=Path("output/memory_dense_adapter_v0/phase2a_materialized_clips_v0"))
+     ap.add_argument("--adapter-checkpoint", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/workspace/datasets/robbyant/lingbot-world-base-cam"))
+-    ap.add_argument("--clip-root", type=Path, default=Path("/mnt/workspace/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/clips"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
++    ap.add_argument("--clip-root", type=Path, default=Path(str(source_path('assets', 'datasets/memory_light_dust2_pilot_1200_v0/clips'))))
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test")
+     ap.add_argument("--clip-index", type=int, default=0)
+--- a/tools/sample_memory_dense_adapter_phase2a_v0.py
++++ b/tools/sample_memory_dense_adapter_phase2a_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import copy
+@@ -383,9 +384,9 @@
+     ap.add_argument("--phase2a-ego-stem", default=None)
+     ap.add_argument("--phase2a-materialized-root", type=Path, default=Path("output/memory_dense_adapter_v0/phase2a_materialized_clips_v0"))
+     ap.add_argument("--adapter-checkpoint", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/workspace/datasets/robbyant/lingbot-world-base-cam"))
+-    ap.add_argument("--clip-root", type=Path, default=Path("/mnt/workspace/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/clips"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
++    ap.add_argument("--clip-root", type=Path, default=Path(str(source_path('assets', 'datasets/memory_light_dust2_pilot_1200_v0/clips'))))
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test")
+     ap.add_argument("--clip-index", type=int, default=0)
+--- a/tools/sample_memory_dense_adapter_state_v0.py
++++ b/tools/sample_memory_dense_adapter_state_v0.py
+@@ -9,6 +9,8 @@
+ """
+ 
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ import copy
+@@ -626,9 +628,9 @@
+                     help="accept a state cache built with the pre-v2 projection contract "
+                          "(pitch_sign=-1 / far=4096) instead of failing; only for deliberate "
+                          "reruns of the old demo caches.")
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
+-    ap.add_argument("--clip-root", type=Path, default=Path("/mnt/data/pku/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/clips"))
++    ap.add_argument("--lingbot-repo", type=Path, default=LINGBOT_ROOT)
++    ap.add_argument("--ckpt-dir", type=Path, default=ASSET_ROOT / "lingbot-world-base-cam")
++    ap.add_argument("--clip-root", type=Path, default=ASSET_ROOT / "clips")
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test")
+     ap.add_argument("--clip-index", type=int, default=0)
+--- a/tools/symmvc_v2_score_haware_v1.py
++++ b/tools/symmvc_v2_score_haware_v1.py
+@@ -10,6 +10,7 @@
+ # Measured heights and applied offsets are recorded in each pair result for audit.
+ """SymMVC v2 diagnostics: expanded frames, quality gates, paired stats, tail metrics."""
+ from __future__ import annotations
++from runtime_paths import source_path
+ import argparse, glob, json, math, os, tempfile, time
+ from pathlib import Path
+ from statistics import median
+@@ -201,7 +202,7 @@
+ 
+ OCCL_MESH_CACHE: dict[str, "np.ndarray"] = {}
+ OCCL_DEPTH_CACHE: dict[tuple, "np.ndarray"] = {}
+-OCCL_DEFAULT_MESH_DIR = "/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d/00a145c4184c4cf092acb25d2521ccee"
++OCCL_DEFAULT_MESH_DIR = str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d/00a145c4184c4cf092acb25d2521ccee'))
+ ANGLE_BUCKET_EDGES = [(0.0, 10.0), (10.0, 30.0), (30.0, 60.0), (60.0, 180.1)]
+ 
+ 
+@@ -441,10 +442,10 @@
+ 
+ def main() -> None:
+     ap = argparse.ArgumentParser()
+-    ap.add_argument("--pair-index", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/rank64_verdict_20260629_1330_v0/symmvc_v2_motion/pair_index_v2_motion.json"))
+-    ap.add_argument("--gen-root", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/cleanv2_verdict_20260703_v0/gen/v2"))
+-    ap.add_argument("--symmvc-view-root", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/cleanv2_verdict_20260703_v0/gen_symmvc_view"))
+-    ap.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/symmvc_v2_eval_20260705_v0"))
++    ap.add_argument("--pair-index", type=Path, default=Path(str(source_path('project', 'output/rank64_verdict_20260629_1330_v0/symmvc_v2_motion/pair_index_v2_motion.json'))))
++    ap.add_argument("--gen-root", type=Path, default=Path(str(source_path('project', 'output/cleanv2_verdict_20260703_v0/gen/v2'))))
++    ap.add_argument("--symmvc-view-root", type=Path, default=Path(str(source_path('project', 'output/cleanv2_verdict_20260703_v0/gen_symmvc_view'))))
++    ap.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/symmvc_v2_eval_20260705_v0'))))
+     ap.add_argument("--variants", default="gt,base,true_dense,shuffled_dense")
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--max-frames", type=int, default=8)
+--- a/tools/teacher_player_latent_mask_v0.py
++++ b/tools/teacher_player_latent_mask_v0.py
+@@ -2,6 +2,8 @@
+ """Project teacher non-ego player masks onto dense, latent, or token grids."""
+ 
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ import importlib.util
+@@ -17,7 +19,7 @@
+ # v2 dense contract (416x240 -> 30x52 native, no interpolation): the dense grid is
+ # owned by map_memory_training_data_v0; read it at call time via default_dense_hw().
+ DEFAULT_LATENT_HW = (60, 104)
+-DEFAULT_DATASET_ROOT = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d")
++DEFAULT_DATASET_ROOT = ASSET_ROOT / "csgo-datasets"
+ MEMORY_MASK_REGION_KINDS = {
+     "memory_dense_channel_3_surrogate_v0",
+     "memory_dense_channel_3_player_mask_surrogate_v0",
+--- a/tools/train_memory_dense_adapter_base_v0.py
++++ b/tools/train_memory_dense_adapter_base_v0.py
+@@ -15,6 +15,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -2220,8 +2221,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/workspace/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/tools/train_memory_dense_adapter_interaction_v1.py
++++ b/tools/train_memory_dense_adapter_interaction_v1.py
+@@ -15,6 +15,8 @@
+ """
+ 
+ from __future__ import annotations
++
++from runtime_paths import ASSET_ROOT, LINGBOT_ROOT
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -3691,8 +3693,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=LINGBOT_ROOT)
++    ap.add_argument("--ckpt-dir", type=Path, default=ASSET_ROOT / "lingbot-world-base-cam")
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/tools/train_memory_dense_adapter_state_v0.py
++++ b/tools/train_memory_dense_adapter_state_v0.py
+@@ -20,6 +20,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -2817,8 +2818,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/tools/train_memory_dense_adapter_v0.py
++++ b/tools/train_memory_dense_adapter_v0.py
+@@ -15,6 +15,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -2169,8 +2170,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/workspace/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/pipelines/scene_rollout/tools/ar_drift_curve_v0.py
++++ b/pipelines/scene_rollout/tools/ar_drift_curve_v0.py
+@@ -2,6 +2,7 @@
+ """Quantify per-window AR drift against GT and teacher-context stitch outputs."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -36,7 +37,7 @@
+ 
+ def parse_args() -> argparse.Namespace:
+     ap = argparse.ArgumentParser()
+-    ap.add_argument("--project-root", default="/mnt/data/pku/zhengqi/multiview-map-v0")
++    ap.add_argument("--project-root", default=str(source_path('scene', '')))
+     ap.add_argument(
+         "--ar-dir",
+         default="output/demo_1min_ar_20260706_v0/gen_true_dense_ar/out",
+--- a/pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py
++++ b/pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import hashlib
+@@ -26,7 +27,7 @@
+ from PIL import Image
+ 
+ 
+-PROMPT_TEXT_CACHE = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt")
++PROMPT_TEXT_CACHE = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt')))
+ 
+ 
+ def add_path(path: Path) -> None:
+@@ -293,8 +294,8 @@
+     ap.add_argument("--combined-map-manifest", type=Path, required=True)
+     ap.add_argument("--out-report", type=Path, required=True)
+     ap.add_argument("--progress-jsonl", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--video-width", type=int, default=832)
+     ap.add_argument("--video-height", type=int, default=480)
+--- a/pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py
++++ b/pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import hashlib
+@@ -26,7 +27,7 @@
+ from PIL import Image
+ 
+ 
+-PROMPT_TEXT_CACHE = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt")
++PROMPT_TEXT_CACHE = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt')))
+ 
+ 
+ def add_path(path: Path) -> None:
+@@ -292,8 +293,8 @@
+     ap.add_argument("--combined-map-manifest", type=Path, required=True)
+     ap.add_argument("--out-report", type=Path, required=True)
+     ap.add_argument("--progress-jsonl", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--video-width", type=int, default=832)
+     ap.add_argument("--video-height", type=int, default=480)
+--- a/pipelines/scene_rollout/tools/build_light_dust2_pilot2_source_v0.py
++++ b/pipelines/scene_rollout/tools/build_light_dust2_pilot2_source_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -413,7 +414,7 @@
+ 
+ def main() -> None:
+     ap = argparse.ArgumentParser(description=__doc__)
+-    ap.add_argument("--raw-root", type=Path, default=Path("/mnt/data/csgo-datasets"))
++    ap.add_argument("--raw-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets'))))
+     ap.add_argument("--out-root", type=Path, required=True)
+     ap.add_argument("--session-plan", nargs="+", default=[
+         "9ea6db4a23df49f4:25:train",
+--- a/pipelines/scene_rollout/tools/build_light_dust2_pilot3_source_v0.py
++++ b/pipelines/scene_rollout/tools/build_light_dust2_pilot3_source_v0.py
+@@ -11,6 +11,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -28,12 +29,10 @@
+ PROMPT = "first-person gameplay video in Counter-Strike, de_dust2 map"
+ INTRINSICS_832_480 = np.asarray([312.00115966796875, 320.0011901855469, 416.0, 240.0], dtype=np.float32)
+ DEFAULT_PILOT1_SOURCE_MANIFEST = Path(
+-    "/mnt/workspace/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/manifests/"
+-    "light_dust2_pilot_1200_source_manifest.jsonl"
++    str(source_path('assets', 'datasets/memory_light_dust2_pilot_1200_v0/manifests/light_dust2_pilot_1200_source_manifest.jsonl'))
+ )
+ DEFAULT_PILOT2_SOURCE_MANIFEST = Path(
+-    "/mnt/workspace/xiaoqi/datasets/memory_light_dust2_pilot2_v0/manifests/"
+-    "light_dust2_pilot2_source_manifest.jsonl"
++    str(source_path('assets', 'datasets/memory_light_dust2_pilot2_v0/manifests/light_dust2_pilot2_source_manifest.jsonl'))
+ )
+ ACTION_KEYS = (
+     "forward",
+@@ -558,7 +557,7 @@
+ 
+ def main() -> None:
+     ap = argparse.ArgumentParser(description=__doc__)
+-    ap.add_argument("--raw-root", type=Path, default=Path("/mnt/data/csgo-datasets"))
++    ap.add_argument("--raw-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets'))))
+     ap.add_argument("--out-root", type=Path, required=True)
+     ap.add_argument("--release-id", default="light_dust2_pilot3_batch1")
+     ap.add_argument("--session-plan", nargs="+", default=[
+--- a/pipelines/scene_rollout/tools/build_memory_dense_aligned_cache_v0.py
++++ b/pipelines/scene_rollout/tools/build_memory_dense_aligned_cache_v0.py
+@@ -8,6 +8,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -22,8 +23,8 @@
+ 
+ 
+ DEFAULT_MAP_MANIFEST = Path("docs/assets/memory_dense_dataset_v43_bsp_all5_match_large_h176/manifest.json")
+-DEFAULT_CACHE_MANIFEST = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/latents_full_32f/cache_manifest.jsonl")
+-DEFAULT_SOURCE_MANIFEST = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/manifests/32f_done_train_cache_input_cpfs.jsonl")
++DEFAULT_CACHE_MANIFEST = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/latents_full_32f/cache_manifest.jsonl')))
++DEFAULT_SOURCE_MANIFEST = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/manifests/32f_done_train_cache_input_cpfs.jsonl')))
+ DEFAULT_OUT_JSONL = Path("output/memory_dense_adapter_v0/aligned_cache_v43.jsonl")
+ DEFAULT_OUT_REPORT = Path("output/memory_dense_adapter_v0/aligned_cache_v43_report.json")
+ 
+--- a/pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py
++++ b/pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -9,7 +10,7 @@
+ from pathlib import Path
+ from typing import Any
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
++ROOT = Path(str(source_path('scene', '')))
+ V1_DIR = ROOT / "output/symmvc_strong_pairs_heldout_v1"
+ DEFAULT_PAIR_INDEX = V1_DIR / "pair_index_strong_covis_heldout_v1.json"
+ DEFAULT_OUT_DIR = ROOT / "output/symmvc_strong_pairs_heldout_v2"
+--- a/pipelines/scene_rollout/tools/build_tier69h_memorymask_view_v0.py
++++ b/pipelines/scene_rollout/tools/build_tier69h_memorymask_view_v0.py
+@@ -1,13 +1,14 @@
+ #!/usr/bin/env python3
+ """Build a tier69h map manifest view that carries memory-mask surrogate fields."""
+ from __future__ import annotations
++from runtime_paths import source_path
+ import argparse, json, time
+ from pathlib import Path
+ from typing import Any
+ REGION_MASK_KIND = "memory_dense_channel_3_surrogate_v0"
+-PROJECT_ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
+-WORKSPACE_ROOT = "/mnt/workspace/zhengqi/multiview-map-v0"
+-DATA_ROOT = "/mnt/data/pku/zhengqi/multiview-map-v0"
++PROJECT_ROOT = Path(str(source_path('scene', '')))
++WORKSPACE_ROOT = str(source_path('scene', ''))
++DATA_ROOT = str(source_path('scene', ''))
+ PATH_KEYS = ("dense_path", "target_rgb_path", "meta_path", "qa_path")
+ REGION_MASK_POLICY = {
+     "kind": REGION_MASK_KIND,
+--- a/pipelines/scene_rollout/tools/cache_light_dust2_pilot_latents_v0.py
++++ b/pipelines/scene_rollout/tools/cache_light_dust2_pilot_latents_v0.py
+@@ -2,6 +2,7 @@
+ """Build LingBot VAE latent cache rows for materialized light-dust2 clips."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -17,7 +18,7 @@
+ from PIL import Image
+ 
+ 
+-TEXT_CACHE = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt")
++TEXT_CACHE = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt')))
+ PROMPT = "first-person gameplay video in Counter-Strike, de_dust2 map"
+ 
+ 
+@@ -193,8 +194,8 @@
+     ap.add_argument("--latents-dir", type=Path, required=True)
+     ap.add_argument("--out-manifest", type=Path, required=True)
+     ap.add_argument("--out-report", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--text-cache", type=Path, default=TEXT_CACHE)
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--shard-index", type=int, default=0)
+--- a/pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py
++++ b/pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py
+@@ -9,6 +9,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -27,7 +28,7 @@
+ 
+ 
+ PROMPT = "first-person gameplay video in Counter-Strike, de_dust2 map"
+-TEXT_CACHE = Path("/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt")
++TEXT_CACHE = Path(str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/text_cache/prompt_089a5a60240c0039.pt')))
+ MIN_FREE_BYTES = 800 * 1024**3
+ 
+ 
+@@ -287,8 +288,8 @@
+     ap.add_argument("--out-manifest", type=Path, required=True)
+     ap.add_argument("--out-report", type=Path, required=True)
+     ap.add_argument("--progress-jsonl", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--text-cache", type=Path, default=TEXT_CACHE)
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--shard-index", type=int, default=0)
+--- a/pipelines/scene_rollout/tools/evaluate_memory_dense_adapter_ablation_v0.py
++++ b/pipelines/scene_rollout/tools/evaluate_memory_dense_adapter_ablation_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import defaultdict
+@@ -516,8 +517,8 @@
+     ap.add_argument("--map-manifest", type=Path, required=True)
+     ap.add_argument("--cache-manifest", type=Path, required=True)
+     ap.add_argument("--adapter-checkpoint", type=Path, default=None)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument("--out-json", type=Path, default=None)
+     ap.add_argument("--device", default="cuda")
+--- a/pipelines/scene_rollout/tools/export_light_dust2_pilot_dense_from_cache_v0.py
++++ b/pipelines/scene_rollout/tools/export_light_dust2_pilot_dense_from_cache_v0.py
+@@ -8,6 +8,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -30,7 +31,7 @@
+ from map_memory_training_data_v0 import CHANNELS, REQUIRED_BACKEND_ID, sha256_file, validate_dense_array
+ 
+ 
+-DEFAULT_RAW_ROOT = Path("/mnt/data/csgo-datasets")
++DEFAULT_RAW_ROOT = Path(str(source_path('assets', 'csgo-datasets')))
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ REGION_MASK_KIND = "memory_dense_channel_3_surrogate_v0"
+ 
+--- a/pipelines/scene_rollout/tools/export_memory_dense_from_lingbot_cache_v0.py
++++ b/pipelines/scene_rollout/tools/export_memory_dense_from_lingbot_cache_v0.py
+@@ -16,6 +16,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -42,7 +43,7 @@
+ 
+ 
+ DEFAULT_OUT_DIR = Path("output/memory_dense_adapter_v0/memory_dense_lingbot_cache_v0")
+-DEFAULT_RAW_ROOT = Path("/mnt/data/csgo-datasets-fullsubset")
++DEFAULT_RAW_ROOT = Path(str(source_path('assets', 'csgo-datasets-fullsubset')))
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ 
+ 
+--- a/pipelines/scene_rollout/tools/gen_tier69h_seed_v0.py
++++ b/pipelines/scene_rollout/tools/gen_tier69h_seed_v0.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ """Generate tier69h seed-expanded manifest."""
++from runtime_paths import source_path
+ import collections
+ import hashlib
+ import heapq
+@@ -8,7 +9,7 @@
+ import time
+ from pathlib import Path
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
++ROOT = Path(str(source_path('scene', '')))
+ OUT_DIR = ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0"
+ SUMMARY_PATH = OUT_DIR / "v2_all188_diversity_stride_manifest_summary_v0.json"
+ SEED_MANIFEST = OUT_DIR / "v2_all188_positive_diversity_tier20h_source_manifest_v0.jsonl"
+--- a/pipelines/scene_rollout/tools/lingbot_fast_v2_runtime_v0.py
++++ b/pipelines/scene_rollout/tools/lingbot_fast_v2_runtime_v0.py
+@@ -2,6 +2,7 @@
+ """Pure contract helpers for the official LingBot World v2 Fast runtime."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import ast
+ from dataclasses import asdict, dataclass
+@@ -19,8 +20,8 @@
+ CONTRACT_VERSION = "lingbot-fast-v2-causal-runtime-contract/v1"
+ REPORT_SCHEMA_VERSION = "lingbot-fast-v2-causal-runtime-audit/v1"
+ 
+-DEFAULT_SOURCE_ROOT = Path("/mnt/data/pku/zhengqi/models/lingbot-world-v2-code")
+-DEFAULT_MODEL_ROOT = Path("/mnt/data/pku/zhengqi/models/lingbot-world-v2-14b-causal-fast")
++DEFAULT_SOURCE_ROOT = Path(str(source_path('assets', 'external/lingbot-world-v2-code')))
++DEFAULT_MODEL_ROOT = Path(str(source_path('assets', 'lingbot-world-v2-14b-causal-fast')))
+ 
+ PUBLIC_TIMESTEP_INDICES = (0, 250, 500, 750)
+ PUBLIC_SHIFT = 10.0
+--- a/pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py
++++ b/pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse, json, math, os, random, sys, time
+ from collections import Counter, defaultdict
+@@ -9,7 +10,7 @@
+ 
+ import numpy as np
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
++ROOT = Path(str(source_path('scene', '')))
+ if str(ROOT) not in sys.path:
+     sys.path.insert(0, str(ROOT))
+ DEFAULT_OUT_DIR = ROOT / "output/symmvc_scene_covis_pairs_v3"
+@@ -19,7 +20,7 @@
+     ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0/v2_all188_positive_diversity_tier20h_source_manifest_v0.jsonl",
+     ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0/v2_all188_positive_diversity_tier69h_source_manifest_v0.jsonl",
+ ]
+-DATA_ROOT = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d")
++DATA_ROOT = Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d')))
+ DEFAULT_MESH_DIR = DATA_ROOT / "00a145c4184c4cf092acb25d2521ccee"
+ 
+ 
+--- a/pipelines/scene_rollout/tools/mine_strong_covis_pairs_heldout_v1.py
++++ b/pipelines/scene_rollout/tools/mine_strong_covis_pairs_heldout_v1.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import hashlib
+@@ -12,7 +13,7 @@
+ from typing import Any
+ 
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
++ROOT = Path(str(source_path('scene', '')))
+ DEFAULT_CANDIDATE_POOL = ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0/candidate_pool_cache_v0.jsonl"
+ DEFAULT_TRAIN_CACHE = ROOT / "output/memory_v2_all188_diversity_stride_manifest_20260629_v0/train_inputs_tier69h_v0/tier69h_aligned_cache_memorymask_view_v0.jsonl"
+ DEFAULT_OUT_DIR = ROOT / "output/symmvc_strong_pairs_heldout_v1"
+--- a/pipelines/scene_rollout/tools/mine_strong_covis_pairs_v0.py
++++ b/pipelines/scene_rollout/tools/mine_strong_covis_pairs_v0.py
+@@ -5,6 +5,7 @@
+ It only reads held-out candidate rows and GT player_visibility JSON files.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -16,11 +17,9 @@
+ from typing import Any
+ 
+ DEFAULT_HELDOUT = Path(
+-    "/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/"
+-    "rank64_final_verdict_20260629_bridge/"
+-    "v2_fixed_motion_heldout_benchmark_candidate_clipdir_corrected_v0.jsonl"
++    str(source_path('project', 'output/rank64_final_verdict_20260629_bridge/v2_fixed_motion_heldout_benchmark_candidate_clipdir_corrected_v0.jsonl'))
+ )
+-DEFAULT_OUT_DIR = Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/symmvc_strong_pairs_20260705_v0")
++DEFAULT_OUT_DIR = Path(str(source_path('scene', 'output/symmvc_strong_pairs_20260705_v0')))
+ 
+ 
+ def load_json(path: Path) -> Any:
+--- a/pipelines/scene_rollout/tools/mutual_observation_harness_v0.py
++++ b/pipelines/scene_rollout/tools/mutual_observation_harness_v0.py
+@@ -6,6 +6,7 @@
+ from FasterRCNN person detections in the corresponding video frame.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ import argparse, glob, json, math, os, time
+ from collections import defaultdict
+ from pathlib import Path
+@@ -275,8 +276,8 @@
+ 
+ def main() -> None:
+     ap = argparse.ArgumentParser()
+-    ap.add_argument("--gen-root", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/cleanv2_verdict_20260703_v0/gen/v2"))
+-    ap.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/mutual_obs_harness_20260705_v0"))
++    ap.add_argument("--gen-root", type=Path, default=Path(str(source_path('project', 'output/cleanv2_verdict_20260703_v0/gen/v2'))))
++    ap.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/mutual_obs_harness_20260705_v0'))))
+     ap.add_argument("--variants", default="gt,base,true_dense,shuffled_dense")
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--score-threshold", type=float, default=0.5)
+--- a/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_anchor_v0.py
++++ b/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_anchor_v0.py
+@@ -6,6 +6,7 @@
+ window generated tail frame as the next window image condition.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -22,8 +23,8 @@
+ import torch
+ from PIL import Image
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
+-QXQ = Path("/mnt/data/pku/xiaoqi/multigen/multiview-map-v0-qxq")
++ROOT = Path(str(source_path('scene', '')))
++QXQ = Path(str(source_path('project', '')))
+ ZH = ROOT
+ 
+ 
+@@ -79,8 +80,8 @@
+     ap.add_argument("--anchor-k", type=int, required=True, help="Use original GT clip image as context every K windows; window0 is always GT.")
+     ap.add_argument("--adapter-checkpoint-low", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_low_tier69h_lora64_w6_v1/checkpoints/memory_dense_adapter_step_004500.pt")
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_high_tier69h_lora64_dsw2_w6_v1/checkpoints/memory_dense_adapter_step_004650.pt")
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--variant", choices=["true_dense"], default="true_dense")
+     ap.add_argument("--latent-frames", type=int, default=21)
+     ap.add_argument("--chunk-size", type=int, default=3)
+@@ -91,7 +92,7 @@
+     ap.add_argument("--size", default="832*480")
+     ap.add_argument("--device-id", type=int, default=0)
+     ap.add_argument("--fps", type=int, default=16)
+-    ap.add_argument("--ffmpeg", default="/root/bin/ffmpeg")
++    ap.add_argument("--ffmpeg", default='ffmpeg')
+     ap.add_argument("--stop-after", type=int, default=0, help="debug: stop after N windows; 0 means all")
+     args = ap.parse_args()
+ 
+--- a/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_hg_v0.py
++++ b/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_hg_v0.py
+@@ -6,6 +6,7 @@
+ window generated tail frame as the next window image condition.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -22,8 +23,8 @@
+ import torch
+ from PIL import Image
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
+-QXQ = Path("/mnt/data/pku/xiaoqi/multigen/multiview-map-v0-qxq")
++ROOT = Path(str(source_path('scene', '')))
++QXQ = Path(str(source_path('project', '')))
+ ZH = ROOT
+ 
+ 
+@@ -78,8 +79,8 @@
+     ap.add_argument("--out-root", type=Path, default=ROOT / "output/demo_1min_ar_20260706_v0")
+     ap.add_argument("--adapter-checkpoint-low", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_low_tier69h_lora64_w6_v1/checkpoints/memory_dense_adapter_step_004500.pt")
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_high_tier69h_lora64_dsw2_w6_v1/checkpoints/memory_dense_adapter_step_004650.pt")
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--variant", choices=["true_dense"], default="true_dense")
+     ap.add_argument("--latent-frames", type=int, default=21)
+     ap.add_argument("--chunk-size", type=int, default=3)
+@@ -95,7 +96,7 @@
+     ap.add_argument("--size", default="832*480")
+     ap.add_argument("--device-id", type=int, default=0)
+     ap.add_argument("--fps", type=int, default=16)
+-    ap.add_argument("--ffmpeg", default="/root/bin/ffmpeg")
++    ap.add_argument("--ffmpeg", default='ffmpeg')
+     ap.add_argument("--stop-after", type=int, default=0, help="debug: stop after N windows; 0 means all")
+     args = ap.parse_args()
+ 
+--- a/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_v0.py
++++ b/pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_v0.py
+@@ -6,6 +6,7 @@
+ window generated tail frame as the next window image condition.
+ """
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -22,8 +23,8 @@
+ import torch
+ from PIL import Image
+ 
+-ROOT = Path("/mnt/data/pku/zhengqi/multiview-map-v0")
+-QXQ = Path("/mnt/data/pku/xiaoqi/multigen/multiview-map-v0-qxq")
++ROOT = Path(str(source_path('scene', '')))
++QXQ = Path(str(source_path('project', '')))
+ ZH = ROOT
+ 
+ 
+@@ -79,8 +80,8 @@
+     ap.add_argument("--adapter-checkpoint-low", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_low_tier69h_lora64_w6_v1/checkpoints/memory_dense_adapter_step_004500.pt")
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=ROOT / "output/memory_dense_adapter_v0/runs/zq_base_high_tier69h_lora64_dsw2_w6_v1/checkpoints/memory_dense_adapter_step_004650.pt")
+     ap.add_argument("--state-cache-manifest", type=Path, default=None)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--variant", choices=["true_dense"], default="true_dense")
+     ap.add_argument("--latent-frames", type=int, default=21)
+     ap.add_argument("--chunk-size", type=int, default=3)
+@@ -91,7 +92,7 @@
+     ap.add_argument("--size", default="832*480")
+     ap.add_argument("--device-id", type=int, default=0)
+     ap.add_argument("--fps", type=int, default=16)
+-    ap.add_argument("--ffmpeg", default="/root/bin/ffmpeg")
++    ap.add_argument("--ffmpeg", default='ffmpeg')
+     ap.add_argument("--stop-after", type=int, default=0, help="debug: stop after N windows; 0 means all")
+     ap.add_argument("--independent-context", action="store_true", help="use each row's original image instead of AR tail chaining")
+     args = ap.parse_args()
+--- a/pipelines/scene_rollout/tools/run_map_memory_70pct_v0.py
++++ b/pipelines/scene_rollout/tools/run_map_memory_70pct_v0.py
+@@ -9,6 +9,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -19,7 +20,7 @@
+ from typing import Any
+ 
+ 
+-DEFAULT_MATCH_DIR = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee")
++DEFAULT_MATCH_DIR = Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee')))
+ DEFAULT_EPISODE = "Ep_000015"
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ DEFAULT_OUT_ROOT = Path("docs/assets")
+--- a/pipelines/scene_rollout/tools/run_map_memory_multi_episode_bsp_v0.py
++++ b/pipelines/scene_rollout/tools/run_map_memory_multi_episode_bsp_v0.py
+@@ -8,6 +8,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import hashlib
+@@ -22,7 +23,7 @@
+ import numpy as np
+ 
+ 
+-DEFAULT_MATCH_DIR = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee")
++DEFAULT_MATCH_DIR = Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d/030a506e5e77459c8d5078a06eec61ee')))
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ DEFAULT_EPISODES = ["Ep_000003", "Ep_000004", "Ep_000005"]
+ CHANNELS = [
+--- a/pipelines/scene_rollout/tools/run_memory_dense_lingbot_training_prep_v0.py
++++ b/pipelines/scene_rollout/tools/run_memory_dense_lingbot_training_prep_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from collections import Counter
+@@ -24,13 +25,13 @@
+ 
+ 
+ DEFAULT_CACHE_MANIFEST = Path(
+-    "/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/latents_full_32f/cache_manifest.jsonl"
++    str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/latents_full_32f/cache_manifest.jsonl'))
+ )
+ DEFAULT_SOURCE_MANIFEST = Path(
+-    "/mnt/data/pku/xiaoqi/datasets/fast_cam_dust2_p0_32f_done_cpfs/manifests/32f_done_train_cache_input_cpfs.jsonl"
++    str(source_path('assets', 'datasets/fast_cam_dust2_p0_32f_done_cpfs/manifests/32f_done_train_cache_input_cpfs.jsonl'))
+ )
+-DEFAULT_RAW_ROOT = Path("/mnt/data/csgo-datasets-fullsubset")
+-DEFAULT_LINGBOT_REPO = Path("/mnt/data/pku/xiaoqi/lingbot-world")
++DEFAULT_RAW_ROOT = Path(str(source_path('assets', 'csgo-datasets-fullsubset')))
++DEFAULT_LINGBOT_REPO = Path(str(source_path('lingbot', '')))
+ DEFAULT_BASE_DIR = Path("output/memory_dense_adapter_v0")
+ DEFAULT_BSP_FACES_NPZ = Path("docs/assets/bsp_static_geometry_v0/de_dust2_bsp_faces_v0.npz")
+ 
+--- a/pipelines/scene_rollout/tools/sample_memory_dense_adapter_phase2a_v0.py
++++ b/pipelines/scene_rollout/tools/sample_memory_dense_adapter_phase2a_v0.py
+@@ -7,6 +7,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import copy
+@@ -374,9 +375,9 @@
+     ap.add_argument("--phase2a-ego-stem", default=None)
+     ap.add_argument("--phase2a-materialized-root", type=Path, default=Path("output/memory_dense_adapter_v0/phase2a_materialized_clips_v0"))
+     ap.add_argument("--adapter-checkpoint", type=Path, required=True)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
+-    ap.add_argument("--clip-root", type=Path, default=Path("/mnt/data/pku/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/clips"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
++    ap.add_argument("--clip-root", type=Path, default=Path(str(source_path('assets', 'datasets/memory_light_dust2_pilot_1200_v0/clips'))))
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test")
+     ap.add_argument("--clip-index", type=int, default=0)
+--- a/pipelines/scene_rollout/tools/sample_memory_dense_adapter_state_v0.py
++++ b/pipelines/scene_rollout/tools/sample_memory_dense_adapter_state_v0.py
+@@ -9,6 +9,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import copy
+@@ -613,9 +614,9 @@
+     ap.add_argument("--adapter-checkpoint-low", type=Path, default=None)
+     ap.add_argument("--adapter-checkpoint-high", type=Path, default=None)
+     ap.add_argument("--state-cache-manifest", type=Path, default=None)
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
+-    ap.add_argument("--clip-root", type=Path, default=Path("/mnt/data/pku/xiaoqi/datasets/memory_light_dust2_pilot_1200_v0/clips"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
++    ap.add_argument("--clip-root", type=Path, default=Path(str(source_path('assets', 'datasets/memory_light_dust2_pilot_1200_v0/clips'))))
+     ap.add_argument("--out-dir", type=Path, required=True)
+     ap.add_argument("--split", default="test")
+     ap.add_argument("--clip-index", type=int, default=0)
+--- a/pipelines/scene_rollout/tools/symmvc_v2_score_v0.py
++++ b/pipelines/scene_rollout/tools/symmvc_v2_score_v0.py
+@@ -1,6 +1,7 @@
+ #!/usr/bin/env python3
+ """SymMVC v2 diagnostics: expanded frames, quality gates, paired stats, tail metrics."""
+ from __future__ import annotations
++from runtime_paths import source_path
+ import argparse, glob, json, math, os, tempfile, time
+ from pathlib import Path
+ from statistics import median
+@@ -287,10 +288,10 @@
+ 
+ def main() -> None:
+     ap = argparse.ArgumentParser()
+-    ap.add_argument("--pair-index", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/rank64_verdict_20260629_1330_v0/symmvc_v2_motion/pair_index_v2_motion.json"))
+-    ap.add_argument("--gen-root", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/cleanv2_verdict_20260703_v0/gen/v2"))
+-    ap.add_argument("--symmvc-view-root", type=Path, default=Path("/mnt/workspace/xiaoqi/multigen/multiview-map-v0-qxq/output/cleanv2_verdict_20260703_v0/gen_symmvc_view"))
+-    ap.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/symmvc_v2_eval_20260705_v0"))
++    ap.add_argument("--pair-index", type=Path, default=Path(str(source_path('project', 'output/rank64_verdict_20260629_1330_v0/symmvc_v2_motion/pair_index_v2_motion.json'))))
++    ap.add_argument("--gen-root", type=Path, default=Path(str(source_path('project', 'output/cleanv2_verdict_20260703_v0/gen/v2'))))
++    ap.add_argument("--symmvc-view-root", type=Path, default=Path(str(source_path('project', 'output/cleanv2_verdict_20260703_v0/gen_symmvc_view'))))
++    ap.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/symmvc_v2_eval_20260705_v0'))))
+     ap.add_argument("--variants", default="gt,base,true_dense,shuffled_dense")
+     ap.add_argument("--device", default="cuda:0")
+     ap.add_argument("--max-frames", type=int, default=8)
+--- a/pipelines/scene_rollout/tools/teacher_player_latent_mask_v0.py
++++ b/pipelines/scene_rollout/tools/teacher_player_latent_mask_v0.py
+@@ -2,6 +2,7 @@
+ """Project teacher non-ego player masks onto dense, latent, or token grids."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import importlib.util
+@@ -15,7 +16,7 @@
+ 
+ DENSE_HW = (176, 320)
+ DEFAULT_LATENT_HW = (60, 104)
+-DEFAULT_DATASET_ROOT = Path("/mnt/data/csgo-datasets-fullsubset/32f1644d4f42c29d")
++DEFAULT_DATASET_ROOT = Path(str(source_path('assets', 'csgo-datasets-fullsubset/32f1644d4f42c29d')))
+ MEMORY_MASK_REGION_KINDS = {
+     "memory_dense_channel_3_surrogate_v0",
+     "memory_dense_channel_3_player_mask_surrogate_v0",
+--- a/pipelines/scene_rollout/tools/test_dense_token_alignment_v0.py
++++ b/pipelines/scene_rollout/tools/test_dense_token_alignment_v0.py
+@@ -12,6 +12,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from dataclasses import dataclass
+@@ -294,7 +295,7 @@
+ 
+ def parse_args() -> argparse.Namespace:
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/workspace/xiaoqi/lingbot-world"))
++    parser.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
+     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+     parser.add_argument("--skip-1c", action="store_true")
+     return parser.parse_args()
+--- a/pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase3_v0.py
++++ b/pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase3_v0.py
+@@ -2,6 +2,7 @@
+ """CPU-only focused tests for the Fast v2 Phase 3 smoke trainer."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import copy
+ from dataclasses import dataclass
+@@ -323,7 +324,7 @@
+                 poses_path,
+                 intrinsics_path,
+                 official_source_root=Path(
+-                    "/mnt/data/pku/zhengqi/models/lingbot-world-v2-code"
++                    str(source_path('assets', 'external/lingbot-world-v2-code'))
+                 ),
+                 device=torch.device("cpu"),
+                 dtype=torch.float32,
+--- a/pipelines/scene_rollout/tools/train_memory_dense_adapter_interaction_v1.py
++++ b/pipelines/scene_rollout/tools/train_memory_dense_adapter_interaction_v1.py
+@@ -15,6 +15,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -3664,8 +3665,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/pipelines/scene_rollout/tools/train_memory_dense_adapter_state_v0.py
++++ b/pipelines/scene_rollout/tools/train_memory_dense_adapter_state_v0.py
+@@ -15,6 +15,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -3093,8 +3094,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/pipelines/scene_rollout/tools/train_memory_dense_adapter_v0.py
++++ b/pipelines/scene_rollout/tools/train_memory_dense_adapter_v0.py
+@@ -15,6 +15,7 @@
+ """
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ from contextlib import nullcontext
+@@ -2122,8 +2123,8 @@
+     ap.add_argument("--hash-dense", action="store_true")
+     ap.add_argument("--hash-manifest", action="store_true")
+ 
+-    ap.add_argument("--lingbot-repo", type=Path, default=Path("/mnt/data/pku/xiaoqi/lingbot-world"))
+-    ap.add_argument("--ckpt-dir", type=Path, default=Path("/mnt/data/pku/datasets/robbyant/lingbot-world-base-cam"))
++    ap.add_argument("--lingbot-repo", type=Path, default=Path(str(source_path('lingbot', ''))))
++    ap.add_argument("--ckpt-dir", type=Path, default=Path(str(source_path('assets', 'lingbot-world-base-cam'))))
+     ap.add_argument("--fast-model-dir", type=Path, default=None)
+     ap.add_argument(
+         "--wan-low-cpu-mem-usage",
+--- a/pipelines/scene_rollout/tools/train_player_dynamics_v0.py
++++ b/pipelines/scene_rollout/tools/train_player_dynamics_v0.py
+@@ -2,6 +2,7 @@
+ """Player dynamics v0: data build, small transformer training, eval, and plots."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -622,14 +623,14 @@
+     ap = argparse.ArgumentParser()
+     sub = ap.add_subparsers(dest="cmd", required=True)
+     p = sub.add_parser("inspect")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
+     p.add_argument("--matches", type=int, default=5)
+     p.add_argument("--episodes-per-match", type=int, default=2)
+     p.set_defaults(func=inspect_cmd)
+ 
+     p = sub.add_parser("build")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0'))))
+     p.add_argument("--history", type=int, default=32)
+     p.add_argument("--future", type=int, default=16)
+     p.add_argument("--stride", type=int, default=16)
+@@ -638,8 +639,8 @@
+     p.set_defaults(func=build_cmd)
+ 
+     p = sub.add_parser("train")
+-    p.add_argument("--manifest", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/manifest_player_dynamics_v0.json"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/train_v0"))
++    p.add_argument("--manifest", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/manifest_player_dynamics_v0.json'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/train_v0'))))
+     p.add_argument("--batch-size", type=int, default=64)
+     p.add_argument("--workers", type=int, default=2)
+     p.add_argument("--max-steps", type=int, default=2000)
+@@ -660,7 +661,7 @@
+ 
+     p = sub.add_parser("eval")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-json", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/eval_player_dynamics_v0.json"))
++    p.add_argument("--out-json", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/eval_player_dynamics_v0.json'))))
+     p.add_argument("--split", default="val")
+     p.add_argument("--batch-size", type=int, default=128)
+     p.add_argument("--workers", type=int, default=2)
+@@ -670,7 +671,7 @@
+ 
+     p = sub.add_parser("plot")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/plots"))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/plots'))))
+     p.add_argument("--count", type=int, default=5)
+     p.add_argument("--cpu", action="store_true")
+     p.set_defaults(func=plot_cmd)
+--- a/pipelines/scene_rollout/tools/train_player_dynamics_v1.py
++++ b/pipelines/scene_rollout/tools/train_player_dynamics_v1.py
+@@ -2,6 +2,7 @@
+ """Player dynamics v1: delta target training, strict decode eval, and plots."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -692,14 +693,14 @@
+     ap = argparse.ArgumentParser()
+     sub = ap.add_subparsers(dest="cmd", required=True)
+     p = sub.add_parser("inspect")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
+     p.add_argument("--matches", type=int, default=5)
+     p.add_argument("--episodes-per-match", type=int, default=2)
+     p.set_defaults(func=inspect_cmd)
+ 
+     p = sub.add_parser("build")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v1"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v1'))))
+     p.add_argument("--history", type=int, default=32)
+     p.add_argument("--future", type=int, default=16)
+     p.add_argument("--stride", type=int, default=16)
+@@ -708,8 +709,8 @@
+     p.set_defaults(func=build_cmd)
+ 
+     p = sub.add_parser("train")
+-    p.add_argument("--manifest", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/manifest_player_dynamics_v0.json"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v1/train_v1"))
++    p.add_argument("--manifest", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/manifest_player_dynamics_v0.json'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v1/train_v1'))))
+     p.add_argument("--batch-size", type=int, default=64)
+     p.add_argument("--workers", type=int, default=2)
+     p.add_argument("--max-steps", type=int, default=2000)
+@@ -730,7 +731,7 @@
+ 
+     p = sub.add_parser("eval")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-json", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v1/eval_player_dynamics_v1.json"))
++    p.add_argument("--out-json", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v1/eval_player_dynamics_v1.json'))))
+     p.add_argument("--split", default="val")
+     p.add_argument("--batch-size", type=int, default=128)
+     p.add_argument("--workers", type=int, default=2)
+@@ -740,7 +741,7 @@
+ 
+     p = sub.add_parser("plot")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v1/plots"))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v1/plots'))))
+     p.add_argument("--count", type=int, default=5)
+     p.add_argument("--cpu", action="store_true")
+     p.set_defaults(func=plot_cmd)
+--- a/pipelines/scene_rollout/tools/train_player_dynamics_v2.py
++++ b/pipelines/scene_rollout/tools/train_player_dynamics_v2.py
+@@ -2,6 +2,7 @@
+ """Player dynamics v2: constant-velocity residual training, strict decode eval, and plots."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -739,14 +740,14 @@
+     ap = argparse.ArgumentParser()
+     sub = ap.add_subparsers(dest="cmd", required=True)
+     p = sub.add_parser("inspect")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
+     p.add_argument("--matches", type=int, default=5)
+     p.add_argument("--episodes-per-match", type=int, default=2)
+     p.set_defaults(func=inspect_cmd)
+ 
+     p = sub.add_parser("build")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2'))))
+     p.add_argument("--history", type=int, default=32)
+     p.add_argument("--future", type=int, default=16)
+     p.add_argument("--stride", type=int, default=16)
+@@ -755,8 +756,8 @@
+     p.set_defaults(func=build_cmd)
+ 
+     p = sub.add_parser("train")
+-    p.add_argument("--manifest", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/manifest_player_dynamics_v0.json"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2/train_v2"))
++    p.add_argument("--manifest", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/manifest_player_dynamics_v0.json'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2/train_v2'))))
+     p.add_argument("--batch-size", type=int, default=64)
+     p.add_argument("--workers", type=int, default=2)
+     p.add_argument("--max-steps", type=int, default=2000)
+@@ -777,7 +778,7 @@
+ 
+     p = sub.add_parser("eval")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-json", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2/eval_player_dynamics_v2.json"))
++    p.add_argument("--out-json", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2/eval_player_dynamics_v2.json'))))
+     p.add_argument("--split", default="val")
+     p.add_argument("--batch-size", type=int, default=128)
+     p.add_argument("--workers", type=int, default=2)
+@@ -787,7 +788,7 @@
+ 
+     p = sub.add_parser("plot")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2/plots_v2"))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2/plots_v2'))))
+     p.add_argument("--count", type=int, default=5)
+     p.add_argument("--cpu", action="store_true")
+     p.set_defaults(func=plot_cmd)
+--- a/pipelines/scene_rollout/tools/train_player_dynamics_v3_rollout_v0.py
++++ b/pipelines/scene_rollout/tools/train_player_dynamics_v3_rollout_v0.py
+@@ -2,6 +2,7 @@
+ """Player dynamics v3: scheduled-sampling rollout curriculum for the v2 residual model."""
+ 
+ from __future__ import annotations
++from runtime_paths import source_path
+ 
+ import argparse
+ import json
+@@ -913,14 +914,14 @@
+     ap = argparse.ArgumentParser()
+     sub = ap.add_subparsers(dest="cmd", required=True)
+     p = sub.add_parser("inspect")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
+     p.add_argument("--matches", type=int, default=5)
+     p.add_argument("--episodes-per-match", type=int, default=2)
+     p.set_defaults(func=inspect_cmd)
+ 
+     p = sub.add_parser("build")
+-    p.add_argument("--data-root", type=Path, default=Path("/mnt/data/csgo-datasets/32f1644d4f42c29d"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2"))
++    p.add_argument("--data-root", type=Path, default=Path(str(source_path('assets', 'csgo-datasets/32f1644d4f42c29d'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2'))))
+     p.add_argument("--history", type=int, default=32)
+     p.add_argument("--future", type=int, default=16)
+     p.add_argument("--stride", type=int, default=16)
+@@ -929,8 +930,8 @@
+     p.set_defaults(func=build_cmd)
+ 
+     p = sub.add_parser("train")
+-    p.add_argument("--manifest", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/manifest_player_dynamics_v0.json"))
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v0/runs/20260707_v3_rollout_dlc_v0"))
++    p.add_argument("--manifest", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/manifest_player_dynamics_v0.json'))))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v0/runs/20260707_v3_rollout_dlc_v0'))))
+     p.add_argument("--batch-size", type=int, default=64)
+     p.add_argument("--workers", type=int, default=2)
+     p.add_argument("--max-steps", type=int, default=2000)
+@@ -955,7 +956,7 @@
+ 
+     p = sub.add_parser("eval")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-json", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2/eval_player_dynamics_v2.json"))
++    p.add_argument("--out-json", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2/eval_player_dynamics_v2.json'))))
+     p.add_argument("--split", default="val")
+     p.add_argument("--batch-size", type=int, default=128)
+     p.add_argument("--workers", type=int, default=2)
+@@ -965,7 +966,7 @@
+ 
+     p = sub.add_parser("plot")
+     p.add_argument("--checkpoint", type=Path, required=True)
+-    p.add_argument("--out-dir", type=Path, default=Path("/mnt/data/pku/zhengqi/multiview-map-v0/output/dynamics_v2/plots_v2"))
++    p.add_argument("--out-dir", type=Path, default=Path(str(source_path('scene', 'output/dynamics_v2/plots_v2'))))
+     p.add_argument("--count", type=int, default=5)
+     p.add_argument("--cpu", action="store_true")
+     p.set_defaults(func=plot_cmd)

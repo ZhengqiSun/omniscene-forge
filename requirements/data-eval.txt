@@ -1,0 +1,7 @@
+# Additional data conversion and plotting utilities.
+av>=13,<17
+pandas>=2.2,<3
+pyarrow>=17,<24
+PyYAML>=6,<7
+matplotlib>=3.8,<4
+# SCOPE model execution also requires the external official source and its deps.

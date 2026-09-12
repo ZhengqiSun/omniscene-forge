@@ -1,0 +1,2922 @@
+[
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/README.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/aris_ops/runs/multiplayer_filter/find_renderable.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/aris_ops/runs/multiplayer_filter/scan_simul.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/aris_ops/runs/multiplayer_filter/scan_vec.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/__init__.py",
+    "disposition": "included",
+    "target": "baselines/__init__.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/LINGBOT_BASELINE_CODE_AUDIT.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/LINGBOT_BASELINE_SMOKE_REPORT.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/README.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/__init__.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/__init__.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/camera.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/camera.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/checkpoint.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/checkpoint.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/configs/base_cam_lora.yaml",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/infer.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/infer.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/lora.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/lora.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/media.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/media.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/pair_checkpoint.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/pair_checkpoint.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/run_smoke.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/schema.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/schema.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/tests/test_checkpoint.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/tests/test_checkpoint.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/tests/test_lora.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/tests/test_lora.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/tests/test_media.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/tests/test_media.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/tests/test_schema.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/tests/test_schema.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/train.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/train.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/lingbot_cam/validate_manifest.py",
+    "disposition": "included",
+    "target": "baselines/lingbot_cam/validate_manifest.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/README.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/SCOPE_ACTION_CONVERSION_AUDIT.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/SCOPE_CODE_AUDIT.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/SCOPE_INTERFACE_SPEC.md",
+    "disposition": "included",
+    "target": "baselines/scope/SCOPE_INTERFACE_SPEC.md"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/SCOPE_SMOKE_REPORT.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/actions/__init__.py",
+    "disposition": "included",
+    "target": "baselines/scope/actions/__init__.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/actions/calibrate_mouse.py",
+    "disposition": "included",
+    "target": "baselines/scope/actions/calibrate_mouse.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/actions/convert_csgo_to_scope.py",
+    "disposition": "included",
+    "target": "baselines/scope/actions/convert_csgo_to_scope.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/actions/resample_actions.py",
+    "disposition": "included",
+    "target": "baselines/scope/actions/resample_actions.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/actions/validate_scope_parquet.py",
+    "disposition": "included",
+    "target": "baselines/scope/actions/validate_scope_parquet.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/configs/actionmodule_ft.yaml",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/configs/smoke.yaml",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/configs/zero_shot.yaml",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/infer.py",
+    "disposition": "included",
+    "target": "baselines/scope/infer.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/normalize_output.py",
+    "disposition": "included",
+    "target": "baselines/scope/normalize_output.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/__init__.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/__init__.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/checkpoint.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/checkpoint.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/dataset.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/dataset.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/flow_matching.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/flow_matching.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/model_loader.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/model_loader.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scope_bridge/schema.py",
+    "disposition": "included",
+    "target": "baselines/scope/scope_bridge/schema.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scripts/infer_finetuned_template.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scripts/infer_zero_shot_template.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/scripts/train_template.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/tests/test_actions.py",
+    "disposition": "included",
+    "target": "baselines/scope/tests/test_actions.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/tests/test_checkpoint.py",
+    "disposition": "included",
+    "target": "baselines/scope/tests/test_checkpoint.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/tests/test_flow_matching.py",
+    "disposition": "included",
+    "target": "baselines/scope/tests/test_flow_matching.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/tests/test_model_boundary.py",
+    "disposition": "included",
+    "target": "baselines/scope/tests/test_model_boundary.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/tests/test_schema.py",
+    "disposition": "included",
+    "target": "baselines/scope/tests/test_schema.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/train.py",
+    "disposition": "included",
+    "target": "baselines/scope/train.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/baselines/scope/validate_manifest.py",
+    "disposition": "included",
+    "target": "baselines/scope/validate_manifest.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/ckpt_watch_and_eval.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/codex_handoff/multiview_video_path_contract_audit.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/do_swap_low_to_high.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/action_transition_v0/action_transition_diagnosis_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/action_velocity_fit_v0/action_velocity_fit_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/bsp_static_geometry_v0/de_dust2_bsp_inspection_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/bsp_static_geometry_v0/obj_vs_bsp_faces_v0/geometry_backend_comparison_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/bsp_static_geometry_v0/obj_vs_bsp_faces_v0/training_readiness_with_bsp_parity_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/bsp_static_geometry_v0/smoke_bsp_faces_gpu_f000009/mesh_dense_condition_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/camera_projection_calib_v0/camera_projection_calibration_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/capsule_calib_fov100_v0/capsule_calibration_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/capsule_calib_fov110_v0/capsule_calibration_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/capsule_calib_v0/capsule_calibration_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/dense_v0/dense_condition_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/episode_memory_v0/episode_memory_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/map_v0/map_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v0/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v1/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v10_balanced_manifest/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v10_balanced_manifest/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v10_balanced_manifest/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v11_semantic_fallback/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v11_semantic_fallback/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v12_balanced_semantic_fallback/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v12_balanced_semantic_fallback/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v12_balanced_semantic_fallback/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v13_bbox_guided_mask/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v13_bbox_guided_mask/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_balanced_capsule_consistent/adapter_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_balanced_capsule_consistent/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_balanced_capsule_consistent/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_balanced_capsule_consistent/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_context_capsule_consistent/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v16_context_capsule_consistent/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_balanced_h176/adapter_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_balanced_h176/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_balanced_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_balanced_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_balanced_h176/wan_fast_adapter_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_context_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_context_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_enemy_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v17_enemy_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v18_other_player_h176/adapter_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v18_other_player_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v18_other_player_h176/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v18_other_player_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v18_other_player_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v19_visibility_strict_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v19_visibility_strict_h176/dataloader_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v19_visibility_strict_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v2/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v20_teacher_positive_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v20_teacher_positive_h176/diagnostics/player_visibility_team2_p2_f1770_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v20_teacher_positive_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v20_teacher_positive_h176/teacher_other_player_candidates_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v21_visibility_strict_mixed_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v21_visibility_strict_mixed_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v21_visibility_strict_mixed_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v22_teacher_positive_alive_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v22_teacher_positive_alive_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v22_teacher_positive_alive_h176/teacher_other_player_candidates_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v23_visibility_strict_mixed_alive_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v23_visibility_strict_mixed_alive_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v23_visibility_strict_mixed_alive_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v24_map70_positive_alive_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v24_map70_positive_alive_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v24_map70_positive_alive_h176/teacher_other_player_candidates_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v25_map70_mixed_alive_h176/channel_teacher_qa_v0/memory_dense_channels_vs_teacher_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v25_map70_mixed_alive_h176/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v25_map70_mixed_alive_h176/map_memory_70pct_release_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v25_map70_mixed_alive_h176/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v25_map70_mixed_alive_h176/training_readiness_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v3/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v4_calibrated/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v5_fov100/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v6_fov110/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v7_semantic/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v8_overlay_stats/enemy_visible_candidates_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v8_overlay_stats/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v8_overlay_stats/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v9_enemy_candidates/manifest.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_dataset_v9_enemy_candidates/summary_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_dense_v0_f0020/mesh_dense_condition_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/memory_vs_teacher_v0/memory_vs_teacher_metrics_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/mesh_dense_v0/mesh_dense_condition_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/mesh_dense_v0_f0020/mesh_dense_condition_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/mesh_projection_v0/mesh_projection_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/player_bbox_scale_fit_v0/player_bbox_scale_fit_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/player_mask_autosearch_bbox_guided_v0/player_mask_autosearch_bbox_guided_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/player_mask_autosearch_v0/player_mask_autosearch_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/player_mask_mode_experiment_v0/metrics.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/static_memory_v0/static_memory_meta_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/transition_linear_fit_v0/transition_linear_fit_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/transition_mlp_fit_v0/transition_mlp_fit_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/transition_mlp_fit_v0/transition_rollout_trace_h16_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/assets/yitao_bev_v0/yitao_bev_meta.json",
+    "disposition": "user-excluded legacy project",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/lingbot_multiview_v2.html",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/docs/map_memory_plan.html",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/eval_4col_bigdata.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/eval_4col_bigdata_013.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/eval_4col_bigdata_hjcards.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/eval_4col_bigdata_hjcards_remaining.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/high_gpu_waiter.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/launch_phase2_lora.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_gen_mutual_driver_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_mv_infer_base_untrained.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_mv_infer_step600.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_mv_infer_step900_gpu6.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_phase2_expert.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_stitch_mv_3way_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/qxq_stitch_mv_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/relaunch_high.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/restart_high_resume.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/restart_low_dense.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/restart_low_hjcards.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/restart_resume_v2.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/run_mutual_controls.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/run_mutual_northstar_B.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/README_dynamics.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/README_map_memory.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/build_memory_dense_aligned_cache_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/build_memory_dense_aligned_cache_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/interaction_channels_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/interaction_channels_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/map_memory_training_data_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/map_memory_training_data_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_interaction_adapter_v1.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_interaction_adapter_v1.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_state_adapter_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_state_adapter_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_wan_adapter_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/memory_dense_wan_adapter_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/sample_memory_dense_adapter_interaction_eval_v1.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/sample_memory_dense_adapter_state_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/sample_memory_dense_adapter_state_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/teacher_player_latent_mask_v0.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/teacher_player_latent_mask_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/w4_controlled_sampler_v1.cpython-311.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/__pycache__/w4_controlled_sampler_v1.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/analyze_ablation_eval_rows_v0.py",
+    "disposition": "included",
+    "target": "tools/analyze_ablation_eval_rows_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/audit_interaction_supervision_v0.py",
+    "disposition": "included",
+    "target": "tools/audit_interaction_supervision_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/audit_w3_zerovis_ch3_fp_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/benchmark_memory_renderer_v0.py",
+    "disposition": "included",
+    "target": "tools/benchmark_memory_renderer_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_ar_gen_source_manifest_v1.py",
+    "disposition": "included",
+    "target": "tools/build_ar_gen_source_manifest_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_balanced_manifest_v0.py",
+    "disposition": "included",
+    "target": "tools/build_balanced_manifest_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_condition_probe_batch_v0.py",
+    "disposition": "included",
+    "target": "tools/build_condition_probe_batch_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_dense_condition_v0.py",
+    "disposition": "included",
+    "target": "tools/build_dense_condition_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_episode_memory_v0.py",
+    "disposition": "included",
+    "target": "tools/build_episode_memory_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_fulltrain_data_gate_v0.py",
+    "disposition": "included",
+    "target": "tools/build_fulltrain_data_gate_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_interaction_action_cache_v0.py",
+    "disposition": "included",
+    "target": "tools/build_interaction_action_cache_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_interaction_eval_subsets_v1.py",
+    "disposition": "included",
+    "target": "tools/build_interaction_eval_subsets_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_interaction_sidecar_v0.py",
+    "disposition": "included",
+    "target": "tools/build_interaction_sidecar_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_memory_dense_aligned_cache_v0.py",
+    "disposition": "included",
+    "target": "tools/build_memory_dense_aligned_cache_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_mesh_dense_condition_v0.py",
+    "disposition": "included",
+    "target": "tools/build_mesh_dense_condition_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_mesh_dense_condition_v0_droplog.py",
+    "disposition": "included",
+    "target": "tools/build_mesh_dense_condition_v0_droplog.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_mesh_projection_v0.py",
+    "disposition": "included",
+    "target": "tools/build_mesh_projection_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_multiview_consistency_manifest_v1.py",
+    "disposition": "included",
+    "target": "tools/build_multiview_consistency_manifest_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_state_channels_v2.py",
+    "disposition": "included",
+    "target": "tools/build_state_channels_v2.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_static_memory_v0.py",
+    "disposition": "included",
+    "target": "tools/build_static_memory_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_v2_map_manifest_and_cache_v1.py",
+    "disposition": "included",
+    "target": "tools/build_v2_map_manifest_and_cache_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/build_visible_multiplayer_manifest_v0.py",
+    "disposition": "included",
+    "target": "tools/build_visible_multiplayer_manifest_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/calibrate_person_detector_on_seg_gt_v0.py",
+    "disposition": "included",
+    "target": "tools/calibrate_person_detector_on_seg_gt_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/canonical_match_split_v0.py",
+    "disposition": "included",
+    "target": "tools/canonical_match_split_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/canonical_match_split_v1.py",
+    "disposition": "included",
+    "target": "tools/canonical_match_split_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/check_episode_memory_v0.py",
+    "disposition": "included",
+    "target": "tools/check_episode_memory_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/check_map_memory_training_readiness_v0.py",
+    "disposition": "included",
+    "target": "tools/check_map_memory_training_readiness_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/check_memory_dense_manifest_v0.py",
+    "disposition": "included",
+    "target": "tools/check_memory_dense_manifest_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/compare_geometry_backends_v0.py",
+    "disposition": "included",
+    "target": "tools/compare_geometry_backends_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/compare_memory_dense_channels_to_teacher_v0.py",
+    "disposition": "included",
+    "target": "tools/compare_memory_dense_channels_to_teacher_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/diagnose_memory_player_visibility_v0.py",
+    "disposition": "included",
+    "target": "tools/diagnose_memory_player_visibility_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/evaluate_map_aware_dynamics_v0.py",
+    "disposition": "included",
+    "target": "tools/evaluate_map_aware_dynamics_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/evaluate_memory_dense_adapter_base_v1.py",
+    "disposition": "included",
+    "target": "tools/evaluate_memory_dense_adapter_base_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/export_map_aware_rollout_memory_v0.py",
+    "disposition": "included",
+    "target": "tools/export_map_aware_rollout_memory_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/export_memory_dense_dataset_v0.py",
+    "disposition": "included",
+    "target": "tools/export_memory_dense_dataset_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/find_mutual_visible_clip_pairs_v0.py",
+    "disposition": "included",
+    "target": "tools/find_mutual_visible_clip_pairs_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/find_teacher_other_player_candidates_v0.py",
+    "disposition": "included",
+    "target": "tools/find_teacher_other_player_candidates_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/fit_motion_params_v0.py",
+    "disposition": "included",
+    "target": "tools/fit_motion_params_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/gen_tier69h_seed_v0.py",
+    "disposition": "included",
+    "target": "tools/gen_tier69h_seed_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/gen_tier_seed_v2.py",
+    "disposition": "included",
+    "target": "tools/gen_tier_seed_v2.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/gpu_mesh_renderer_v0.py",
+    "disposition": "included",
+    "target": "tools/gpu_mesh_renderer_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/inspect_bsp_static_geometry_v0.py",
+    "disposition": "included",
+    "target": "tools/inspect_bsp_static_geometry_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/interaction_channels_v0.py",
+    "disposition": "included",
+    "target": "tools/interaction_channels_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/build_balanced_manifest_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/build_dense_condition_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/build_map_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/build_mesh_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/calibrate_camera_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/calibrate_player_capsule_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/check_memory_dense_real_wan_noop_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/convert_memory_dense_to_other_player_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/diagnose_action_transition_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/diagnose_player_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/evaluate_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/evaluate_inference_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/evaluate_map_aware_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/export_dynamics_rollout_memory_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/find_enemy_visible_candidates_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/fit_action_velocity_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/fit_player_bbox_scale_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/fit_transition_linear_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/fit_transition_mlp_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/memory_dense_wan_adapter_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/run_map_memory_pipeline_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/run_yitao_bev_v0.py",
+    "disposition": "user-excluded legacy project",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/smoke_memory_dense_adapter_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/smoke_memory_dense_dataloader_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/smoke_memory_dense_wan_fast_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/visualize_memory_vs_teacher_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/legacy/visualize_transition_rollout_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/map_memory_training_data_v0.py",
+    "disposition": "included",
+    "target": "tools/map_memory_training_data_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/materialize_clips_v1.py",
+    "disposition": "included",
+    "target": "tools/materialize_clips_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/materialize_event50h_clips_v1.py",
+    "disposition": "included",
+    "target": "tools/materialize_event50h_clips_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/memory_dense_action_adapter_v0.py",
+    "disposition": "included",
+    "target": "tools/memory_dense_action_adapter_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/memory_dense_interaction_adapter_v1.py",
+    "disposition": "included",
+    "target": "tools/memory_dense_interaction_adapter_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/memory_dense_state_adapter_v0.py",
+    "disposition": "included",
+    "target": "tools/memory_dense_state_adapter_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/memory_dense_wan_adapter_v0.py",
+    "disposition": "included",
+    "target": "tools/memory_dense_wan_adapter_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/multiview_consistency_data_v1.py",
+    "disposition": "included",
+    "target": "tools/multiview_consistency_data_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/qxq_dense_v2_release_manifest_v1.py",
+    "disposition": "included",
+    "target": "tools/qxq_dense_v2_release_manifest_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/qxq_minarea_entry_conflict_v0.py",
+    "disposition": "included",
+    "target": "tools/qxq_minarea_entry_conflict_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/qxq_sample_candidate1_ar_v0.py",
+    "disposition": "included",
+    "target": "tools/qxq_sample_candidate1_ar_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/qxq_sample_valtest_v0.py",
+    "disposition": "included",
+    "target": "tools/qxq_sample_valtest_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/run_dense_v2_gpu_v1.py",
+    "disposition": "included",
+    "target": "tools/run_dense_v2_gpu_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/run_map_memory_70pct_v0.py",
+    "disposition": "included",
+    "target": "tools/run_map_memory_70pct_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/sample_memory_dense_adapter_interaction_eval_v1.py",
+    "disposition": "included",
+    "target": "tools/sample_memory_dense_adapter_interaction_eval_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/sample_memory_dense_adapter_phase2a_qxq_v0.py",
+    "disposition": "included",
+    "target": "tools/sample_memory_dense_adapter_phase2a_qxq_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/sample_memory_dense_adapter_phase2a_v0.py",
+    "disposition": "included",
+    "target": "tools/sample_memory_dense_adapter_phase2a_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/sample_memory_dense_adapter_state_v0.py",
+    "disposition": "included",
+    "target": "tools/sample_memory_dense_adapter_state_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/smoke_memory_dense_action_adapter_v0.py",
+    "disposition": "included",
+    "target": "tools/smoke_memory_dense_action_adapter_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/summarize_memory_dense_dataset_v0.py",
+    "disposition": "included",
+    "target": "tools/summarize_memory_dense_dataset_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/symmvc_v2_score_haware_v1.py",
+    "disposition": "included",
+    "target": "tools/symmvc_v2_score_haware_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/teacher_player_latent_mask_v0.py",
+    "disposition": "included",
+    "target": "tools/teacher_player_latent_mask_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/train_memory_dense_adapter_base_v0.py",
+    "disposition": "included",
+    "target": "tools/train_memory_dense_adapter_base_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/train_memory_dense_adapter_interaction_v1.py",
+    "disposition": "included",
+    "target": "tools/train_memory_dense_adapter_interaction_v1.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/train_memory_dense_adapter_state_v0.py",
+    "disposition": "included",
+    "target": "tools/train_memory_dense_adapter_state_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/train_memory_dense_adapter_v0.py",
+    "disposition": "included",
+    "target": "tools/train_memory_dense_adapter_v0.py"
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/verify_batch_results_20260721_v0.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "xiaoqi/multiview-map-v0-qxq/tools/w4_controlled_sampler_v1.py",
+    "disposition": "included",
+    "target": "tools/w4_controlled_sampler_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/README.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W4_25STEP_GATE_AND_VISUAL_20260718.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W4_50STEP_GATE_VISUAL_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W4_PHASE2_50STEP_LAUNCH_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W5_100STEP_GATE_VISUAL_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W5_EXTENSION_100_TO_200_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W5_EXTENSION_STEP200_GATE_VISUAL_20260720.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W5_LOSS_BALANCED_100STEP_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W5_STEP75_HELDOUT_VISUAL_GATE_20260719.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W6_DIVERSE_POSITIVE_GUARD_20260720.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W7_25_HELDOUT_VISUAL_GATE_20260721.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W7_FORMAL25_AUTHORIZED_20260721.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W7_LORA_INTERPOLATION_RESCUE_20260721.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/TASK_W7_NEGATIVE_SPACE_LORA_SMOKE_ONLY_20260720.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/_provenance/source_commit.txt",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/_provenance/source_status.txt",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_dense_direct_tune_retry1_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_dense_direct_tune_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase3_smoke_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase4_25step_authorization_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase4_25step_from_step4_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase5_visual_probe_realstate_retry1_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase5_visual_probe_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase5a_200step_authorization_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/lingbot_fast_v2_phase5a_200step_from_step29_v0.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w4_phase1_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w4_phase2_50step_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w5_extension_100_to200_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w5_loss_balanced_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w6_diverse_positive_guard_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w7_negative_space_lora_only_formal25_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/configs/w7_negative_space_lora_only_launcher_contract_v1.json",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/docs/lingbot_multiview_v2.html",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/docs/map_memory_plan.html",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/install_dlc_train_deps_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/requirements_dlc_train_v0.txt",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/task_mv_candidate1_multiview_sideA_20260714.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/task_mv_candidate23_multiview_20260714.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/task_mv_daily_tracking_b6_test_20260713.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_lingbot_fast_v2_phase5_visual_probe_realstate_retry1_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_lingbot_fast_v2_phase5_visual_probe_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_run_w3_continuation_authorization_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_verify_w4_25step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w4_controlled_sampler_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w4_freeze_and_launcher_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w4_phase2_50step_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w5_extension_100_to200_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w5_extension_step200_gate_visual_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w5_formal100_gate_and_visual_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w5_loss_balanced_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w5_step75_heldout_visual_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w6_diverse_positive_guard_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w7_25_heldout_visual_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w7_formal25_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w7_lora_interpolation_rescue_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tests/test_w7_negative_space_lora_only_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/README_dynamics.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/README_map_memory.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/build_memory_dense_aligned_cache_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/interaction_channels_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/map_memory_training_data_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/memory_dense_interaction_adapter_v1.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/memory_dense_state_adapter_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/memory_dense_wan_adapter_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/teacher_player_latent_mask_v0.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/__pycache__/w4_controlled_sampler_v1.cpython-312.pyc",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/ar_drift_curve_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/ar_drift_curve_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/audit_lingbot_fast_v2_runtime_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/audit_w3_final_delivery_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/audit_w3_training_schedule_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/benchmark_memory_renderer_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/benchmark_memory_renderer_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_anchor_ft_noised_context_sharded_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_anchor_ft_noised_context_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_balanced_manifest_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_balanced_manifest_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_dense_condition_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_dense_condition_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_episode_memory_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_episode_memory_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_light_dust2_pilot2_source_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_light_dust2_pilot2_source_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_light_dust2_pilot3_source_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_light_dust2_pilot3_source_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_map_memory_large_release_from_candidates_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_map_memory_large_release_from_candidates_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_memory_dense_aligned_cache_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_memory_dense_aligned_cache_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_mesh_dense_condition_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_mesh_dense_condition_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_mesh_projection_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_mesh_projection_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_persistent_window_audit_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_persistent_window_audit_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_state_channels_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_state_channels_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_state_channels_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_state_channels_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_static_memory_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_static_memory_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_symmvc_heldout_verdict_ready_v2.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_tier69h_memorymask_view_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/build_tier69h_memorymask_view_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_w3_zero_exam_contract_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_w3_zero_training_release_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/build_w4_phase_a_audit_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/cache_light_dust2_pilot_latents_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/cache_light_dust2_pilot_latents_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/cache_tier69h_latents_dlc_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/check_episode_memory_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/check_episode_memory_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/check_lingbot_fast_v2_zero_init_parity_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/check_lingbot_fast_v2_zero_init_parity_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/check_map_memory_training_readiness_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/check_map_memory_training_readiness_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/check_memory_dense_manifest_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/check_memory_dense_manifest_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/combine_light_dust2_pilot_dense_shards_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/combine_light_dust2_pilot_dense_shards_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/combine_map_memory_match_releases_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/combine_map_memory_match_releases_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/combine_memory_dense_lingbot_shards_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/combine_memory_dense_lingbot_shards_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/compare_geometry_backends_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/compare_geometry_backends_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/compare_memory_dense_channels_to_teacher_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/compare_memory_dense_channels_to_teacher_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/compare_simulator_memory_dense_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/compare_simulator_memory_dense_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/diagnose_memory_player_visibility_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/diagnose_memory_player_visibility_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/dlc_import_check_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/eval_zero_visibility_hallucination_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/eval_zero_visibility_hallucination_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/evaluate_map_aware_dynamics_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/evaluate_map_aware_dynamics_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/evaluate_map_aware_dynamics_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/evaluate_map_aware_dynamics_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/evaluate_memory_dense_adapter_ablation_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/evaluate_memory_dense_adapter_ablation_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/evaluate_player_dynamics_v2_long_horizon_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/evaluate_player_dynamics_v2_long_horizon_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/export_light_dust2_pilot_dense_from_cache_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/export_light_dust2_pilot_dense_from_cache_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/export_map_aware_rollout_memory_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/export_map_aware_rollout_memory_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/export_memory_dense_dataset_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/export_memory_dense_dataset_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/export_memory_dense_from_lingbot_cache_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/export_memory_dense_from_lingbot_cache_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/finalize_w3_zero_training_inputs_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/find_teacher_other_player_candidates_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/find_teacher_other_player_candidates_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/fit_motion_params_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/fit_motion_params_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/fit_motion_params_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/fit_motion_params_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/gen_tier69h_seed_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/gen_tier69h_seed_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/gpu_hold_placeholder_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/gpu_mesh_renderer_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/gpu_mesh_renderer_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/inspect_bsp_static_geometry_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/inspect_bsp_static_geometry_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/inspect_memory_dense_adapter_checkpoint_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/inspect_memory_dense_adapter_checkpoint_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/interaction_channels_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/interaction_channels_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/known_dense_patterns_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/known_dense_patterns_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/launch_and_verify_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/launch_memory_dense_train_when_ready_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/build_balanced_manifest_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/build_dense_condition_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/build_map_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/build_mesh_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/calibrate_camera_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/calibrate_player_capsule_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/check_memory_dense_real_wan_noop_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/convert_memory_dense_to_other_player_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/diagnose_action_transition_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/diagnose_player_projection_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/evaluate_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/evaluate_inference_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/evaluate_map_aware_dynamics_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/export_dynamics_rollout_memory_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/find_enemy_visible_candidates_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/fit_action_velocity_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/fit_player_bbox_scale_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/fit_transition_linear_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/fit_transition_mlp_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/memory_dense_wan_adapter_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/run_map_memory_pipeline_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/run_yitao_bev_v0.py",
+    "disposition": "user-excluded legacy project",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/smoke_memory_dense_adapter_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/smoke_memory_dense_dataloader_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/smoke_memory_dense_wan_fast_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/visualize_memory_vs_teacher_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/legacy/visualize_transition_rollout_v0.py",
+    "disposition": "unreferenced legacy module",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/lingbot_fast_v2_dense_direct_tune_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/lingbot_fast_v2_dense_direct_tune_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/lingbot_fast_v2_injection_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/lingbot_fast_v2_injection_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/lingbot_fast_v2_parity_fixture_v0.json",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/lingbot_fast_v2_parity_fixture_v0.json"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/lingbot_fast_v2_phase3_conditioning_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/lingbot_fast_v2_phase3_conditioning_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/lingbot_fast_v2_runtime_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/lingbot_fast_v2_runtime_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/map_memory_training_data_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/map_memory_training_data_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/memory_dense_interaction_adapter_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/memory_dense_interaction_adapter_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/memory_dense_state_adapter_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/memory_dense_state_adapter_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/memory_dense_wan_adapter_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/memory_dense_wan_adapter_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/migrate_lingbot_fast_v2_phase3_checkpoint_canonical_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/migrate_lingbot_fast_v2_phase3_checkpoint_canonical_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mine_scene_covis_pairs_v3.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mine_strong_covis_pairs_heldout_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/mine_strong_covis_pairs_heldout_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mine_strong_covis_pairs_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/mine_strong_covis_pairs_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mine_zero_visibility_windows_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/mine_zero_visibility_windows_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mutual_observation_harness_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/mutual_observation_harness_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_dlc_l20x_turnkey_recipe_v0.md",
+    "disposition": "historical documentation, configuration, or generated artifact",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_dlc_submit_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_train_watchdog_dsw2_high_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_train_watchdog_loop_dsw2_high_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_train_watchdog_loop_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/mv_train_watchdog_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_best_of_frozen_empty_demo_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_clean_unlabeled_reels_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_clean_unlabeled_video_pack_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_dynamics_inference_suite_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_ext15_checkpoint_comparison_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_ext15_pairs_checkpoint_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_ext15_pairs_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_lingbot_final_hybrid_demo_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_lingbot_final_hybrid_demo_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_lingbot_final_hybrid_demo_v2.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_lingbot_final_hybrid_demo_v3.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_w5_step75_curated_demo_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/package_zero_exam_checkpoint_comparison_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/paired_significance_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/paired_significance_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/prepare_zero_visibility_render_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/prepare_zero_visibility_render_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/print_w5_extension_paired_commands_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/print_w5_paired_commands_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/probe_v2_path.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/qxq_sample_candidate1_ar_anchor_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_anchor_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/qxq_sample_candidate1_ar_hg_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_hg_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/qxq_sample_candidate1_ar_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_dynamics_inference_demo_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_dynamics_inference_demo_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_dynamics_v3_rollout_dlc_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_dense_direct_tune_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_phase3_distributed_selftest_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_phase3_smoke_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase3_smoke_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_phase4_25step_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase4_25step_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_phase5_visual_probe_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_phase5a_200step_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase5a_200step_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_lingbot_fast_v2_zero_init_parity_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_zero_init_parity_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_map_memory_70pct_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_map_memory_70pct_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_map_memory_multi_episode_bsp_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_map_memory_multi_episode_bsp_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_memory_dense_lingbot_training_prep_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_memory_dense_lingbot_training_prep_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_multiscene_10ego_demo_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_multiscene_10ego_demo_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_multiscene_10ego_worker_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_multiscene_10ego_worker_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_native_dynamics_10view_10s_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_native_dynamics_10view_10s_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_srcds_inference_rollout_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/run_srcds_inference_rollout_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_continuation_expert_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_dual_expert_smoke_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_10ego_watcher_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_exam_watcher_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_ext15_node_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_ext15_package_watcher_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_quality_watcher_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_plus300_zero_exam_comparison_watcher_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_post_smoke_visual_probe_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_zero_exam_checkpoint_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w3_zero_exam_step8500_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w4_phase1_contract_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w4_phase2_50step_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w4_probe25_visual_parity_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w4_probe50_visual_parity_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_extension_100_to200_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_extension_visual_curve_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_extension_visual_watcher_20260720.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_formal_visual_parity_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_loss_balanced_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_step75_heldout_16win_20260720.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w5_visual_remaining_watcher_20260719.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w6_diverse_positive_guard_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w6_interpolation_rescue_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w7_formal25_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w7_heldout_host_shard_20260721.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w7_interp_host_shard_20260721.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w7_lora_interpolation_rescue_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/run_w7_negative_space_lora_only_contract_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/sample_memory_dense_adapter_phase2a_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/sample_memory_dense_adapter_phase2a_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/sample_memory_dense_adapter_state_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/sample_memory_dense_adapter_state_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/scan_tier69h_raw_presence_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/select_w2_valid_eval_windows_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/select_zero_visibility_exam_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/select_zero_visibility_exam_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/smoke_memory_seam_helpers_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/smoke_memory_seam_helpers_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/structure_adherence_score_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/structure_adherence_score_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/summarize_memory_dense_dataset_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/summarize_memory_dense_dataset_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/summarize_memory_dense_training_prep_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/summarize_memory_dense_training_prep_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/symmvc_v2_score_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/symmvc_v2_score_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/teacher_player_latent_mask_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/teacher_player_latent_mask_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_dense_token_alignment_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_dense_token_alignment_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_dense_direct_tune_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_dense_direct_tune_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_phase2_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase2_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_phase3_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase3_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_phase4_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase4_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_phase5a_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase5a_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_lingbot_fast_v2_runtime_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_runtime_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_run_multiscene_10ego_demo_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/test_run_multiscene_10ego_demo_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/test_verify_w4_50step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_memory_dense_adapter_interaction_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_memory_dense_adapter_interaction_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_memory_dense_adapter_state_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_memory_dense_adapter_state_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_memory_dense_adapter_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_memory_dense_adapter_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_player_dynamics_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_player_dynamics_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_player_dynamics_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_player_dynamics_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_player_dynamics_v2.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_player_dynamics_v2.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/train_player_dynamics_v3_rollout_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/train_player_dynamics_v3_rollout_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w4_25step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w4_50step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w4_smoke_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w5_100step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w5_extension_smoke_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w5_extension_step200_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w5_smoke_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w6_25step_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w6_smoke_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w7_formal25_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/verify_w7_smoke_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w3_zero_dense_retry_47_shards_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w3_zero_finalize_watch_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w3_zero_render_watch_v0.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w4_controlled_sampler_v1.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/w4_controlled_sampler_v1.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w5_step75_heldout_visual_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w6_25_heldout_visual_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/w7_25_heldout_visual_gate_v1.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/wan_history_guidance_patch_v0.py",
+    "disposition": "included",
+    "target": "pipelines/scene_rollout/tools/wan_history_guidance_patch_v0.py"
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/watch_w7_heldout_visual_gate_20260721.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/watch_w7_interp_rescue_20260721.sh",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/write_w3_final_demo_human_gate_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  },
+  {
+    "source_path": "zhengqi/multiview-map-v0/code_interaction_v1_20260731_v0/tools/write_w3_visual_probe_human_gate_v0.py",
+    "disposition": "fixed experiment orchestration / presentation / scratch",
+    "target": null
+  }
+]

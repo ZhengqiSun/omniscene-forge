@@ -1,0 +1,10 @@
+[project]
+name = "multi-views-lingbot-clean"
+version = "0.1.0"
+description = "Multiview world generation: data, geometry, conditioning, training, rollout and evaluation"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "baselines/lingbot_cam/tests", "baselines/scope/tests", "pipelines/scene_rollout/tools/test_run_multiscene_10ego_demo_v1.py"]
+addopts = "--import-mode=importlib"
+pythonpath = [".", "tools", "vendor/lingbot"]

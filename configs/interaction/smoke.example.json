@@ -1,0 +1,40 @@
+{
+  "args": {
+    "map-manifest": "../../assets/prepared/tier69h/map_manifest.json",
+    "cache-manifest": "../../assets/prepared/tier69h/cache_manifest.jsonl",
+    "state-cache-manifest": "../../assets/state/state_cache_manifest_v1.jsonl",
+    "ckpt-dir": "../../assets/lingbot-world-base-cam",
+    "resume-from": "../../assets/checkpoints/memory_dense_adapter_step_008500.pt",
+    "out-dir": "../../runs/smoke",
+    "dense-condition-encoder": "frozen_vae",
+    "dense-hw": [
+      240,
+      416
+    ],
+    "dense-resize-mode": "bilinear",
+    "cond-dim": 128,
+    "adapter-hidden-dim": 512,
+    "precision": "bf16",
+    "use-base-model": true,
+    "base-expert": "low",
+    "activation-checkpoint-blocks": true,
+    "activation-checkpoint-adapter": true,
+    "negative-contrast-weight": 0,
+    "lora-rank": 64,
+    "lora-targets": "attn,mlp",
+    "lora-lr": 5e-06,
+    "lr": 5e-05,
+    "grad-accum": 1,
+    "max-steps": 1,
+    "save-every": 1,
+    "log-every": 1,
+    "reset-optimizer": true,
+    "split-key": "match",
+    "train-split": "train",
+    "require-release-report": false,
+    "seed": 20260912
+  },
+  "distributed": {
+    "nproc_per_node": 1
+  }
+}

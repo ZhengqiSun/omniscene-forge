@@ -1,0 +1,17 @@
+{
+  "args": {
+    "pair": [
+      [
+        "tier69h",
+        "../../assets/prepared/tier69h/map_manifest.json",
+        "../../assets/prepared/tier69h/cache_manifest.jsonl"
+      ]
+    ],
+    "state-cache-manifest": "../../assets/state/state_cache_manifest_v1.jsonl",
+    "splits": [
+      "val",
+      "test"
+    ],
+    "out": "../../runs/eval/subset.jsonl"
+  }
+}

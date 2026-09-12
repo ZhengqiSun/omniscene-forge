@@ -1,0 +1,1613 @@
+{
+  "source_commit": "b61bd38007eb1bc87214989c83760a9e02d75bc5",
+  "files": [
+    {
+      "path": "vendor/lingbot/LICENSE.txt",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "clean_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/generate.py",
+      "source_sha256": "627817b9878a11e895c351cad7fdaf412e26550e72e82b4e32fd2ab29679accf",
+      "clean_sha256": "627817b9878a11e895c351cad7fdaf412e26550e72e82b4e32fd2ab29679accf",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/generate_fast.py",
+      "source_sha256": "a944530a897728ac4f1697a2b754f0f753e41661dd42715e83540ddf0232b339",
+      "clean_sha256": "a944530a897728ac4f1697a2b754f0f753e41661dd42715e83540ddf0232b339",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/__init__.py",
+      "source_sha256": "d8cd0e69ebfae2473db5f3e39b415da0075f73b166836b8621be170ffb4f2dd2",
+      "clean_sha256": "d8cd0e69ebfae2473db5f3e39b415da0075f73b166836b8621be170ffb4f2dd2",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/configs/__init__.py",
+      "source_sha256": "44668265e5a5844379ed83094c07d193c678cc40a8a3c453556c260490c0010a",
+      "clean_sha256": "44668265e5a5844379ed83094c07d193c678cc40a8a3c453556c260490c0010a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/configs/shared_config.py",
+      "source_sha256": "891a6e82d9c6520e6308f9f7b11080836ea03ca7b776d2c2c75d111d2cd593cc",
+      "clean_sha256": "891a6e82d9c6520e6308f9f7b11080836ea03ca7b776d2c2c75d111d2cd593cc",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/configs/wan_i2v_A14B.py",
+      "source_sha256": "907f49c0cd4b489d98e6dc0f12956e83f3338a584ec5cdeb07440d7530d3bd65",
+      "clean_sha256": "907f49c0cd4b489d98e6dc0f12956e83f3338a584ec5cdeb07440d7530d3bd65",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/distributed/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "clean_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/distributed/fsdp.py",
+      "source_sha256": "016d0216047edc9626e6728c7bb172a6d1038e2b5555c577de10ce43a9990b45",
+      "clean_sha256": "016d0216047edc9626e6728c7bb172a6d1038e2b5555c577de10ce43a9990b45",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/distributed/sequence_parallel.py",
+      "source_sha256": "a383a7f103175f7aa44bb16ee6c075a1f155f19c1b316891bfd2e29f4ea7102f",
+      "clean_sha256": "a383a7f103175f7aa44bb16ee6c075a1f155f19c1b316891bfd2e29f4ea7102f",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/distributed/ulysses.py",
+      "source_sha256": "d5f2ac64ee202b47d612cae1f4fa715c8930fb87b18c04a206ce25028e3df9a3",
+      "clean_sha256": "d5f2ac64ee202b47d612cae1f4fa715c8930fb87b18c04a206ce25028e3df9a3",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/distributed/util.py",
+      "source_sha256": "002321d89bd5b81285b598d78eb2a0c96822dfda8fce0949b5ae931a1bc9a97a",
+      "clean_sha256": "002321d89bd5b81285b598d78eb2a0c96822dfda8fce0949b5ae931a1bc9a97a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/image2video.py",
+      "source_sha256": "e7d374092ef1a0ecb7e2174a275673417467fe24f9dc9789429396fa9d8b27c8",
+      "clean_sha256": "e7d374092ef1a0ecb7e2174a275673417467fe24f9dc9789429396fa9d8b27c8",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/image2video_fast.py",
+      "source_sha256": "b2b6f94ab0403c238eb3914bd68c9b392d2573b9dfb9ce1b50610f49f26bd0b2",
+      "clean_sha256": "b2b6f94ab0403c238eb3914bd68c9b392d2573b9dfb9ce1b50610f49f26bd0b2",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/__init__.py",
+      "source_sha256": "f2dc8616538b71774fe4cbcfab7dc1cd0e3d4a6432f13a697b66aff7b96797af",
+      "clean_sha256": "f2dc8616538b71774fe4cbcfab7dc1cd0e3d4a6432f13a697b66aff7b96797af",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/__init__.py",
+      "source_sha256": "015d31db0656861fdf36c29b51b46d6f0b7de08c82aae1e334b2c249dbcb70bb",
+      "clean_sha256": "015d31db0656861fdf36c29b51b46d6f0b7de08c82aae1e334b2c249dbcb70bb",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/animate_utils.py",
+      "source_sha256": "289e0a162faef9f7d1b00cc33c59e8ef5253bcc1d1102cba4b46934e4f946ffb",
+      "clean_sha256": "289e0a162faef9f7d1b00cc33c59e8ef5253bcc1d1102cba4b46934e4f946ffb",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/clip.py",
+      "source_sha256": "b95b67bd4219f07e2d10bd4785f089d4eadaeee7fd7e4a1493cba8e54d4d65a2",
+      "clean_sha256": "b95b67bd4219f07e2d10bd4785f089d4eadaeee7fd7e4a1493cba8e54d4d65a2",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/face_blocks.py",
+      "source_sha256": "fd7ca22c4c064ec6f8c462a47c053b3d82d219ce9d19225027299196d1554305",
+      "clean_sha256": "fd7ca22c4c064ec6f8c462a47c053b3d82d219ce9d19225027299196d1554305",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/model_animate.py",
+      "source_sha256": "664a0b01bd6d7a6be8f9e3cbc373d2c81328ad13b12ba3bcef9470c57c561056",
+      "clean_sha256": "664a0b01bd6d7a6be8f9e3cbc373d2c81328ad13b12ba3bcef9470c57c561056",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/motion_encoder.py",
+      "source_sha256": "22059a2050f4e1ef620229d28a14b76e489fd09ecf9abb20e81b0888a17ec93a",
+      "clean_sha256": "22059a2050f4e1ef620229d28a14b76e489fd09ecf9abb20e81b0888a17ec93a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/__init__.py",
+      "source_sha256": "23a057d57223eef2859033bc042254e1e75ab3b56fa644a9d3f424e207bec5cb",
+      "clean_sha256": "23a057d57223eef2859033bc042254e1e75ab3b56fa644a9d3f424e207bec5cb",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/human_visualization.py",
+      "source_sha256": "0f9032cb4cf0f5f744ee0c014177cfc78b800220f5f95db7599a11a14df479a0",
+      "clean_sha256": "0f9032cb4cf0f5f744ee0c014177cfc78b800220f5f95db7599a11a14df479a0",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/pose2d.py",
+      "source_sha256": "94a3370701375f3c93fc5788418b2a0cea45cc779c2dcb5b85086ecf8f5ebf90",
+      "clean_sha256": "94a3370701375f3c93fc5788418b2a0cea45cc779c2dcb5b85086ecf8f5ebf90",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/pose2d_utils.py",
+      "source_sha256": "2720a191721ea2a0e61d0a28087d244d18bda3760efdfd4f62a54532a0de264f",
+      "clean_sha256": "2720a191721ea2a0e61d0a28087d244d18bda3760efdfd4f62a54532a0de264f",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/preprocess_data.py",
+      "source_sha256": "a8a3065c386c565b05c83c167f3fc3b45ec22bb9f401c2199fdf352967d73720",
+      "clean_sha256": "a8a3065c386c565b05c83c167f3fc3b45ec22bb9f401c2199fdf352967d73720",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/process_pipepline.py",
+      "source_sha256": "bd2b26de901a053157e46c17d8bc25a0918707c4efbe968a9ace137e522218f6",
+      "clean_sha256": "bd2b26de901a053157e46c17d8bc25a0918707c4efbe968a9ace137e522218f6",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/retarget_pose.py",
+      "source_sha256": "56cd3416414b6ec002b27cbfada3b1c5ee4b35b32b145cf65de810d9ac15973c",
+      "clean_sha256": "56cd3416414b6ec002b27cbfada3b1c5ee4b35b32b145cf65de810d9ac15973c",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/sam_utils.py",
+      "source_sha256": "97d389115290a10ed30ed53fbacec8c33ea0719a1bc9f7e354b65c680294311c",
+      "clean_sha256": "97d389115290a10ed30ed53fbacec8c33ea0719a1bc9f7e354b65c680294311c",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/utils.py",
+      "source_sha256": "68b21f752fb2236c4d14f247eb25af8b3b164f83682eb48aecc6629ad77e68f4",
+      "clean_sha256": "68b21f752fb2236c4d14f247eb25af8b3b164f83682eb48aecc6629ad77e68f4",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/preprocess/video_predictor.py",
+      "source_sha256": "c8f8857d1dbf0025a8b4260c164ed3fd8ddae5a58369e625c7fa9ee351973659",
+      "clean_sha256": "c8f8857d1dbf0025a8b4260c164ed3fd8ddae5a58369e625c7fa9ee351973659",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/animate/xlm_roberta.py",
+      "source_sha256": "74f4e53c7f2ca46f64420edc4b5096a7d2e1971d89163eab5f392be7f29de4d2",
+      "clean_sha256": "74f4e53c7f2ca46f64420edc4b5096a7d2e1971d89163eab5f392be7f29de4d2",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/attention.py",
+      "source_sha256": "2662379e0e60f813315a238a4952f68f2b7cfa5da09ad785d2e7f5bc5d58a67a",
+      "clean_sha256": "2662379e0e60f813315a238a4952f68f2b7cfa5da09ad785d2e7f5bc5d58a67a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/model.py",
+      "source_sha256": "07853562ec82d6babc34dd07b9337ccb6b93ad188a629f2feb92e87b35bfe6d6",
+      "clean_sha256": "07853562ec82d6babc34dd07b9337ccb6b93ad188a629f2feb92e87b35bfe6d6",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/model_fast.py",
+      "source_sha256": "bf0d83f471ebfa993094d5982ae77098c9e1706f1a803bbf101dcf75305a3683",
+      "clean_sha256": "bf0d83f471ebfa993094d5982ae77098c9e1706f1a803bbf101dcf75305a3683",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/__init__.py",
+      "source_sha256": "bde1d3a8565d9a39f0365954d9a70731a4afefae2732ac9dde155e8b8120e971",
+      "clean_sha256": "bde1d3a8565d9a39f0365954d9a70731a4afefae2732ac9dde155e8b8120e971",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/audio_encoder.py",
+      "source_sha256": "905a37f3df8fe8a98f0ef249a413a8e9d4003c64174c26b8bcd944240e312520",
+      "clean_sha256": "905a37f3df8fe8a98f0ef249a413a8e9d4003c64174c26b8bcd944240e312520",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/audio_utils.py",
+      "source_sha256": "82bc02dd8ba9095b733966c296c4e9e3d21e8bfbbfa5c024aa8209542637feda",
+      "clean_sha256": "82bc02dd8ba9095b733966c296c4e9e3d21e8bfbbfa5c024aa8209542637feda",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/auxi_blocks.py",
+      "source_sha256": "2e41f8fe7ae9af9ae0a1e1fac6e8d15d2c4819194998a9ce00cc7d2725433b9f",
+      "clean_sha256": "2e41f8fe7ae9af9ae0a1e1fac6e8d15d2c4819194998a9ce00cc7d2725433b9f",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/model_s2v.py",
+      "source_sha256": "bf1668ea7bd01412942ae589cbe9d6d4a40f2fee833e9d6bbebbdeda2eeff2ef",
+      "clean_sha256": "bf1668ea7bd01412942ae589cbe9d6d4a40f2fee833e9d6bbebbdeda2eeff2ef",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/motioner.py",
+      "source_sha256": "ae1ea45c56a7f7f792e0c55a36be1bc2a2b2336c874199003dcd307654e2f7de",
+      "clean_sha256": "ae1ea45c56a7f7f792e0c55a36be1bc2a2b2336c874199003dcd307654e2f7de",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/s2v/s2v_utils.py",
+      "source_sha256": "fd6edd576d499baad9315541e25161339c580bdf6940ca53cace7dfc62701cc1",
+      "clean_sha256": "fd6edd576d499baad9315541e25161339c580bdf6940ca53cace7dfc62701cc1",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/t5.py",
+      "source_sha256": "d98ba202ea8c2ee520fed7232dbfff310d73a70ca1c280e0dc49130041b0fa9d",
+      "clean_sha256": "b56481403db95618e75fe07b0ceb6e4d04d877c589e204aa481d2ef54ca946c2",
+      "modified": true
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/tokenizers.py",
+      "source_sha256": "c6f8eb124058a26182bd22fc48484384aba67d299a07241cb2ef2bb3065f953a",
+      "clean_sha256": "c6f8eb124058a26182bd22fc48484384aba67d299a07241cb2ef2bb3065f953a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/vae2_1.py",
+      "source_sha256": "7b8134a4b6497aea0f2c0ca492c3550b6a1cecc1a23d63c421c876ef8d976a2f",
+      "clean_sha256": "7b8134a4b6497aea0f2c0ca492c3550b6a1cecc1a23d63c421c876ef8d976a2f",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/modules/vae2_2.py",
+      "source_sha256": "985a43d76863bddeda454c6818c9370458bca3b3c79272dce89954bd46661a55",
+      "clean_sha256": "985a43d76863bddeda454c6818c9370458bca3b3c79272dce89954bd46661a55",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/__init__.py",
+      "source_sha256": "046308907139c69026bcd2699038c62abb5dd04e9bc57ca6b6ad15250b1a6da7",
+      "clean_sha256": "046308907139c69026bcd2699038c62abb5dd04e9bc57ca6b6ad15250b1a6da7",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/cam_utils.py",
+      "source_sha256": "1e28699c959ad04f6e9b32f61eb6557ba0d95ea0bb2b588b5a047b5a36e30590",
+      "clean_sha256": "1e28699c959ad04f6e9b32f61eb6557ba0d95ea0bb2b588b5a047b5a36e30590",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/fm_solvers.py",
+      "source_sha256": "37350e31d43ab391520944354e0130a7637f603ec80948f5acd38d21ff7bc1d3",
+      "clean_sha256": "37350e31d43ab391520944354e0130a7637f603ec80948f5acd38d21ff7bc1d3",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/fm_solvers_unipc.py",
+      "source_sha256": "ebb600f3a892ba5afe7ab223487bf62d22490d1d6da43af2101f3cb93bff224a",
+      "clean_sha256": "ebb600f3a892ba5afe7ab223487bf62d22490d1d6da43af2101f3cb93bff224a",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/qwen_vl_utils.py",
+      "source_sha256": "e4ad56af72c42e0da445891565d66b25836881acc7f21d1e63bb2cf1f346f6af",
+      "clean_sha256": "e4ad56af72c42e0da445891565d66b25836881acc7f21d1e63bb2cf1f346f6af",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/system_prompt.py",
+      "source_sha256": "3fe103dc2db1967bc59f511e1ec1880b915ba4b59599f8378ee67be77f7616a4",
+      "clean_sha256": "3fe103dc2db1967bc59f511e1ec1880b915ba4b59599f8378ee67be77f7616a4",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/utils.py",
+      "source_sha256": "7b31ee431132749df3a65cd0448b20a7d18a9eb9d9758041dbe7a36cbc1d66e4",
+      "clean_sha256": "7b31ee431132749df3a65cd0448b20a7d18a9eb9d9758041dbe7a36cbc1d66e4",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/vis_utils.py",
+      "source_sha256": "03a88d621b4c2890a6d85e23631fc602d1650eac71c12fdd34df64891f96b90e",
+      "clean_sha256": "03a88d621b4c2890a6d85e23631fc602d1650eac71c12fdd34df64891f96b90e",
+      "modified": false
+    },
+    {
+      "path": "vendor/lingbot/wan/utils/wasd_ijkl_to_c2ws.py",
+      "source_sha256": "8f025f3d60dbbc5b96ca16a119fef25ff254db352be010ebee0b921e63de4838",
+      "clean_sha256": "8f025f3d60dbbc5b96ca16a119fef25ff254db352be010ebee0b921e63de4838",
+      "modified": false
+    },
+    {
+      "path": "baselines/__init__.py",
+      "source_sha256": "a53815ce6cc83b3f49922382f15bfa04b2c683d243de55a744a4755d9b3b11e4",
+      "clean_sha256": "a53815ce6cc83b3f49922382f15bfa04b2c683d243de55a744a4755d9b3b11e4",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/__init__.py",
+      "source_sha256": "ed0a713ab8b8dd4665ce01f6211911423e0c302fcd79241721cb947bdb8c4c4d",
+      "clean_sha256": "ed0a713ab8b8dd4665ce01f6211911423e0c302fcd79241721cb947bdb8c4c4d",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/camera.py",
+      "source_sha256": "b6fab7624e8a6cf983b40fc48a6aadf610dc70c8371cf2a8b0508248a741b91c",
+      "clean_sha256": "b6fab7624e8a6cf983b40fc48a6aadf610dc70c8371cf2a8b0508248a741b91c",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/checkpoint.py",
+      "source_sha256": "8e098431c96eb3bc1575336871770168b65fd6a42fe4a3355bec81c34101e9c4",
+      "clean_sha256": "8e098431c96eb3bc1575336871770168b65fd6a42fe4a3355bec81c34101e9c4",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/infer.py",
+      "source_sha256": "158e1ff5750f1549e619dce490b95193b08fcea2a0c605a1046a303cc6da99b5",
+      "clean_sha256": "ffcd99af68053caf195ba219c2544485fe95ff940110acc867195c6659c60b5c",
+      "modified": true
+    },
+    {
+      "path": "baselines/lingbot_cam/lora.py",
+      "source_sha256": "b32927ca8ca51a01d7fd4f84ce0156dd3a93a93b336b33ee295e4341837cf562",
+      "clean_sha256": "b32927ca8ca51a01d7fd4f84ce0156dd3a93a93b336b33ee295e4341837cf562",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/media.py",
+      "source_sha256": "a6239c96ced5e8384861ab9e2a94068967845d38c0addcdbcac5da119b2cdb65",
+      "clean_sha256": "a6239c96ced5e8384861ab9e2a94068967845d38c0addcdbcac5da119b2cdb65",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/pair_checkpoint.py",
+      "source_sha256": "8e8032c2c7508a901ae1e0ba428b420a68f41cb7b9e46c64d138f8867089d63b",
+      "clean_sha256": "8e8032c2c7508a901ae1e0ba428b420a68f41cb7b9e46c64d138f8867089d63b",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/schema.py",
+      "source_sha256": "102761e273c0f0861a2f25e1efc7b82ec44acd45415bcb7c5cda6aa4bdf6c13e",
+      "clean_sha256": "102761e273c0f0861a2f25e1efc7b82ec44acd45415bcb7c5cda6aa4bdf6c13e",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/tests/test_checkpoint.py",
+      "source_sha256": "92ac8d2c5d02667ea1fd395a94a18c198bbbc071b0e568becd05860a442948d8",
+      "clean_sha256": "92ac8d2c5d02667ea1fd395a94a18c198bbbc071b0e568becd05860a442948d8",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/tests/test_lora.py",
+      "source_sha256": "a731a21198ccf911c5f2b0382c17e8ebc94d4f06385a2c3fad2c87153555efdb",
+      "clean_sha256": "a731a21198ccf911c5f2b0382c17e8ebc94d4f06385a2c3fad2c87153555efdb",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/tests/test_media.py",
+      "source_sha256": "e024da533db7701169447e6835e4ec96026c8bd05e6a854a7b0e0ee6ef4bfe72",
+      "clean_sha256": "e024da533db7701169447e6835e4ec96026c8bd05e6a854a7b0e0ee6ef4bfe72",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/tests/test_schema.py",
+      "source_sha256": "6b15ff90e3577a87670f4c928ecde9b14449d754c8f053ca984050550917e116",
+      "clean_sha256": "6b15ff90e3577a87670f4c928ecde9b14449d754c8f053ca984050550917e116",
+      "modified": false
+    },
+    {
+      "path": "baselines/lingbot_cam/train.py",
+      "source_sha256": "3a168aedd599f1f02aef593ad863df81f765374048873a50b762ce9966874428",
+      "clean_sha256": "7a80f460e639409b11f2ba44e7e8d36fbbe77666c3b9d7d250db79b14247b629",
+      "modified": true
+    },
+    {
+      "path": "baselines/lingbot_cam/validate_manifest.py",
+      "source_sha256": "fa347d0a54a45a1cd574717298c8563d2d775441e6325ca4d8bdb123081fdd6d",
+      "clean_sha256": "fa347d0a54a45a1cd574717298c8563d2d775441e6325ca4d8bdb123081fdd6d",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/SCOPE_INTERFACE_SPEC.md",
+      "source_sha256": "cb5bb5c1de6412180d5095e8cb5b87853f2160ea5a4f2b68f1770dda42e68be8",
+      "clean_sha256": "cb5bb5c1de6412180d5095e8cb5b87853f2160ea5a4f2b68f1770dda42e68be8",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/actions/__init__.py",
+      "source_sha256": "1420163b7108cb05a578b2cf9bb686f7ffad92cd8801e69c574b7d1fce199d41",
+      "clean_sha256": "1420163b7108cb05a578b2cf9bb686f7ffad92cd8801e69c574b7d1fce199d41",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/actions/calibrate_mouse.py",
+      "source_sha256": "8a48e3ae1a752657a9f16766a528a49ea96f6c91ae44f85f7414aa239c8bdf2c",
+      "clean_sha256": "8a48e3ae1a752657a9f16766a528a49ea96f6c91ae44f85f7414aa239c8bdf2c",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/actions/convert_csgo_to_scope.py",
+      "source_sha256": "cba06338a260d870e54a8cba9c16c58e767f722b3332bcca4e7105ec28cae2a8",
+      "clean_sha256": "cba06338a260d870e54a8cba9c16c58e767f722b3332bcca4e7105ec28cae2a8",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/actions/resample_actions.py",
+      "source_sha256": "b8a5d031cab085b55b1f1642064d92c00d5c148e455c082fa25eec71b9a0ff8b",
+      "clean_sha256": "b8a5d031cab085b55b1f1642064d92c00d5c148e455c082fa25eec71b9a0ff8b",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/actions/validate_scope_parquet.py",
+      "source_sha256": "87c200cab35a935a04f8261a39ba729e998ee010f82047b10fae09f67536fe01",
+      "clean_sha256": "87c200cab35a935a04f8261a39ba729e998ee010f82047b10fae09f67536fe01",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/infer.py",
+      "source_sha256": "cea79500da626a626477000ef5c2f8e4f4e78a88efe94bbbf9538e8c03128861",
+      "clean_sha256": "cea79500da626a626477000ef5c2f8e4f4e78a88efe94bbbf9538e8c03128861",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/normalize_output.py",
+      "source_sha256": "9b098f65c670c29b54acff71cddc721ee7cc5f976bbce7593a2652d32afeadaf",
+      "clean_sha256": "9b098f65c670c29b54acff71cddc721ee7cc5f976bbce7593a2652d32afeadaf",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/__init__.py",
+      "source_sha256": "4ea11ae299b04124228424c3d0eda40ba454a21809c1e881185fd010b77313d5",
+      "clean_sha256": "4ea11ae299b04124228424c3d0eda40ba454a21809c1e881185fd010b77313d5",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/checkpoint.py",
+      "source_sha256": "3a51ed6e67170662213d3b206083b202e96881b4b0cb4897735ff24bc7f8947c",
+      "clean_sha256": "3a51ed6e67170662213d3b206083b202e96881b4b0cb4897735ff24bc7f8947c",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/dataset.py",
+      "source_sha256": "ae3cc9f55ae1c2f89a14dcd4d43b86542f4235bc1c29c4ed085e13fbdf21cf44",
+      "clean_sha256": "ae3cc9f55ae1c2f89a14dcd4d43b86542f4235bc1c29c4ed085e13fbdf21cf44",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/flow_matching.py",
+      "source_sha256": "dac52c1afe7d69a387c21c3cf431ac476547e71e9229b55390fe2a238c9ba12b",
+      "clean_sha256": "dac52c1afe7d69a387c21c3cf431ac476547e71e9229b55390fe2a238c9ba12b",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/model_loader.py",
+      "source_sha256": "f398b44a7923e892d1379860821c20269da8965e0a2c279f3cc8eaadcf439367",
+      "clean_sha256": "f398b44a7923e892d1379860821c20269da8965e0a2c279f3cc8eaadcf439367",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/scope_bridge/schema.py",
+      "source_sha256": "1b9d88f7d6f9accfb3fe91bfb47b281a3f2b2e954beaec5f896bb4d5129911ea",
+      "clean_sha256": "1b9d88f7d6f9accfb3fe91bfb47b281a3f2b2e954beaec5f896bb4d5129911ea",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/tests/test_actions.py",
+      "source_sha256": "8b0a3c2728ab608a76390170e5f91a006619192fcebf0460d6724a4503ba76fc",
+      "clean_sha256": "8b0a3c2728ab608a76390170e5f91a006619192fcebf0460d6724a4503ba76fc",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/tests/test_checkpoint.py",
+      "source_sha256": "7e3cd9eb14216eb7e738a16cd55691834b494775def7b1876316572354a14f1d",
+      "clean_sha256": "7e3cd9eb14216eb7e738a16cd55691834b494775def7b1876316572354a14f1d",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/tests/test_flow_matching.py",
+      "source_sha256": "471bfee5b2516051fbdf4c3d6d7789b6417a125a737cac52e0faafe6cd9d460a",
+      "clean_sha256": "471bfee5b2516051fbdf4c3d6d7789b6417a125a737cac52e0faafe6cd9d460a",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/tests/test_model_boundary.py",
+      "source_sha256": "32c1f45191cd124c89d72d7a955f9a44178162c5261f212ca9f83f66c2a6915f",
+      "clean_sha256": "32c1f45191cd124c89d72d7a955f9a44178162c5261f212ca9f83f66c2a6915f",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/tests/test_schema.py",
+      "source_sha256": "6fd66ab490d1eb46209d673823b244832be3ca7673800e8b5c5497dccfa9d0bc",
+      "clean_sha256": "6fd66ab490d1eb46209d673823b244832be3ca7673800e8b5c5497dccfa9d0bc",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/train.py",
+      "source_sha256": "243e1ab3a09f870c3bd45e51bfb1dfa936a4d92085b998acc46a195f53f22153",
+      "clean_sha256": "243e1ab3a09f870c3bd45e51bfb1dfa936a4d92085b998acc46a195f53f22153",
+      "modified": false
+    },
+    {
+      "path": "baselines/scope/validate_manifest.py",
+      "source_sha256": "d037f23914062688e4e2ddce00d87bc82c34a9663e2fd9ccc0d80327ad9a8030",
+      "clean_sha256": "d037f23914062688e4e2ddce00d87bc82c34a9663e2fd9ccc0d80327ad9a8030",
+      "modified": false
+    },
+    {
+      "path": "tools/analyze_ablation_eval_rows_v0.py",
+      "source_sha256": "577cee3f0571bbe20b0e45946b187a83426b33ce42afff1973bf355c10482994",
+      "clean_sha256": "577cee3f0571bbe20b0e45946b187a83426b33ce42afff1973bf355c10482994",
+      "modified": false
+    },
+    {
+      "path": "tools/audit_interaction_supervision_v0.py",
+      "source_sha256": "f94c53688dbb93afbec67121357a510181461dc666b8caa0ad7aed3c927bd8de",
+      "clean_sha256": "f94c53688dbb93afbec67121357a510181461dc666b8caa0ad7aed3c927bd8de",
+      "modified": false
+    },
+    {
+      "path": "tools/benchmark_memory_renderer_v0.py",
+      "source_sha256": "d2391b8da535e909da541203e36ad6f418d1774a1a93d75cc0fa3db423cce43b",
+      "clean_sha256": "d2391b8da535e909da541203e36ad6f418d1774a1a93d75cc0fa3db423cce43b",
+      "modified": false
+    },
+    {
+      "path": "tools/build_ar_gen_source_manifest_v1.py",
+      "source_sha256": "2ef43b4a4c2eaad5d0c03c80461d83ed1e6f3594a4d69a679dec809342aa1361",
+      "clean_sha256": "2ef43b4a4c2eaad5d0c03c80461d83ed1e6f3594a4d69a679dec809342aa1361",
+      "modified": false
+    },
+    {
+      "path": "tools/build_balanced_manifest_v0.py",
+      "source_sha256": "6c6a6fd5318764b38446e87425be53416dfd8a2a32eed80adfe02cf8a64df852",
+      "clean_sha256": "6c6a6fd5318764b38446e87425be53416dfd8a2a32eed80adfe02cf8a64df852",
+      "modified": false
+    },
+    {
+      "path": "tools/build_condition_probe_batch_v0.py",
+      "source_sha256": "cc700980b0c4735422cccab58f9fedb46d320b99219dc980f408e9650ac2ed22",
+      "clean_sha256": "81858fd1971522530a5a32f31a75279c8a099d6a0571c8892544db127db15877",
+      "modified": true
+    },
+    {
+      "path": "tools/build_dense_condition_v0.py",
+      "source_sha256": "9dbe3f835d09f3164dc732bb11bc6f86944a0de67aeb18db865f0742fcbe81be",
+      "clean_sha256": "9dbe3f835d09f3164dc732bb11bc6f86944a0de67aeb18db865f0742fcbe81be",
+      "modified": false
+    },
+    {
+      "path": "tools/build_episode_memory_v0.py",
+      "source_sha256": "cec6cf0540e7942723183b7b1c08269df5b02f8336a1094873a974a53ee0c18f",
+      "clean_sha256": "cec6cf0540e7942723183b7b1c08269df5b02f8336a1094873a974a53ee0c18f",
+      "modified": false
+    },
+    {
+      "path": "tools/build_fulltrain_data_gate_v0.py",
+      "source_sha256": "bd21edc663bb75442786d140d4164028d7e0e5e17f80f5d1bdd7fa7b9da541c6",
+      "clean_sha256": "bd21edc663bb75442786d140d4164028d7e0e5e17f80f5d1bdd7fa7b9da541c6",
+      "modified": false
+    },
+    {
+      "path": "tools/build_interaction_action_cache_v0.py",
+      "source_sha256": "cfb00c7e78e2bc3393a9db4af2e9bfdada783eaf0568b31e0a2d48927207b3b1",
+      "clean_sha256": "cfb00c7e78e2bc3393a9db4af2e9bfdada783eaf0568b31e0a2d48927207b3b1",
+      "modified": false
+    },
+    {
+      "path": "tools/build_interaction_eval_subsets_v1.py",
+      "source_sha256": "981e68dd77e0684d3ee19bc755994479888278a9a0501994fad9ab45b6f77c2c",
+      "clean_sha256": "981e68dd77e0684d3ee19bc755994479888278a9a0501994fad9ab45b6f77c2c",
+      "modified": false
+    },
+    {
+      "path": "tools/build_interaction_sidecar_v0.py",
+      "source_sha256": "2ac206a71fdd2a2a9efaf3ce7a9ddab5f6552718835063ba42379071a7a6b63a",
+      "clean_sha256": "2ac206a71fdd2a2a9efaf3ce7a9ddab5f6552718835063ba42379071a7a6b63a",
+      "modified": false
+    },
+    {
+      "path": "tools/build_memory_dense_aligned_cache_v0.py",
+      "source_sha256": "d3108e743ff69b4b37908483ffd922b6df2fc696e0d79f56d14d9ec062ca68e1",
+      "clean_sha256": "a9ed0c949b268ac8809ed0f2d9b57849e8759c620187b3f84d8c3878f41dd7d6",
+      "modified": true
+    },
+    {
+      "path": "tools/build_mesh_dense_condition_v0.py",
+      "source_sha256": "b00b44c4989886c7e129d4049f034a69ac6e2aac18bc412cb2f781decc769355",
+      "clean_sha256": "b00b44c4989886c7e129d4049f034a69ac6e2aac18bc412cb2f781decc769355",
+      "modified": false
+    },
+    {
+      "path": "tools/build_mesh_dense_condition_v0_droplog.py",
+      "source_sha256": "1692a5bc3f932c46878f2c97ef68f7b2f71c8b47f818a007c4934d6a0aa91344",
+      "clean_sha256": "1692a5bc3f932c46878f2c97ef68f7b2f71c8b47f818a007c4934d6a0aa91344",
+      "modified": false
+    },
+    {
+      "path": "tools/build_mesh_projection_v0.py",
+      "source_sha256": "4d82a9cee20eb2e77c8832d1681e7d48cc062f603bdc80014428a4351fbcff78",
+      "clean_sha256": "4d82a9cee20eb2e77c8832d1681e7d48cc062f603bdc80014428a4351fbcff78",
+      "modified": false
+    },
+    {
+      "path": "tools/build_multiview_consistency_manifest_v1.py",
+      "source_sha256": "5d27621914bfc76b1a677cc3438bf365c5508ba107c5712cfb306c04e5917d76",
+      "clean_sha256": "5d27621914bfc76b1a677cc3438bf365c5508ba107c5712cfb306c04e5917d76",
+      "modified": false
+    },
+    {
+      "path": "tools/build_state_channels_v2.py",
+      "source_sha256": "1cfdcaa6c9c8b4220af76eb4f8da8c03da0b207b943837faf34b5dc673fb16d7",
+      "clean_sha256": "1cfdcaa6c9c8b4220af76eb4f8da8c03da0b207b943837faf34b5dc673fb16d7",
+      "modified": false
+    },
+    {
+      "path": "tools/build_static_memory_v0.py",
+      "source_sha256": "c4ad456664bfc4706c0485438ac1755c5baa903dc773c56484134de399590294",
+      "clean_sha256": "c4ad456664bfc4706c0485438ac1755c5baa903dc773c56484134de399590294",
+      "modified": false
+    },
+    {
+      "path": "tools/build_v2_map_manifest_and_cache_v1.py",
+      "source_sha256": "3fa1c6df93e3e713e530aad8932700fe5f0b98c90315e71adcd37ecc38a2ebf9",
+      "clean_sha256": "3e63937e7e26e91ff7fce9778928da7bc92b634398cae5f14037aa9181d16fc8",
+      "modified": true
+    },
+    {
+      "path": "tools/build_visible_multiplayer_manifest_v0.py",
+      "source_sha256": "50e787a47731c7da41829d730c5e9f4f666c9f83b6a02b03ad9f9f77da6c8b46",
+      "clean_sha256": "50e787a47731c7da41829d730c5e9f4f666c9f83b6a02b03ad9f9f77da6c8b46",
+      "modified": false
+    },
+    {
+      "path": "tools/calibrate_person_detector_on_seg_gt_v0.py",
+      "source_sha256": "0dc55a941a1f09b8bc48cd2ce902f292796f4fd796c9dd2e071e3a0ffb78b52c",
+      "clean_sha256": "3db1253d20ce9b656649a0d40751329fa3209342340df673baeda39663887f6a",
+      "modified": true
+    },
+    {
+      "path": "tools/canonical_match_split_v0.py",
+      "source_sha256": "05af92d63388060f44bb2d255294e5972ed2a2aee78e9da8feeae147bef69b0f",
+      "clean_sha256": "05af92d63388060f44bb2d255294e5972ed2a2aee78e9da8feeae147bef69b0f",
+      "modified": false
+    },
+    {
+      "path": "tools/canonical_match_split_v1.py",
+      "source_sha256": "99dea4ee7131a7e405727aafc532ddeb80381e18e04ccc9bad0de2a111c2cad1",
+      "clean_sha256": "99dea4ee7131a7e405727aafc532ddeb80381e18e04ccc9bad0de2a111c2cad1",
+      "modified": false
+    },
+    {
+      "path": "tools/check_episode_memory_v0.py",
+      "source_sha256": "0f7c75842196b212d7e0e0cdb83340ca00a39d6608f250fe46ea84a43f2e7e04",
+      "clean_sha256": "0f7c75842196b212d7e0e0cdb83340ca00a39d6608f250fe46ea84a43f2e7e04",
+      "modified": false
+    },
+    {
+      "path": "tools/check_map_memory_training_readiness_v0.py",
+      "source_sha256": "c5a4709732bc975e3f6897fbb2e3be5c0be13ba789f95ea03f8a5bfc21bd1cd7",
+      "clean_sha256": "c5a4709732bc975e3f6897fbb2e3be5c0be13ba789f95ea03f8a5bfc21bd1cd7",
+      "modified": false
+    },
+    {
+      "path": "tools/check_memory_dense_manifest_v0.py",
+      "source_sha256": "a824a63738dd4bcbe415edffe5a4560ae830b7c4e1aeb81e5c9e168fc7a897a4",
+      "clean_sha256": "a824a63738dd4bcbe415edffe5a4560ae830b7c4e1aeb81e5c9e168fc7a897a4",
+      "modified": false
+    },
+    {
+      "path": "tools/compare_geometry_backends_v0.py",
+      "source_sha256": "016ef498a5851058d802eb21a06528201be4c8f209d0c4fdd9932402db935c26",
+      "clean_sha256": "016ef498a5851058d802eb21a06528201be4c8f209d0c4fdd9932402db935c26",
+      "modified": false
+    },
+    {
+      "path": "tools/compare_memory_dense_channels_to_teacher_v0.py",
+      "source_sha256": "d5af9460123f8ac70a4766d4f924645b495a0aa31524501b5ed2e7f5512ac81b",
+      "clean_sha256": "d5af9460123f8ac70a4766d4f924645b495a0aa31524501b5ed2e7f5512ac81b",
+      "modified": false
+    },
+    {
+      "path": "tools/diagnose_memory_player_visibility_v0.py",
+      "source_sha256": "735ffbb130d5f959c006eba7cff26400abbc41c1687fce2eaf1666038850d210",
+      "clean_sha256": "735ffbb130d5f959c006eba7cff26400abbc41c1687fce2eaf1666038850d210",
+      "modified": false
+    },
+    {
+      "path": "tools/evaluate_map_aware_dynamics_v0.py",
+      "source_sha256": "ce2b576b4c2d6400b6b40c37ced67634c0cd8d7db4052deecd696096a585466d",
+      "clean_sha256": "ce2b576b4c2d6400b6b40c37ced67634c0cd8d7db4052deecd696096a585466d",
+      "modified": false
+    },
+    {
+      "path": "tools/evaluate_memory_dense_adapter_base_v1.py",
+      "source_sha256": "73f8c333f64984781240fc2dfaf8a9345e668e5df8f868f3133f057bbd7b0e65",
+      "clean_sha256": "017a986287accced491dd47b3d7c8dfb31dfca3597fba01d8ff01e39d3c5d7c9",
+      "modified": true
+    },
+    {
+      "path": "tools/export_map_aware_rollout_memory_v0.py",
+      "source_sha256": "70f916f6d2b58285e00028359e8bed0a89d3ed78b097d872c5f3e48726e63ad5",
+      "clean_sha256": "70f916f6d2b58285e00028359e8bed0a89d3ed78b097d872c5f3e48726e63ad5",
+      "modified": false
+    },
+    {
+      "path": "tools/export_memory_dense_dataset_v0.py",
+      "source_sha256": "6d65bcfa1e3f90523822ed42990216db070e3d7fd00d3d56ee52b0483c549ad4",
+      "clean_sha256": "6d65bcfa1e3f90523822ed42990216db070e3d7fd00d3d56ee52b0483c549ad4",
+      "modified": false
+    },
+    {
+      "path": "tools/find_mutual_visible_clip_pairs_v0.py",
+      "source_sha256": "7ee3b3229bb4328d2fd4718534643a628f48cf274e0bc29734a77a51a88169c7",
+      "clean_sha256": "7ee3b3229bb4328d2fd4718534643a628f48cf274e0bc29734a77a51a88169c7",
+      "modified": false
+    },
+    {
+      "path": "tools/find_teacher_other_player_candidates_v0.py",
+      "source_sha256": "035d1b9b60e9a19bae935b7dd4e4ab73c1a20bed46bb3363d7790da764f00704",
+      "clean_sha256": "035d1b9b60e9a19bae935b7dd4e4ab73c1a20bed46bb3363d7790da764f00704",
+      "modified": false
+    },
+    {
+      "path": "tools/fit_motion_params_v0.py",
+      "source_sha256": "d8e3a85cf590ace92f5a91d1ddd8dc1960e6a0ef83e7998373d32742642ccc8e",
+      "clean_sha256": "d8e3a85cf590ace92f5a91d1ddd8dc1960e6a0ef83e7998373d32742642ccc8e",
+      "modified": false
+    },
+    {
+      "path": "tools/gen_tier69h_seed_v0.py",
+      "source_sha256": "f58260798ca556f8a6a3311d77e72607d7533318ba53877add354b14945f5316",
+      "clean_sha256": "fb229374cebe655fbaae051cf0b076046f4e0d6ff97a42891d962554496f832b",
+      "modified": true
+    },
+    {
+      "path": "tools/gen_tier_seed_v2.py",
+      "source_sha256": "1a025cefdd26fa4e47a69d61d73d65b1d2eb112ced352e0f8ca969ad8b7fd723",
+      "clean_sha256": "5589f5ea7fc99921fae9dbe6c66edf497c9b5e1158839f73409b7efb0b587e43",
+      "modified": true
+    },
+    {
+      "path": "tools/gpu_mesh_renderer_v0.py",
+      "source_sha256": "3599ef596670eec5a08e11babe15232d9272b171c8ba76c4e1e6f7aad32c2d1e",
+      "clean_sha256": "3599ef596670eec5a08e11babe15232d9272b171c8ba76c4e1e6f7aad32c2d1e",
+      "modified": false
+    },
+    {
+      "path": "tools/inspect_bsp_static_geometry_v0.py",
+      "source_sha256": "20f99a4089ff10bb0361e243eb58bd757542cae80671eef62b0baaf7451db000",
+      "clean_sha256": "20f99a4089ff10bb0361e243eb58bd757542cae80671eef62b0baaf7451db000",
+      "modified": false
+    },
+    {
+      "path": "tools/interaction_channels_v0.py",
+      "source_sha256": "6f40b3df3ca6e5003997facbd39cac7f97c59336f01e6855c2be6e251b32fb8a",
+      "clean_sha256": "6f40b3df3ca6e5003997facbd39cac7f97c59336f01e6855c2be6e251b32fb8a",
+      "modified": false
+    },
+    {
+      "path": "tools/map_memory_training_data_v0.py",
+      "source_sha256": "c5a5baf3a9bb481629570b392b452f81a0c9635c3c036f524d72eff9242e5e14",
+      "clean_sha256": "c5a5baf3a9bb481629570b392b452f81a0c9635c3c036f524d72eff9242e5e14",
+      "modified": false
+    },
+    {
+      "path": "tools/materialize_clips_v1.py",
+      "source_sha256": "628235e5f2202b4ccbde2ed9eec16254902d3324e13b4523a0076ecd318bd949",
+      "clean_sha256": "628235e5f2202b4ccbde2ed9eec16254902d3324e13b4523a0076ecd318bd949",
+      "modified": false
+    },
+    {
+      "path": "tools/materialize_event50h_clips_v1.py",
+      "source_sha256": "92b95f6b5511156e7385a3f8b9040266e117cdc33b1fdb7e93d6f2982476777c",
+      "clean_sha256": "2517b319656db96e5d6a1013f10fbf93cdfc016dc7a4237a42e3add927f0b80e",
+      "modified": true
+    },
+    {
+      "path": "tools/memory_dense_action_adapter_v0.py",
+      "source_sha256": "91c3488603071fe8312a5ad19eb7a06a79c59ce83067e69570c96fd8d19259e2",
+      "clean_sha256": "91c3488603071fe8312a5ad19eb7a06a79c59ce83067e69570c96fd8d19259e2",
+      "modified": false
+    },
+    {
+      "path": "tools/memory_dense_interaction_adapter_v1.py",
+      "source_sha256": "5fb3339af44af14c6568b913ac050a1b0c740b57d320db790d0a390cc367ad45",
+      "clean_sha256": "5fb3339af44af14c6568b913ac050a1b0c740b57d320db790d0a390cc367ad45",
+      "modified": false
+    },
+    {
+      "path": "tools/memory_dense_state_adapter_v0.py",
+      "source_sha256": "39300cbf097e15c3a523573b292594dc835b217a7227887c1d95f9cb71eb1a93",
+      "clean_sha256": "39300cbf097e15c3a523573b292594dc835b217a7227887c1d95f9cb71eb1a93",
+      "modified": false
+    },
+    {
+      "path": "tools/memory_dense_wan_adapter_v0.py",
+      "source_sha256": "d683d3e0e41f3ade2b43732a9dac7b50cbfe5acea4992de8464ccf535957cce4",
+      "clean_sha256": "d683d3e0e41f3ade2b43732a9dac7b50cbfe5acea4992de8464ccf535957cce4",
+      "modified": false
+    },
+    {
+      "path": "tools/multiview_consistency_data_v1.py",
+      "source_sha256": "093ce1a7aebe70f28cab4284455a4c499dd6de7525ffb7b461e7174988dea0d4",
+      "clean_sha256": "093ce1a7aebe70f28cab4284455a4c499dd6de7525ffb7b461e7174988dea0d4",
+      "modified": false
+    },
+    {
+      "path": "tools/qxq_dense_v2_release_manifest_v1.py",
+      "source_sha256": "c997ad8e9604d7ec76a5f96150d8b6343fac49bbfc796f676536b264fc26d113",
+      "clean_sha256": "c997ad8e9604d7ec76a5f96150d8b6343fac49bbfc796f676536b264fc26d113",
+      "modified": false
+    },
+    {
+      "path": "tools/qxq_minarea_entry_conflict_v0.py",
+      "source_sha256": "ea165de234e5b132938eea2cbdf1395d6a5bd9fd39b0caf0f8a1caf7caac40d4",
+      "clean_sha256": "b160b380afbd0d06afdf0805f39e51c3d308642203ab8f4f790df7e234b28dd8",
+      "modified": true
+    },
+    {
+      "path": "tools/qxq_sample_candidate1_ar_v0.py",
+      "source_sha256": "5bff0b1be326cf2bed86cd171d512d44e4df7779c495f5d87ad3dffa7af3292b",
+      "clean_sha256": "aaaea419d7050e14b685f366632743755c224501c44a24d6e3f2d23d74d3003e",
+      "modified": true
+    },
+    {
+      "path": "tools/qxq_sample_valtest_v0.py",
+      "source_sha256": "47c5541d51a12632320a9077d3c7922e41bd8eabff52b693693f389078a1494e",
+      "clean_sha256": "a9384321376f57a91b40cefb1ea90f5ec87067cafd3772b3ce12ec715814947d",
+      "modified": true
+    },
+    {
+      "path": "tools/run_dense_v2_gpu_v1.py",
+      "source_sha256": "88704e9fea676f91a2ad72e71d474515d19a8af8511f957ef8ed01f9fd173c98",
+      "clean_sha256": "d73a0ef024a2b68eaf9309ef0ba5d84ee2922f10ee596a98d64c93f98de97caf",
+      "modified": true
+    },
+    {
+      "path": "tools/run_map_memory_70pct_v0.py",
+      "source_sha256": "d686d98a063a7b4e509dba942a1c440a5398a9855dc49c0f24b154bbe61b2968",
+      "clean_sha256": "f243fb276a101f2b1914b6a0950c05753c863d1bf51b396aeb1f56001b5a6f4d",
+      "modified": true
+    },
+    {
+      "path": "tools/sample_memory_dense_adapter_interaction_eval_v1.py",
+      "source_sha256": "b49b233bdd81634833a9832a28af0a0bed4e4d3a28fddbad2b146ebda41dc174",
+      "clean_sha256": "dcfb896e867466393da6de5acc3d5de650d1af6d8cfea3a4fa46027c09b32930",
+      "modified": true
+    },
+    {
+      "path": "tools/sample_memory_dense_adapter_phase2a_qxq_v0.py",
+      "source_sha256": "f7c02598906dc832a6f5a777e8c30192c99dcdc337f1fbf807faebff4dc3fbf6",
+      "clean_sha256": "366051f2f0a003c1d82e017aff0d2f6978d919d2e3f88985c0fc2b78e24a3bd3",
+      "modified": true
+    },
+    {
+      "path": "tools/sample_memory_dense_adapter_phase2a_v0.py",
+      "source_sha256": "79b7d73c6861f84886bff1a9fc35778bfb1feb8360499cefbed330e1eb66e371",
+      "clean_sha256": "059f4215d8aee4793cfdfad99ef66499231882db77c4285a33818416605c0390",
+      "modified": true
+    },
+    {
+      "path": "tools/sample_memory_dense_adapter_state_v0.py",
+      "source_sha256": "58efad03099db64bea761c52dc6a776d88a26237854f8a9667e4d1fc8d84b30b",
+      "clean_sha256": "50772beb2b5ad8dbef1c96d07139b35d8b0cbbc829c0768484d53710d348277c",
+      "modified": true
+    },
+    {
+      "path": "tools/smoke_memory_dense_action_adapter_v0.py",
+      "source_sha256": "b7144734f4ba02e81b3864a2f4657a69adb9a8ab663570bfb889189b594ed8b8",
+      "clean_sha256": "b7144734f4ba02e81b3864a2f4657a69adb9a8ab663570bfb889189b594ed8b8",
+      "modified": false
+    },
+    {
+      "path": "tools/summarize_memory_dense_dataset_v0.py",
+      "source_sha256": "6227f0f41e99be474e6f945ba60c723e2707ef4473ea9c3b64188e9652139f20",
+      "clean_sha256": "6227f0f41e99be474e6f945ba60c723e2707ef4473ea9c3b64188e9652139f20",
+      "modified": false
+    },
+    {
+      "path": "tools/symmvc_v2_score_haware_v1.py",
+      "source_sha256": "3cadac2e8d29f190cd3d660df715017e70e3a325ef32f176ce7a3e113460cbd7",
+      "clean_sha256": "c3c165db481478328b50ef2965f54b32f83d93ae5b0ebc1f91e3f59077023c66",
+      "modified": true
+    },
+    {
+      "path": "tools/teacher_player_latent_mask_v0.py",
+      "source_sha256": "7e8a60239b9ef578b4e1cd9a00ba6c48a46512b2170280d4fdc743844576621d",
+      "clean_sha256": "c9ed3386226b199cd23047d9fbd1507dc8fc71968610a8728c91282bb23641a2",
+      "modified": true
+    },
+    {
+      "path": "tools/train_memory_dense_adapter_base_v0.py",
+      "source_sha256": "ae338a9751627d6b43ec71e2a4f627fc0080a15e161f80b40d22ba4500ddf2eb",
+      "clean_sha256": "a52da33ceb590ad2cecf7e5c500c26fb83524fde7d8f22be4bdfd4499020aac1",
+      "modified": true
+    },
+    {
+      "path": "tools/train_memory_dense_adapter_interaction_v1.py",
+      "source_sha256": "3f2aeac52451a6354b4355f3a49370acc1741fee29c95db39cf66c98a060c735",
+      "clean_sha256": "dc02a2283180605f99d987ab697e6d57ab5ba7d3ad6eebba77c12855e756a3a7",
+      "modified": true
+    },
+    {
+      "path": "tools/train_memory_dense_adapter_state_v0.py",
+      "source_sha256": "9229d6413578f9b735f008139518baf655feb8959cdb821725b8183302bfa596",
+      "clean_sha256": "d9ec056df62a51f8d40bd6f19afdd6001b4976f057042335598df4788d604d49",
+      "modified": true
+    },
+    {
+      "path": "tools/train_memory_dense_adapter_v0.py",
+      "source_sha256": "9de5f9e57b9edbe56659b33629101cfdcaba3b4d49efcb58a9c52bb3ef903e2b",
+      "clean_sha256": "4f4b6096a7e4f62a15916b5932d2ce9d50ba4b923ac6a22af63d2ecacd6ea834",
+      "modified": true
+    },
+    {
+      "path": "tools/w4_controlled_sampler_v1.py",
+      "source_sha256": "a684c26b3cf66e40c11886832770a65f39694952333f8502e26bf127865de5cd",
+      "clean_sha256": "a684c26b3cf66e40c11886832770a65f39694952333f8502e26bf127865de5cd",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/ar_drift_curve_v0.py",
+      "source_sha256": "c54eed316f0c21ac9d8977c50b317359f328400853c0e4dc895ad4fa6f57aca1",
+      "clean_sha256": "bae59bfca3cf9990c9d79493b6d36e02e41ec2ad1c0d17fdb20f86daada588fe",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/benchmark_memory_renderer_v0.py",
+      "source_sha256": "d2391b8da535e909da541203e36ad6f418d1774a1a93d75cc0fa3db423cce43b",
+      "clean_sha256": "d2391b8da535e909da541203e36ad6f418d1774a1a93d75cc0fa3db423cce43b",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_sharded_v0.py",
+      "source_sha256": "a35ac06745c08ea42ded72fbba387d6a788bbf34d0518674f2cfc003052a2bc8",
+      "clean_sha256": "6d99512f38d1661c49b404c9714cb68adf8f99f25a1fd5b03d308303edc8910e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_anchor_ft_noised_context_v0.py",
+      "source_sha256": "52ce5e85bafd55b491b37e337844bdd60a222d870ced32f01afb0a202f35f61b",
+      "clean_sha256": "2cab1d978a564a2ba5e90b9840c10a42a45f49294d1c30e55c25afcfc22e464e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_balanced_manifest_v0.py",
+      "source_sha256": "fd8ce97dd8c3054455def7f5a134512ab99f232c77f22f4ee4748cecd6b889f3",
+      "clean_sha256": "fd8ce97dd8c3054455def7f5a134512ab99f232c77f22f4ee4748cecd6b889f3",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_dense_condition_v0.py",
+      "source_sha256": "9c14475a515e7e9a30291316b56911d3dda713f6711e38e1739f9895c4ea6e47",
+      "clean_sha256": "9c14475a515e7e9a30291316b56911d3dda713f6711e38e1739f9895c4ea6e47",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_episode_memory_v0.py",
+      "source_sha256": "cec6cf0540e7942723183b7b1c08269df5b02f8336a1094873a974a53ee0c18f",
+      "clean_sha256": "cec6cf0540e7942723183b7b1c08269df5b02f8336a1094873a974a53ee0c18f",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_light_dust2_pilot2_source_v0.py",
+      "source_sha256": "d2246190b44ec3cb3e3ccb9483b939af6600a1da942a708c9549a58d6e573eac",
+      "clean_sha256": "357f7ba4b8f44c3a47161a65cfd7051398c19d6a0805f321e05fbf62da1c170e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_light_dust2_pilot3_source_v0.py",
+      "source_sha256": "0f8583862e347b067fd5bce18dfb3354b6f5d55e2da2c42fd3839a63330a6e8c",
+      "clean_sha256": "ce7567ad3112cd834b22f6f8f12b9ebb5e4b7d2369df134c34202d9b4f4985eb",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_map_memory_large_release_from_candidates_v0.py",
+      "source_sha256": "db217fa880491f331c906d344e02d4aceaef9079225a2357c66c41f6b98ab18e",
+      "clean_sha256": "db217fa880491f331c906d344e02d4aceaef9079225a2357c66c41f6b98ab18e",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_memory_dense_aligned_cache_v0.py",
+      "source_sha256": "41d741687694d8cde542a1fba514e8e8271031cc2042bc6494032121175e4d96",
+      "clean_sha256": "a39c9d250cbd424aedae12b605736c2457e4bf2023d1413e437600635bdfa51e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_mesh_dense_condition_v0.py",
+      "source_sha256": "fd368b511ecfdad2da3459741637485e299a48e36608c161fc46264023f6a510",
+      "clean_sha256": "fd368b511ecfdad2da3459741637485e299a48e36608c161fc46264023f6a510",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_mesh_projection_v0.py",
+      "source_sha256": "4d82a9cee20eb2e77c8832d1681e7d48cc062f603bdc80014428a4351fbcff78",
+      "clean_sha256": "4d82a9cee20eb2e77c8832d1681e7d48cc062f603bdc80014428a4351fbcff78",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_persistent_window_audit_v0.py",
+      "source_sha256": "4dfc9c9a1d47f0c016bc0c82bdeb1e2f658fdd3bf1d030d56db245250bbe17cf",
+      "clean_sha256": "4dfc9c9a1d47f0c016bc0c82bdeb1e2f658fdd3bf1d030d56db245250bbe17cf",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_state_channels_v0.py",
+      "source_sha256": "afb641eed5d382cff45ef89cae7a8f5ba990aa055f330827dcf9007b44769a2e",
+      "clean_sha256": "afb641eed5d382cff45ef89cae7a8f5ba990aa055f330827dcf9007b44769a2e",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_state_channels_v1.py",
+      "source_sha256": "d24397c8fa75210eca4756fc8c8d1117673ca53d00d6e8421f317b6ad161a8d2",
+      "clean_sha256": "d24397c8fa75210eca4756fc8c8d1117673ca53d00d6e8421f317b6ad161a8d2",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_static_memory_v0.py",
+      "source_sha256": "44856c71efe6c5f0eb2b499e2cac9c6528dcf9987e6edc0ecb5fdd3b822c6acd",
+      "clean_sha256": "44856c71efe6c5f0eb2b499e2cac9c6528dcf9987e6edc0ecb5fdd3b822c6acd",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_symmvc_heldout_verdict_ready_v2.py",
+      "source_sha256": "3165ebe4db5a52062e274ada65e7f5f6916021a0e7a2953f16456f757c8b8279",
+      "clean_sha256": "88c6513e4f4ce04a0aa7d5dd0fd531bf3302d8d5c36f83a726abf2d512c9674d",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/build_tier69h_memorymask_view_v0.py",
+      "source_sha256": "2936ac7ed833c1a76684bd34b44ea0dd043cdbdb4570a865acfd5d6c743645cf",
+      "clean_sha256": "92e0e4ae0549c67d3d4d917a0025c0be72d46cd9436cd33cbec8d0827bd26709",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/cache_light_dust2_pilot_latents_v0.py",
+      "source_sha256": "f8998e7f2222d34c7197b5fed1f24a9249d63bc7a0eb92c623fddc698a77119a",
+      "clean_sha256": "a35512eb0b5afbfaa797d50274cdbed5493dfb6f27d3eacbe58fef6af2d9ce70",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/cache_tier69h_latents_dlc_v0.py",
+      "source_sha256": "fb5426b985521399d913d669b52b0112f4958609d0369f32bb26cd91a511021f",
+      "clean_sha256": "e8ce86c0f9e370409e8a57a279db8a22106bcc5d51e0125c17478b685bc6b17f",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/check_episode_memory_v0.py",
+      "source_sha256": "0f7c75842196b212d7e0e0cdb83340ca00a39d6608f250fe46ea84a43f2e7e04",
+      "clean_sha256": "0f7c75842196b212d7e0e0cdb83340ca00a39d6608f250fe46ea84a43f2e7e04",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/check_lingbot_fast_v2_zero_init_parity_v0.py",
+      "source_sha256": "a212a6ff6c80263de720519d094d03fab59be9a78d4e229a358da44ec01193d5",
+      "clean_sha256": "a212a6ff6c80263de720519d094d03fab59be9a78d4e229a358da44ec01193d5",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/check_map_memory_training_readiness_v0.py",
+      "source_sha256": "9a306b5e7768007f8337c0dd785e16ad9daa9513999b6c5a319ead58b398f92a",
+      "clean_sha256": "9a306b5e7768007f8337c0dd785e16ad9daa9513999b6c5a319ead58b398f92a",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/check_memory_dense_manifest_v0.py",
+      "source_sha256": "a824a63738dd4bcbe415edffe5a4560ae830b7c4e1aeb81e5c9e168fc7a897a4",
+      "clean_sha256": "a824a63738dd4bcbe415edffe5a4560ae830b7c4e1aeb81e5c9e168fc7a897a4",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/combine_light_dust2_pilot_dense_shards_v0.py",
+      "source_sha256": "416fc2c5bd236a1ccedd92bc8de20172ad3ae37c3f953c5af4ccf887671cff8b",
+      "clean_sha256": "416fc2c5bd236a1ccedd92bc8de20172ad3ae37c3f953c5af4ccf887671cff8b",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/combine_map_memory_match_releases_v0.py",
+      "source_sha256": "9b4388b0f591902db247bcbd0e54b3fd18c5aa46a9d04e77a79bf85aef935a20",
+      "clean_sha256": "9b4388b0f591902db247bcbd0e54b3fd18c5aa46a9d04e77a79bf85aef935a20",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/combine_memory_dense_lingbot_shards_v0.py",
+      "source_sha256": "583cbc6eff09448c05b7c63ec3d49c13321d2e4bc6c7386f94930bc3b3d03944",
+      "clean_sha256": "583cbc6eff09448c05b7c63ec3d49c13321d2e4bc6c7386f94930bc3b3d03944",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/compare_geometry_backends_v0.py",
+      "source_sha256": "016ef498a5851058d802eb21a06528201be4c8f209d0c4fdd9932402db935c26",
+      "clean_sha256": "016ef498a5851058d802eb21a06528201be4c8f209d0c4fdd9932402db935c26",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/compare_memory_dense_channels_to_teacher_v0.py",
+      "source_sha256": "9a21030d81d939c97af87a53cb17ca7913b11e0158da0813c690bae4794cf8da",
+      "clean_sha256": "9a21030d81d939c97af87a53cb17ca7913b11e0158da0813c690bae4794cf8da",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/compare_simulator_memory_dense_v0.py",
+      "source_sha256": "8855d8eb9aba9ba4d1b6e4990f1ef06fee1322946120872421a21545c8a566ca",
+      "clean_sha256": "8855d8eb9aba9ba4d1b6e4990f1ef06fee1322946120872421a21545c8a566ca",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/diagnose_memory_player_visibility_v0.py",
+      "source_sha256": "735ffbb130d5f959c006eba7cff26400abbc41c1687fce2eaf1666038850d210",
+      "clean_sha256": "735ffbb130d5f959c006eba7cff26400abbc41c1687fce2eaf1666038850d210",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/eval_zero_visibility_hallucination_v0.py",
+      "source_sha256": "e9f6462ed42cb0e7d17ed4ad74533c7dbaa357cc9bae6873a9561a72d0c20084",
+      "clean_sha256": "e9f6462ed42cb0e7d17ed4ad74533c7dbaa357cc9bae6873a9561a72d0c20084",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/evaluate_map_aware_dynamics_v0.py",
+      "source_sha256": "1914f04beed36ec7fc4b48d0ccdab8f9c24a1a337d778cf67d2ef2158dbbbb23",
+      "clean_sha256": "1914f04beed36ec7fc4b48d0ccdab8f9c24a1a337d778cf67d2ef2158dbbbb23",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/evaluate_map_aware_dynamics_v1.py",
+      "source_sha256": "fcd0a76870ff8d956bdaf7c64424523dc1e7395cd613a9b61a89ce1306744ffa",
+      "clean_sha256": "fcd0a76870ff8d956bdaf7c64424523dc1e7395cd613a9b61a89ce1306744ffa",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/evaluate_memory_dense_adapter_ablation_v0.py",
+      "source_sha256": "3d427925f0584cd52117af4fccfed9ef3b88abd531d700e92ab0b7576c338c49",
+      "clean_sha256": "21962622143cac6127aa87ac63d1431b92984d304ba83f48622d1cddb542c754",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/evaluate_player_dynamics_v2_long_horizon_v0.py",
+      "source_sha256": "05a2e326fc75f2006888e581cc3a732ae578bd0b4da4c5104fb9e036a798fc0f",
+      "clean_sha256": "05a2e326fc75f2006888e581cc3a732ae578bd0b4da4c5104fb9e036a798fc0f",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/export_light_dust2_pilot_dense_from_cache_v0.py",
+      "source_sha256": "e8eaaa08f2bbb5efedf49b5e6da78c3b47734d5aab87dc45b43455167400e653",
+      "clean_sha256": "8112d24eb73a209792d397655999f2bfc69951e2875fecf5bd9e92adc7816ac2",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/export_map_aware_rollout_memory_v0.py",
+      "source_sha256": "b6466821766c53a693b3eae8212649f9e8ca4cf99f7683386c0f4da9b6582c4a",
+      "clean_sha256": "b6466821766c53a693b3eae8212649f9e8ca4cf99f7683386c0f4da9b6582c4a",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/export_memory_dense_dataset_v0.py",
+      "source_sha256": "03b222e7659bd860bf4e01aee5e142da6a8b1d1095152a5b2bd58a7c0f97161f",
+      "clean_sha256": "03b222e7659bd860bf4e01aee5e142da6a8b1d1095152a5b2bd58a7c0f97161f",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/export_memory_dense_from_lingbot_cache_v0.py",
+      "source_sha256": "2cb607794018251dddf3aaaa64702b1fb1c787fd9042657634178c6f74bcd7a4",
+      "clean_sha256": "5cfe4c2a7ceaa3d68870b1e36f4aa6b66a8d7ab1698720de96630e17bb588c1d",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/find_teacher_other_player_candidates_v0.py",
+      "source_sha256": "35877bfabe6eecae6915fb8aee865f7fac580c68c40b0ba2f0bfe779b09a6f22",
+      "clean_sha256": "35877bfabe6eecae6915fb8aee865f7fac580c68c40b0ba2f0bfe779b09a6f22",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/fit_motion_params_v0.py",
+      "source_sha256": "e048a40bcd21d55e9e70294dbb870d422ac18e4e21e5266841108dc59962fff2",
+      "clean_sha256": "e048a40bcd21d55e9e70294dbb870d422ac18e4e21e5266841108dc59962fff2",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/fit_motion_params_v1.py",
+      "source_sha256": "01e6f3c0e37c784f79fb00b2bfec7d7114b473a5e748a3155e55473f8f5c8279",
+      "clean_sha256": "01e6f3c0e37c784f79fb00b2bfec7d7114b473a5e748a3155e55473f8f5c8279",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/gen_tier69h_seed_v0.py",
+      "source_sha256": "642a78423aad4f9e8c67371b95a4b8bae8b71c03780ebc7b2a09041c423ab8f8",
+      "clean_sha256": "ae6ffca5fbab0b542c61ffa50fc2d411431e9ec5df732a185fa4cba80a9fbf25",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/gpu_mesh_renderer_v0.py",
+      "source_sha256": "3599ef596670eec5a08e11babe15232d9272b171c8ba76c4e1e6f7aad32c2d1e",
+      "clean_sha256": "3599ef596670eec5a08e11babe15232d9272b171c8ba76c4e1e6f7aad32c2d1e",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/inspect_bsp_static_geometry_v0.py",
+      "source_sha256": "20f99a4089ff10bb0361e243eb58bd757542cae80671eef62b0baaf7451db000",
+      "clean_sha256": "20f99a4089ff10bb0361e243eb58bd757542cae80671eef62b0baaf7451db000",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/inspect_memory_dense_adapter_checkpoint_v0.py",
+      "source_sha256": "057cd56c4e64b3672d74b5533e2850e7c29cf2a553dc004259b7b434e9405996",
+      "clean_sha256": "057cd56c4e64b3672d74b5533e2850e7c29cf2a553dc004259b7b434e9405996",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/interaction_channels_v0.py",
+      "source_sha256": "6f40b3df3ca6e5003997facbd39cac7f97c59336f01e6855c2be6e251b32fb8a",
+      "clean_sha256": "6f40b3df3ca6e5003997facbd39cac7f97c59336f01e6855c2be6e251b32fb8a",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/known_dense_patterns_v0.py",
+      "source_sha256": "07b0ad9b2e51112cacb490caf3460c71e7b946863cd7829dfb4368b3cd3372c0",
+      "clean_sha256": "07b0ad9b2e51112cacb490caf3460c71e7b946863cd7829dfb4368b3cd3372c0",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/lingbot_fast_v2_dense_direct_tune_v0.py",
+      "source_sha256": "6c4b606732e47fe4821ea7e0fa32211168a5a37500c081e2869a127b0562e341",
+      "clean_sha256": "6c4b606732e47fe4821ea7e0fa32211168a5a37500c081e2869a127b0562e341",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/lingbot_fast_v2_injection_v0.py",
+      "source_sha256": "347d8bd03ee3c5c5207dcf17ff1f127ddc41a309c79e6d6a74cb2e6a85680e52",
+      "clean_sha256": "347d8bd03ee3c5c5207dcf17ff1f127ddc41a309c79e6d6a74cb2e6a85680e52",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/lingbot_fast_v2_parity_fixture_v0.json",
+      "source_sha256": "98d530891b11372d69a6268ea3e650119dc58504e7e74c6c0f835a315bf1f215",
+      "clean_sha256": "98d530891b11372d69a6268ea3e650119dc58504e7e74c6c0f835a315bf1f215",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/lingbot_fast_v2_phase3_conditioning_v0.py",
+      "source_sha256": "4576dcb34b38c744066b7a24eab8a52242d6e623076b8c4daa0fbfebc0a71c9d",
+      "clean_sha256": "4576dcb34b38c744066b7a24eab8a52242d6e623076b8c4daa0fbfebc0a71c9d",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/lingbot_fast_v2_runtime_v0.py",
+      "source_sha256": "aa2686fa3ba89d3db26cfab9fdd97cef6f98110337a94379cb51ef2bfbea1962",
+      "clean_sha256": "abb9196d18d91e6f69b7f716bc14a532002504cd253b5c41e67f37ce7b378c2e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/map_memory_training_data_v0.py",
+      "source_sha256": "780e3c58c2125975af5add5e3911a24572d4bcbbdbbb7bbcefec14e7549cb6c0",
+      "clean_sha256": "780e3c58c2125975af5add5e3911a24572d4bcbbdbbb7bbcefec14e7549cb6c0",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/memory_dense_interaction_adapter_v1.py",
+      "source_sha256": "5fb3339af44af14c6568b913ac050a1b0c740b57d320db790d0a390cc367ad45",
+      "clean_sha256": "5fb3339af44af14c6568b913ac050a1b0c740b57d320db790d0a390cc367ad45",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/memory_dense_state_adapter_v0.py",
+      "source_sha256": "fde1fe7505644b9d2fdca126645df9cc879bf163112c9a0467e3a5860eaf32d0",
+      "clean_sha256": "fde1fe7505644b9d2fdca126645df9cc879bf163112c9a0467e3a5860eaf32d0",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/memory_dense_wan_adapter_v0.py",
+      "source_sha256": "314a2ae77f10765c8f5ba30c3c70e33bb5919d886609446fdf7a57e888f6460f",
+      "clean_sha256": "314a2ae77f10765c8f5ba30c3c70e33bb5919d886609446fdf7a57e888f6460f",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/migrate_lingbot_fast_v2_phase3_checkpoint_canonical_v0.py",
+      "source_sha256": "8ebe157f234261e119ec7245a0571745c1ca11f6c9abf9d565276039ef952ee0",
+      "clean_sha256": "8ebe157f234261e119ec7245a0571745c1ca11f6c9abf9d565276039ef952ee0",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/mine_scene_covis_pairs_v3.py",
+      "source_sha256": "1983dd8013c69b2bb672cc564d2671671a019ed601ed3666a0c388f70807e350",
+      "clean_sha256": "f93284f53889b2dac91ad4e14b42680809b49874aa8928a459ebf636166bd431",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/mine_strong_covis_pairs_heldout_v1.py",
+      "source_sha256": "69d53ad337e36ece674ba47a8db2dc957638f7334d3d1498f883cd9538df48b9",
+      "clean_sha256": "85bb6451171f16554f7e4ec81c44a5d8d13e622d534364c1ad752a6ae696b09b",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/mine_strong_covis_pairs_v0.py",
+      "source_sha256": "3646395c6ff6bc9154af28dc977e8bbc9650ee38768a4f1a7f0e84e88651bea8",
+      "clean_sha256": "436b45ef53658846de46e8fb7cd882b4678d49d281d2fc2396ecaf6331d762d3",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/mine_zero_visibility_windows_v0.py",
+      "source_sha256": "f2aee5db21d74c980a0fecfed6fb373e3dc3a393f31b364be328800293c567a1",
+      "clean_sha256": "f2aee5db21d74c980a0fecfed6fb373e3dc3a393f31b364be328800293c567a1",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/mutual_observation_harness_v0.py",
+      "source_sha256": "301d91fa2e32f16854ee882850d9298968fcfb3ea563fa0a302b3b36130c016a",
+      "clean_sha256": "f073c0a6ff072b13cbcc3fe0706e1b3d835c83ebc2defa300085be89899eabbe",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/paired_significance_v0.py",
+      "source_sha256": "30e911dcfd7f801124c500dbb6235cc1e5f5fbc6291e0a2a0dff1a5715483e65",
+      "clean_sha256": "30e911dcfd7f801124c500dbb6235cc1e5f5fbc6291e0a2a0dff1a5715483e65",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/prepare_zero_visibility_render_v0.py",
+      "source_sha256": "a30e2a012ffc3e184801899410fabeef9df2150957947a516675a40a298d2870",
+      "clean_sha256": "a30e2a012ffc3e184801899410fabeef9df2150957947a516675a40a298d2870",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_anchor_v0.py",
+      "source_sha256": "e4aad5dd6e0a55e0e020e30c6aa698a38e915244e92951a0c81146d673ff3aca",
+      "clean_sha256": "aea0bb59c8be686281258b8667e0dd595e91e7207708155c437d5a7cffe79b42",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_hg_v0.py",
+      "source_sha256": "02302c8bc62d2e55e3de159b52a5b02c08dcdac3eb840959b94188b77615306b",
+      "clean_sha256": "b95993adfe854b88de737bd61a1b413859f5e8045ae30fc8b4e9a9e3bfcfb69d",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/qxq_sample_candidate1_ar_v0.py",
+      "source_sha256": "acc7ce5d3a3e150b269b69ab77b4c118c0bc15cf51d711e22617bd9b4182f2dd",
+      "clean_sha256": "24d10e2f52c5bf5754e4a7c6102a48e0ec86d5731011fdc08833dfa8f61251f0",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_dynamics_inference_demo_v0.py",
+      "source_sha256": "6f96ce693168956872eea6aced8a2da650c98607e3d0d8ff3d300c75e1e3d588",
+      "clean_sha256": "6f96ce693168956872eea6aced8a2da650c98607e3d0d8ff3d300c75e1e3d588",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase3_smoke_v0.py",
+      "source_sha256": "2c97dd3babff77c6e65706f0a524c3ded6662ed52b0535c8fb3b23e70d5fe8a9",
+      "clean_sha256": "2c97dd3babff77c6e65706f0a524c3ded6662ed52b0535c8fb3b23e70d5fe8a9",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase4_25step_v0.py",
+      "source_sha256": "7055b4ccb57121d70074b5bb7f72fd03b122f45785a4ba3d833f6188387ccc6b",
+      "clean_sha256": "7055b4ccb57121d70074b5bb7f72fd03b122f45785a4ba3d833f6188387ccc6b",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_phase5a_200step_v0.py",
+      "source_sha256": "0419ccc3acda108d715108efc7dbef4e8ff836e0c17ab36f629aadbd3a9dea90",
+      "clean_sha256": "0419ccc3acda108d715108efc7dbef4e8ff836e0c17ab36f629aadbd3a9dea90",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_lingbot_fast_v2_zero_init_parity_v0.py",
+      "source_sha256": "ff23e083828056e0c7243da8e54501f2e6a3617d6e60f84ad9acb769a0609763",
+      "clean_sha256": "ff23e083828056e0c7243da8e54501f2e6a3617d6e60f84ad9acb769a0609763",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_map_memory_70pct_v0.py",
+      "source_sha256": "f443fa75ccae350552d08759292f03d0c9ad14f3049a6c7e5a0dc74ccba27d2d",
+      "clean_sha256": "6b49d924b748b5dff6715be89777ca5445531aeba99fa09a829820c92a1ee6d9",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_map_memory_multi_episode_bsp_v0.py",
+      "source_sha256": "665426625f0f96e76a1a24689ce7311c633afc41e683872f1835e46f4b0a4969",
+      "clean_sha256": "489e9aa4c2f7b54f7c3418c4fa26630558823ec0200d7a5ad5f1633cacd2c1fb",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_memory_dense_lingbot_training_prep_v0.py",
+      "source_sha256": "c292dd3bf69ddc6fa8a2b12b54bd2bab424901009f261d5f20e82508f6fcde54",
+      "clean_sha256": "6ae0f7a083c1139a89587b58afeb6eeaa6cd64b2406594c80e73e09c4bad97c8",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_multiscene_10ego_demo_v1.py",
+      "source_sha256": "6b2a14372c1c0dd4b2748d50eb80d429c09f1c3adff278ad5fa847e736456eec",
+      "clean_sha256": "6b2a14372c1c0dd4b2748d50eb80d429c09f1c3adff278ad5fa847e736456eec",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_multiscene_10ego_worker_v1.py",
+      "source_sha256": "8032a90a5d0d67497defd09e70385f2b5c3aaf2b885272f108a222892390980e",
+      "clean_sha256": "8032a90a5d0d67497defd09e70385f2b5c3aaf2b885272f108a222892390980e",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_native_dynamics_10view_10s_v1.py",
+      "source_sha256": "6816a84a04bc227e73caf3ad1e8e2377dd9c6bf97a6b641a6fa2f60274d11e41",
+      "clean_sha256": "6816a84a04bc227e73caf3ad1e8e2377dd9c6bf97a6b641a6fa2f60274d11e41",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/run_srcds_inference_rollout_v1.py",
+      "source_sha256": "c59533a44a4bccd4def5dd2f84c7bb01b9c924ee55763c4007f8e575044146e2",
+      "clean_sha256": "c59533a44a4bccd4def5dd2f84c7bb01b9c924ee55763c4007f8e575044146e2",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/sample_memory_dense_adapter_phase2a_v0.py",
+      "source_sha256": "0a99dc60fe808ab2e6f96e97da88eaedde1e78f53e474deaa9aaed79704b9db1",
+      "clean_sha256": "063f4a1f7cdbd1f25ceac69bd8a3c3abe9abcf1969ed74610d9c11d99a2581fe",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/sample_memory_dense_adapter_state_v0.py",
+      "source_sha256": "622a55ce950a07b0422302ff7c97d891a653590896ba6a44291f4eb5a23ca17a",
+      "clean_sha256": "2775758cf22e8bccdcea0ffd2a9acdba374178c5df529fc56abd8a3b60a3c685",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/select_zero_visibility_exam_v0.py",
+      "source_sha256": "d2f3ca1dfb2d22e16d0a8d604431d05db3ddf7411039fbd1eca35d61cf4b6d93",
+      "clean_sha256": "d2f3ca1dfb2d22e16d0a8d604431d05db3ddf7411039fbd1eca35d61cf4b6d93",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/smoke_memory_seam_helpers_v0.py",
+      "source_sha256": "1d1c429aad18e88da4c247ebd32df1539356c13fe6b2bef0d0ae71c164ab5415",
+      "clean_sha256": "1d1c429aad18e88da4c247ebd32df1539356c13fe6b2bef0d0ae71c164ab5415",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/structure_adherence_score_v0.py",
+      "source_sha256": "8ab2bed66e9f8ce1c0976ed8173e7007fe3f3dfb34665ff89127ed1d99895c71",
+      "clean_sha256": "8ab2bed66e9f8ce1c0976ed8173e7007fe3f3dfb34665ff89127ed1d99895c71",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/summarize_memory_dense_dataset_v0.py",
+      "source_sha256": "6227f0f41e99be474e6f945ba60c723e2707ef4473ea9c3b64188e9652139f20",
+      "clean_sha256": "6227f0f41e99be474e6f945ba60c723e2707ef4473ea9c3b64188e9652139f20",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/summarize_memory_dense_training_prep_v0.py",
+      "source_sha256": "6cc41c79892e4b9ca6dfdca0b104a7080b0ddbd9be627bab3a59a57ba8b6b3b4",
+      "clean_sha256": "6cc41c79892e4b9ca6dfdca0b104a7080b0ddbd9be627bab3a59a57ba8b6b3b4",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/symmvc_v2_score_v0.py",
+      "source_sha256": "9b4c65ebb82c80dfa9231fcef50f46c09904e0a2408a6c3e8926047a12a1b717",
+      "clean_sha256": "67a7543245d5db83f3972500d94dafb4976f0f1f03e37cf864121a60bbf25f02",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/teacher_player_latent_mask_v0.py",
+      "source_sha256": "2ec503d591e747c479a46bd5f32278fcc850cdddb641cf4304562dab2c02c639",
+      "clean_sha256": "50c4806f226277776e35cc7d65d718c8bef55864944ee3ea1c5bc33c071328b5",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_dense_token_alignment_v0.py",
+      "source_sha256": "e3351b614a0565aa23633d0c6a5a3052175e2e87fa53256b3bc7879548cb9def",
+      "clean_sha256": "3b02d454f5c920e6508973ff199f9435a5765ba169604b5f7c45955814e93dc9",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_dense_direct_tune_v0.py",
+      "source_sha256": "11e53afe0cc2daa4766e16b46a6043b4d57534292f412a597298704dead30d3f",
+      "clean_sha256": "11e53afe0cc2daa4766e16b46a6043b4d57534292f412a597298704dead30d3f",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase2_v0.py",
+      "source_sha256": "3699bc576832576c0cf480e7352c9d2e1116a374c71f626eba734d4a266ff2c1",
+      "clean_sha256": "3699bc576832576c0cf480e7352c9d2e1116a374c71f626eba734d4a266ff2c1",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase3_v0.py",
+      "source_sha256": "b7586c794b90ee36f9abd0a0d45a5e8b912694a9e6d694bdfeb3d7b9c7f64e55",
+      "clean_sha256": "d343186bd783f07957ed55ded8e75e3bf7bffa02cfb257a920d75e225897435e",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase4_v0.py",
+      "source_sha256": "a0bc5d8d2b99c21bc1e4cec6044a762799eec1c7d5395b2de821659ba4c6dc41",
+      "clean_sha256": "a0bc5d8d2b99c21bc1e4cec6044a762799eec1c7d5395b2de821659ba4c6dc41",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_phase5a_v0.py",
+      "source_sha256": "2bda10227a1098f03ac0a16dc3b52a1fa2d558a1d68e072d8af837f6c00c92cb",
+      "clean_sha256": "2bda10227a1098f03ac0a16dc3b52a1fa2d558a1d68e072d8af837f6c00c92cb",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_lingbot_fast_v2_runtime_v0.py",
+      "source_sha256": "216ba1dcb31f6cd43d4098499342a70dbeb40e375d1e038a32cdfbce85139ad6",
+      "clean_sha256": "216ba1dcb31f6cd43d4098499342a70dbeb40e375d1e038a32cdfbce85139ad6",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/test_run_multiscene_10ego_demo_v1.py",
+      "source_sha256": "6371c41676d6c21dffcb7fa69f4be9dd2d1e6d62b80a97eb4c849a1faee2e460",
+      "clean_sha256": "6371c41676d6c21dffcb7fa69f4be9dd2d1e6d62b80a97eb4c849a1faee2e460",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_memory_dense_adapter_interaction_v1.py",
+      "source_sha256": "e827ab5933c1627ea4e9e9415205881892f27914578c081466e53098536612fe",
+      "clean_sha256": "d4b61d594b84b97ba2e28e7d68389085b0cde0d00f15847d267a5cb79fd25fc9",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_memory_dense_adapter_state_v0.py",
+      "source_sha256": "52a63aca978f68e35967966c95b9998df02d07158e1069ae89f435fd142e95ac",
+      "clean_sha256": "c9426aa9f96354524a1f8a9fe07ea61cfc64fa343333b817b6688c58d3e76c9c",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_memory_dense_adapter_v0.py",
+      "source_sha256": "ccc19c23bfd90bf4216b985b909a02fcac88b00ea97d5ca237ef9e585a80435e",
+      "clean_sha256": "b51a61785087ed2a4151fc2ca3749adfd84e5a4c4d053c1315e950c5b6f9ae8f",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_player_dynamics_v0.py",
+      "source_sha256": "1aa6170dcccd2a8067afcef5e7e6f85a142efa9f013b9b062ff9280bdd0c8885",
+      "clean_sha256": "dca285ab77d58acf52f379de8577e9f2b023b8d6195776971bcb80756fd07100",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_player_dynamics_v1.py",
+      "source_sha256": "de31d9660488ab7ac6a8152bb07676e7f91dae9a117b56956429fe7542dab74d",
+      "clean_sha256": "fe4fca5b7915a254b5869b85ebe3d00e6fa9a97a92b089d7a901083d1acab9e3",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_player_dynamics_v2.py",
+      "source_sha256": "6e113c8cdd7f750293309c17d79866f58c8efdfc67d8c5696568ba5502352fd1",
+      "clean_sha256": "c6d1b124d6ee018cb9af71d4be7201078b27b7456c833e5465b727c62fedb952",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/train_player_dynamics_v3_rollout_v0.py",
+      "source_sha256": "1980342df25e290f7e3d94f688992ab0e601eb9e2de377cb6a5e7f93df73ce9b",
+      "clean_sha256": "99c1b5886198a3ffdb68cb0ae605a77aa19f2e602776192c41d333bf19b822d1",
+      "modified": true
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/w4_controlled_sampler_v1.py",
+      "source_sha256": "a684c26b3cf66e40c11886832770a65f39694952333f8502e26bf127865de5cd",
+      "clean_sha256": "a684c26b3cf66e40c11886832770a65f39694952333f8502e26bf127865de5cd",
+      "modified": false
+    },
+    {
+      "path": "pipelines/scene_rollout/tools/wan_history_guidance_patch_v0.py",
+      "source_sha256": "741bc03e8066989ccfeb91c24f1ffc3826cd7f3e4da67560b5db885e95ea4078",
+      "clean_sha256": "741bc03e8066989ccfeb91c24f1ffc3826cd7f3e4da67560b5db885e95ea4078",
+      "modified": false
+    }
+  ]
+}

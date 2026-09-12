@@ -1,0 +1,16 @@
+# Portable Python dependencies. Install a matching torch/torchvision first.
+# This is a curated environment profile, not a recovered complete training lock.
+numpy==1.26.4
+opencv-python==4.11.0.86
+diffusers==0.39.0
+transformers==4.51.3
+accelerate==1.14.0
+easydict==1.13
+einops>=0.8,<0.9
+safetensors>=0.4,<1
+Pillow>=10,<13
+scipy>=1.11,<2
+ftfy>=6,<7
+tqdm>=4.66,<5
+imageio>=2.34,<3
+imageio-ffmpeg>=0.5,<1

@@ -1,0 +1,144 @@
+{
+  "schema_version": "lingbot-fast-v2-zero-init-parity-fixture/v1",
+  "contract_version": "lingbot-fast-v2-causal-runtime-contract/v1",
+  "fixture_id": "lingbot-fast-v2-14b-causal-fast-synthetic-480x832-20latent/v1",
+  "official_source_revision": "2648877f763a06cc743bcd919936da4d25f12e7b",
+  "public_contract": {
+    "timestep_indices": [0, 250, 500, 750],
+    "selected_timesteps": [999, 967, 908, 768],
+    "shift": 10.0,
+    "chunk_size": 4,
+    "local_attn_size": 18,
+    "sink_size": 6,
+    "clean_commit_timestep": 0
+  },
+  "execution": {
+    "mode": "causal_fast",
+    "world_size": 8,
+    "sequence_parallel_size": 8,
+    "dtype": "bfloat16",
+    "batch_size": 1,
+    "chunk_count": 5,
+    "latent_frames": 20,
+    "latent_height": 58,
+    "latent_width": 104,
+    "frame_seqlen": 1508,
+    "max_sequence_length": 6032,
+    "text_sequence_length": 512,
+    "head_dim": 128,
+    "local_num_heads": 5
+  },
+  "injection": {
+    "cond_dim": 128,
+    "adapter_hidden_dim": 128,
+    "wrap_first_blocks": null,
+    "residual_scale_init": 1.0,
+    "lora_rank": 16,
+    "lora_alpha": 16.0,
+    "lora_dropout": 0.0,
+    "lora_targets": [
+      "self_attn.q",
+      "self_attn.k",
+      "self_attn.v",
+      "self_attn.o",
+      "cross_attn.q",
+      "cross_attn.k",
+      "cross_attn.v",
+      "cross_attn.o",
+      "ffn.0",
+      "ffn.2"
+    ],
+    "cond_key": "lingbot_fast_v2_cond_tokens",
+    "external_checkpoint": null
+  },
+  "deterministic_fixture": {
+    "algorithm": "torch.Generator(device='cpu').manual_seed(seed); torch.randn(shape, dtype=torch.float32)",
+    "base_seed": 2026071700,
+    "chunk_seed_stride": 100,
+    "tensors": {
+      "context": {
+        "shape": [512, 4096],
+        "seed_offset": 1,
+        "scale": 0.02,
+        "runtime_dtype": "bfloat16"
+      },
+      "initial_latent_chunk": {
+        "shape": [16, 4, 58, 104],
+        "seed_offset": 10,
+        "scale": 1.0,
+        "runtime_dtype": "float32"
+      },
+      "image_condition_chunk": {
+        "shape": [20, 4, 58, 104],
+        "seed_offset": 20,
+        "scale": 1.0,
+        "runtime_dtype": "bfloat16"
+      },
+      "camera_condition_chunk": {
+        "shape": [1, 384, 4, 58, 104],
+        "seed_offset": 30,
+        "scale": 0.02,
+        "runtime_dtype": "bfloat16"
+      },
+      "adapter_condition_chunk": {
+        "shape": [1, 6032, 128],
+        "seed_offset": 40,
+        "scale": 0.02,
+        "runtime_dtype": "bfloat16",
+        "sequence_parallel_partition": "contiguous_dim_1_by_rank"
+      },
+      "transition_noise": {
+        "shape": [16, 4, 58, 104],
+        "seed_offset": 50,
+        "transition_seed_stride": 1,
+        "transition_count_per_chunk": 3,
+        "scale": 1.0,
+        "runtime_dtype": "float32"
+      }
+    }
+  },
+  "thresholds": {
+    "output_max_abs": 0.0,
+    "output_mean_abs": 0.0,
+    "x0_max_abs": 0.0,
+    "x0_mean_abs": 0.0,
+    "cache_max_abs": 0.0,
+    "cache_mean_abs": 0.0
+  },
+  "expected_model_config": {
+    "dim": 5120,
+    "ffn_dim": 13824,
+    "freq_dim": 256,
+    "in_dim": 36,
+    "model_type": "i2v",
+    "num_heads": 40,
+    "num_layers": 40,
+    "out_dim": 16,
+    "text_len": 512
+  },
+  "bindings": {
+    "official_source_files": [
+      {"relpath": "generate.py", "size_bytes": 10132, "sha256": "b9df59e385850128ea5add3ca27c7c8b879403009d18bd770e814bb767c0e02f"},
+      {"relpath": "run_fast.sh", "size_bytes": 1033, "sha256": "fcd72ae9d56705c92fa04e150f00a5b8b36e1791a7c0233c084e8759dd98b522"},
+      {"relpath": "wan/image2video.py", "size_bytes": 43352, "sha256": "d52cb8f1c0c70faa9e650118db6acf4836562a1f6664390b01000fdea9962dd4"},
+      {"relpath": "wan/modules/model_fast.py", "size_bytes": 26808, "sha256": "af32f4eeb70341ca6338054575da1ecb6d4c66e44a84bc9ff98256b37f72dc98"},
+      {"relpath": "wan/distributed/sequence_parallel.py", "size_bytes": 21024, "sha256": "e96dd7c5608aa8081adff0145c19a4fc4ffec00209d934607f9f2d57ad90cb1f"},
+      {"relpath": "wan/distributed/fsdp.py", "size_bytes": 1309, "sha256": "bedd7d04f79fd7a30b7539dd83aa802d05563d0354fc72eb0cf479d1425d1feb"},
+      {"relpath": "wan/utils/fm_solvers_unipc.py", "size_bytes": 32733, "sha256": "ebb600f3a892ba5afe7ab223487bf62d22490d1d6da43af2101f3cb93bff224a"},
+      {"relpath": "wan/configs/shared_config.py", "size_bytes": 872, "sha256": "891a6e82d9c6520e6308f9f7b11080836ea03ca7b776d2c2c75d111d2cd593cc"},
+      {"relpath": "wan/configs/wan_i2v_A14B.py", "size_bytes": 1718, "sha256": "bd0e70fb7a04a457b0a584b6b3214d0cab1d1a2d0ed77cd6f15aa8dcec899691"}
+    ],
+    "model_files": [
+      {"relpath": "config.json", "size_bytes": 251, "sha256": "1b73e66e5d82858ed9cfb65b93793e3221c2e3d3fe6ecb8dca29c106b2f20930"},
+      {"relpath": "transformers/diffusion_pytorch_model.safetensors.index.json", "size_bytes": 102106, "sha256": "5ff911c1a9b95baf3ad0e01f1aac32cdb46d1299aeff5a16b6bc112ddee76320"},
+      {"relpath": "transformers/model-00001-of-00008.safetensors", "size_bytes": 9312046483, "sha256": "81de15d940e763b9f2f50e0cde4f47b8dd8085660f529dd0a0409dfa03d0175c"},
+      {"relpath": "transformers/model-00002-of-00008.safetensors", "size_bytes": 9691794835, "sha256": "611e64ad2a6af9e6ef51ec59d09e6d84e23c41a9ab928808be415ed9def326c9"},
+      {"relpath": "transformers/model-00003-of-00008.safetensors", "size_bytes": 9335244395, "sha256": "930e9beab25729cf702be1f24a86ff80613101620b7c580458d0cdf4b6025767"},
+      {"relpath": "transformers/model-00004-of-00008.safetensors", "size_bytes": 9335346804, "sha256": "2e7c77bbd03b9f52bb4b3b06e4917f58df981621f183b400547b2e9685f80d25"},
+      {"relpath": "transformers/model-00005-of-00008.safetensors", "size_bytes": 9440081514, "sha256": "069547006233c60a4eeea66990a26bff1c37ea62622db63f1615c674eaac7ff2"},
+      {"relpath": "transformers/model-00006-of-00008.safetensors", "size_bytes": 9230407270, "sha256": "bf679e3b7898ca4de1ab45bf08323df679fa5475ce21d842ad713890ac6eaf0c"},
+      {"relpath": "transformers/model-00007-of-00008.safetensors", "size_bytes": 9440081531, "sha256": "89cda3cb5ba3d9617fa95a67c2a0dc6947a88d3b274f44057bc6f6bfaa88f15b"},
+      {"relpath": "transformers/model-00008-of-00008.safetensors", "size_bytes": 8392486660, "sha256": "a5cc8baed0c7ba171f1a0a5075320ba1ac41f5d53b26ca5dde8fa30bff57ef1e"}
+    ]
+  }
+}

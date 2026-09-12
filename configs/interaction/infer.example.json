@@ -1,0 +1,16 @@
+{
+  "args": {
+    "map-manifest": "../../assets/prepared/tier69h/map_manifest.json",
+    "cache-manifest": "../../assets/prepared/tier69h/cache_manifest.jsonl",
+    "state-cache-manifest": "../../assets/state/state_cache_manifest_v1.jsonl",
+    "ckpt-dir": "../../assets/lingbot-world-base-cam",
+    "adapter-checkpoint-low": "../../assets/checkpoints/interaction_step_008500.pt",
+    "out-dir": "../../runs/infer",
+    "split": "test",
+    "clip-index": 0,
+    "interaction-variant": "true",
+    "target-height": 480,
+    "target-width": 832,
+    "seed": 20260912
+  }
+}
