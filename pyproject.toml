@@ -1,6 +1,7 @@
 [project]
-name = "multi-views-lingbot-clean"
+name = "omniscene-forge"
 version = "0.1.0"
+license = {file = "LICENSE"}
 description = "Multiview world generation: data, geometry, conditioning, training, rollout and evaluation"
 requires-python = ">=3.11"
 

@@ -31,4 +31,4 @@
 
 ## 第三方代码
 
-`vendor/lingbot` 保留原 `LICENSE.txt` 和模块版权信息，来源是项目已修改的工作树，不等价于未修改上游。SCOPE 和官方 causal Fast v2 runtime 未上传，只有项目集成代码。项目自有代码不新增公开许可证；新仓库保持私有。
+`vendor/lingbot` 保留原 `LICENSE.txt` 和模块版权信息，来源是项目已修改的工作树，不等价于未修改上游。SCOPE 和官方 causal Fast v2 runtime 未上传，只有项目集成代码。2026-09-12 经项目所有者授权，仓库更名为 OmniScene Forge 并公开；项目自有代码以 Apache 2.0 发布。第三方文件保留各自条款，特别是 LIA 衍生动画模块的非商业许可，见 [第三方说明](../THIRD_PARTY_NOTICES.md)。

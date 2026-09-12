@@ -1,0 +1,12 @@
+OmniScene Forge
+Copyright 2026 OmniScene Forge contributors
+
+This project contains research implementations derived from the
+ZhengqiSun/multi-views-lingbot project and a modified LingBot/Wan source tree.
+Source attribution and modifications are recorded in docs/PROVENANCE.md and
+provenance/source_manifest.json and provenance/source_patches.patch.
+
+Apache License 2.0 applies to the original project contributions. Third-party
+code retains its respective copyright notices and license terms. In particular,
+the optional LIA-derived animation motion encoder is subject to CC BY-NC 4.0.
+See THIRD_PARTY_NOTICES.md and the license texts in licenses/.

@@ -1,8 +1,12 @@
-# Multi-view LingBot
+# OmniScene Forge
 
-完整多视角项目的源码整理仓库：数据与相机对齐、地图与场景记忆、条件渲染、模型训练、长时序生成、动力学、多视角评估和 baseline。**Interaction 是其中一条条件建模路线。**
+**Scene-grounded multiview world generation.**
 
-基于原仓库 `runtime-complete-20260912` 的 `b61bd38` 建立独立历史。金融项目、Yitao/Hongfeng 项目、历史整树、视频、权重、日志与缓存不进入新仓库。原始备份保持不变。
+面向共享场景的多视角世界生成研究代码库，覆盖数据与相机对齐、地图与场景记忆、条件渲染、模型训练、长时序生成、动力学、多视角评估和 baseline。Interaction 是其中一条条件建模路线。
+
+[项目路线图](docs/PROJECT_MAP.md) · [验证结果](docs/VALIDATION.md) · [使用与许可](#许可)
+
+基于项目已有实现整理，保留完整方法链路和逐文件来源记录。模型权重、研究数据和运行产物由外部提供，源码关系与验证边界见下文。
 
 ## 项目组成
 
@@ -92,3 +96,7 @@ python multiview.py run rollout.dynamics -- self-test
 ```
 
 源码来源、选择范围与改动边界见 [来源说明](docs/PROVENANCE.md)。历史实验运行记录没有被当成本仓库的运行证明。
+
+## 许可
+
+项目自有代码以 [Apache License 2.0](LICENSE) 开源。第三方代码保留其原有许可和署名，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。其中 `vendor/lingbot/wan/modules/animate/motion_encoder.py` 标注衍生自 LIA，保留 CC BY-NC 4.0 的非商业许可边界；该可选动画模块不属于本项目注册的多视角运行路线。模型权重与外部数据适用各自条款。
