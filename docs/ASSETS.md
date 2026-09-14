@@ -17,3 +17,7 @@
 CPU 测试可以验证本仓库的接口和组件逻辑，无法证明这些外部资产齐备，也无法证明研究指标达到历史记录。
 
 部分导入工具仍保留旧 mount 前缀，用于识别旧 manifest 的路径并做兼容转换；它们不应被当作新机器的挂载要求。`provenance/remaining_server_paths.json` 列出剩余字符串所在位置，用于迁移资产时逐项核对。
+
+## Demo 06/07 data preview
+
+The [06/07 sample guide](demo_reproduction/06_07/README.md) describes a separate Release archive containing six historical views, GT, context/camera inputs and 126 legacy dense NPZ files. Extract it under `assets/demos/06_07/`. The matching LOW2700/HIGH2850 checkpoint paths and hashes are documented, but those project checkpoint binaries are not publicly downloadable from this release. Source files and existing inference routes are unchanged; this does not supersede the GPU-validation limits above.

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "path_base": "repository_root",
+  "groups": [
+    "06",
+    "07"
+  ],
+  "project_weights": [
+    {
+      "id": "historical_low2700",
+      "expert": "low",
+      "step": 2700,
+      "expected_path": "assets/checkpoints/demo-06-07/historical_low2700.pt",
+      "bytes": 1044200842,
+      "sha256": "41a4befe41c8fb36b3a6016f681b52fce08ae0034842dff8aa22a755a568a155",
+      "download_url": null,
+      "included_in_release": false,
+      "format": "inference_only_export",
+      "source_tensor_equality_count": 1122
+    },
+    {
+      "id": "historical_high2850",
+      "expert": "high",
+      "step": 2850,
+      "expected_path": "assets/checkpoints/demo-06-07/historical_high2850.pt",
+      "bytes": 1044201968,
+      "sha256": "fb23a3f4badf122672113016436e674e34878338604ef7836cb215c8ba09db23",
+      "download_url": null,
+      "included_in_release": false,
+      "format": "inference_only_export",
+      "source_tensor_equality_count": 1122
+    }
+  ],
+  "base_model": {
+    "repository": "robbyant/lingbot-world-base-cam",
+    "revision": "6fc824ffc338d64c97c77e2eb8c0f4cfc24d82bd",
+    "url": "https://huggingface.co/robbyant/lingbot-world-base-cam/tree/6fc824ffc338d64c97c77e2eb8c0f4cfc24d82bd",
+    "expected_path": "assets/models/lingbot-world-base-cam",
+    "included_in_release": false,
+    "required_files_bytes": 160246219231
+  },
+  "availability": "Project checkpoint binaries are not hosted by this release; obtain authorized copies separately."
+}

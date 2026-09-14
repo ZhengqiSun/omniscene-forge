@@ -1,0 +1,1864 @@
+{
+  "schema_version": 1,
+  "release_kind": "data_and_weight_references_only",
+  "release_tag": "demo-repro-06-07-v1",
+  "weight_binaries_included": false,
+  "gpu_reproduction_validated": false,
+  "data_license": "not_assigned",
+  "sample_files": 180,
+  "sample_bytes": 89895706,
+  "groups": [
+    {
+      "number": "06",
+      "title": "从不可见到可见：三视角",
+      "members": [
+        {
+          "view": "t2_p0003",
+          "reference_output": "samples/06/t2_p0003/reference_output.mp4"
+        },
+        {
+          "view": "t2_p0006",
+          "reference_output": "samples/06/t2_p0006/reference_output.mp4"
+        },
+        {
+          "view": "t2_p0011",
+          "reference_output": "samples/06/t2_p0011/reference_output.mp4"
+        }
+      ]
+    },
+    {
+      "number": "07",
+      "title": "动态相机与玩家：三视角",
+      "members": [
+        {
+          "view": "t3_p0002",
+          "reference_output": "samples/07/t3_p0002/reference_output.mp4"
+        },
+        {
+          "view": "t3_p0004",
+          "reference_output": "samples/07/t3_p0004/reference_output.mp4"
+        },
+        {
+          "view": "t3_p0008",
+          "reference_output": "samples/07/t3_p0008/reference_output.mp4"
+        }
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "path": "samples/06/t2_p0003/window00",
+      "schema_version": 1,
+      "group": "06",
+      "view": "t2_p0003",
+      "window_index": 0,
+      "clip_id": "7844_aaebee4e89b94d0cac64445a13370419_Ep_000004_Ep_000004_team_2_player_0003_inst_000",
+      "raw_start": 16,
+      "raw_frame_indices": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100,
+        102,
+        104,
+        106,
+        108,
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176
+      ],
+      "latent_raw_frame_indices": [
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128,
+        136,
+        144,
+        152,
+        160,
+        168,
+        176
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": "val",
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260701,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    },
+    {
+      "path": "samples/06/t2_p0006/window00",
+      "schema_version": 1,
+      "group": "06",
+      "view": "t2_p0006",
+      "window_index": 0,
+      "clip_id": "7852_aaebee4e89b94d0cac64445a13370419_Ep_000004_Ep_000004_team_2_player_0006_inst_000",
+      "raw_start": 16,
+      "raw_frame_indices": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100,
+        102,
+        104,
+        106,
+        108,
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176
+      ],
+      "latent_raw_frame_indices": [
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128,
+        136,
+        144,
+        152,
+        160,
+        168,
+        176
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": "val",
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260701,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    },
+    {
+      "path": "samples/06/t2_p0011/window00",
+      "schema_version": 1,
+      "group": "06",
+      "view": "t2_p0011",
+      "window_index": 0,
+      "clip_id": "7870_aaebee4e89b94d0cac64445a13370419_Ep_000004_Ep_000004_team_2_player_0011_inst_000",
+      "raw_start": 16,
+      "raw_frame_indices": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100,
+        102,
+        104,
+        106,
+        108,
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176
+      ],
+      "latent_raw_frame_indices": [
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128,
+        136,
+        144,
+        152,
+        160,
+        168,
+        176
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": "val",
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260701,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    },
+    {
+      "path": "samples/07/t3_p0002/window00",
+      "schema_version": 1,
+      "group": "07",
+      "view": "t3_p0002",
+      "window_index": 0,
+      "clip_id": "1415_8790bb3c174541378f8325d5ad609a23_Ep_000003_Ep_000003_team_3_player_0002_inst_000",
+      "raw_start": 664,
+      "raw_frame_indices": [
+        664,
+        666,
+        668,
+        670,
+        672,
+        674,
+        676,
+        678,
+        680,
+        682,
+        684,
+        686,
+        688,
+        690,
+        692,
+        694,
+        696,
+        698,
+        700,
+        702,
+        704,
+        706,
+        708,
+        710,
+        712,
+        714,
+        716,
+        718,
+        720,
+        722,
+        724,
+        726,
+        728,
+        730,
+        732,
+        734,
+        736,
+        738,
+        740,
+        742,
+        744,
+        746,
+        748,
+        750,
+        752,
+        754,
+        756,
+        758,
+        760,
+        762,
+        764,
+        766,
+        768,
+        770,
+        772,
+        774,
+        776,
+        778,
+        780,
+        782,
+        784,
+        786,
+        788,
+        790,
+        792,
+        794,
+        796,
+        798,
+        800,
+        802,
+        804,
+        806,
+        808,
+        810,
+        812,
+        814,
+        816,
+        818,
+        820,
+        822,
+        824
+      ],
+      "latent_raw_frame_indices": [
+        664,
+        672,
+        680,
+        688,
+        696,
+        704,
+        712,
+        720,
+        728,
+        736,
+        744,
+        752,
+        760,
+        768,
+        776,
+        784,
+        792,
+        800,
+        808,
+        816,
+        824
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": null,
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260629,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    },
+    {
+      "path": "samples/07/t3_p0004/window00",
+      "schema_version": 1,
+      "group": "07",
+      "view": "t3_p0004",
+      "window_index": 0,
+      "clip_id": "1417_8790bb3c174541378f8325d5ad609a23_Ep_000003_Ep_000003_team_3_player_0004_inst_000",
+      "raw_start": 664,
+      "raw_frame_indices": [
+        664,
+        666,
+        668,
+        670,
+        672,
+        674,
+        676,
+        678,
+        680,
+        682,
+        684,
+        686,
+        688,
+        690,
+        692,
+        694,
+        696,
+        698,
+        700,
+        702,
+        704,
+        706,
+        708,
+        710,
+        712,
+        714,
+        716,
+        718,
+        720,
+        722,
+        724,
+        726,
+        728,
+        730,
+        732,
+        734,
+        736,
+        738,
+        740,
+        742,
+        744,
+        746,
+        748,
+        750,
+        752,
+        754,
+        756,
+        758,
+        760,
+        762,
+        764,
+        766,
+        768,
+        770,
+        772,
+        774,
+        776,
+        778,
+        780,
+        782,
+        784,
+        786,
+        788,
+        790,
+        792,
+        794,
+        796,
+        798,
+        800,
+        802,
+        804,
+        806,
+        808,
+        810,
+        812,
+        814,
+        816,
+        818,
+        820,
+        822,
+        824
+      ],
+      "latent_raw_frame_indices": [
+        664,
+        672,
+        680,
+        688,
+        696,
+        704,
+        712,
+        720,
+        728,
+        736,
+        744,
+        752,
+        760,
+        768,
+        776,
+        784,
+        792,
+        800,
+        808,
+        816,
+        824
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": null,
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260629,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    },
+    {
+      "path": "samples/07/t3_p0008/window00",
+      "schema_version": 1,
+      "group": "07",
+      "view": "t3_p0008",
+      "window_index": 0,
+      "clip_id": "1427_8790bb3c174541378f8325d5ad609a23_Ep_000003_Ep_000003_team_3_player_0008_inst_000",
+      "raw_start": 664,
+      "raw_frame_indices": [
+        664,
+        666,
+        668,
+        670,
+        672,
+        674,
+        676,
+        678,
+        680,
+        682,
+        684,
+        686,
+        688,
+        690,
+        692,
+        694,
+        696,
+        698,
+        700,
+        702,
+        704,
+        706,
+        708,
+        710,
+        712,
+        714,
+        716,
+        718,
+        720,
+        722,
+        724,
+        726,
+        728,
+        730,
+        732,
+        734,
+        736,
+        738,
+        740,
+        742,
+        744,
+        746,
+        748,
+        750,
+        752,
+        754,
+        756,
+        758,
+        760,
+        762,
+        764,
+        766,
+        768,
+        770,
+        772,
+        774,
+        776,
+        778,
+        780,
+        782,
+        784,
+        786,
+        788,
+        790,
+        792,
+        794,
+        796,
+        798,
+        800,
+        802,
+        804,
+        806,
+        808,
+        810,
+        812,
+        814,
+        816,
+        818,
+        820,
+        822,
+        824
+      ],
+      "latent_raw_frame_indices": [
+        664,
+        672,
+        680,
+        688,
+        696,
+        704,
+        712,
+        720,
+        728,
+        736,
+        744,
+        752,
+        760,
+        768,
+        776,
+        784,
+        792,
+        800,
+        808,
+        816,
+        824
+      ],
+      "raw_fps": 32,
+      "output_fps": 16,
+      "output_frames": 81,
+      "split_label": null,
+      "split_scope": "Historical source label; no whole-lineage unseen claim",
+      "input_image": "image.jpg",
+      "image_size": [
+        832,
+        480
+      ],
+      "poses": "poses.npy",
+      "pose_convention": "OpenCV camera-to-world, columns right/down/forward; translation in Source engine units",
+      "intrinsics": "intrinsics.npy",
+      "intrinsics_convention": "[fx,fy,cx,cy] in materialized camera coordinates; preserve the supplied values",
+      "prompt_file": "prompt.txt",
+      "dense_manifest": "dense_manifest.jsonl",
+      "state_manifest": null,
+      "gt": "gt.mp4",
+      "gt_kind": "existing preprocessed reference clip, bytes unchanged",
+      "raw_format_example": "raw_player_frames.json",
+      "seed": 20260629,
+      "checkpoint_profile": "historical_2700_2850_pair",
+      "solver": "unipc",
+      "sampling_steps": 70,
+      "shift": 3.0,
+      "guidance": [
+        5.0,
+        5.0
+      ],
+      "max_area": 399360,
+      "expected_generated_size": [
+        832,
+        464
+      ],
+      "context": "provided image.jpg",
+      "teacher_depth_seg_required": false,
+      "raw_pitch_multiplier_vs_legacy_conversion": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "samples/06/t2_p0003/reference_output.mp4",
+      "bytes": 5814631,
+      "sha256": "a434246ea33c3e1c0f840640048baf485a15512ce438c8c84fb1a3f62e78a69d"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/00.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/01.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/02.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/03.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/04.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/05.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/06.npz",
+      "bytes": 133200,
+      "sha256": "239e9562b1be12580f278d997ce534284fe39269a6bbcadd528e12f3b07b5c95"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/07.npz",
+      "bytes": 295483,
+      "sha256": "07c3b40131e446f42460a319dc3ed0b2737d2e7587e0e9cfe3d6184419a6d7ca"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/08.npz",
+      "bytes": 330172,
+      "sha256": "0825d426c64c5f9bd662525b8a1b0c5cd427ac7453ec380e9e46843d3ca8d594"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/09.npz",
+      "bytes": 362952,
+      "sha256": "f98f7db2187731ccd4c72f959cb00b76a52fbf4173f05cc8479a349d25ddee5c"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/10.npz",
+      "bytes": 362952,
+      "sha256": "f98f7db2187731ccd4c72f959cb00b76a52fbf4173f05cc8479a349d25ddee5c"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/11.npz",
+      "bytes": 362532,
+      "sha256": "7a1f618364b1f8859d89e29754b2039110824db1e06fe2824b35b3350938f616"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/12.npz",
+      "bytes": 356137,
+      "sha256": "a34750348b9fe9932be56e4f705026d2a53a9829b84474fced8a3be7c24ea9a5"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/13.npz",
+      "bytes": 356061,
+      "sha256": "f2679a48b3a41d3d55f8acd8603d0988ca97a3ef3ca4d5933e2f5cdb53c97c15"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/14.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/15.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/16.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/17.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/18.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/19.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense/20.npz",
+      "bytes": 356063,
+      "sha256": "4a082b501584e458e86fb64c96ee15cd81a196593379bbf2e5a5584931257cd3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/dense_manifest.jsonl",
+      "bytes": 11778,
+      "sha256": "0bd27cd2fcfebf4fd2dbad61399830ec23ffb972d7b6e7597865ecfd18128eb3"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/gt.mp4",
+      "bytes": 1437647,
+      "sha256": "8bf39c41862608de45122c4f83b9902bee752950367c6d6a98447b1a1407d4bd"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/image.jpg",
+      "bytes": 177375,
+      "sha256": "d7f166a840171ccf7d6d9dcbc50b3998e93d113c69581339185d1150edf77086"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "bf29238592a1df4f7fec4a739a0cc506031c48a89892e6fa929085c240b90cfa"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/raw_player_frames.json",
+      "bytes": 298284,
+      "sha256": "a3e1aba2c1713cd98335d3231c03dcb50e9e24181bb399deac2b5d063c86e504"
+    },
+    {
+      "path": "samples/06/t2_p0003/window00/sample.json",
+      "bytes": 2352,
+      "sha256": "8a824ed42f02ffb2e68b40e379128fc4b4b907be41b50381d9ed4bdb136c10ee"
+    },
+    {
+      "path": "samples/06/t2_p0006/reference_output.mp4",
+      "bytes": 5518606,
+      "sha256": "b60896cecde6f46a41ecffc879e6004dae46dc3e0b840ef3524d2b98f8ea09fd"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/00.npz",
+      "bytes": 196618,
+      "sha256": "700b178c31ad19296b7e27d20014dd5acd7e4fb3646801d2cb48372c624db8a6"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/01.npz",
+      "bytes": 302009,
+      "sha256": "59bcae915b17134b418b8eed251f632b2b80cef8f37c2ca8b5156b04ba6723fc"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/02.npz",
+      "bytes": 327569,
+      "sha256": "e28801193967503e82510a1a9fc32a08a33f9e47d7e3db6699d7c7dbae9415a9"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/03.npz",
+      "bytes": 329113,
+      "sha256": "b8ea256cbc045fc64d6a76e4757319e609e736f9a0aa68e194a266067de3053b"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/04.npz",
+      "bytes": 342332,
+      "sha256": "fb9b01eafa8c95c63461deaf1703ac2346aabd68e922c5396e1c8048158cffc7"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/05.npz",
+      "bytes": 342332,
+      "sha256": "fb9b01eafa8c95c63461deaf1703ac2346aabd68e922c5396e1c8048158cffc7"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/06.npz",
+      "bytes": 342332,
+      "sha256": "fb9b01eafa8c95c63461deaf1703ac2346aabd68e922c5396e1c8048158cffc7"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/07.npz",
+      "bytes": 342332,
+      "sha256": "fcd150df503c492cdd5140339256e4f441e70134666e6b099b12941329b10612"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/08.npz",
+      "bytes": 342005,
+      "sha256": "64927d66f808f64ec981daf09a8b0ffee595a7887ba6852df2d4f432882c3858"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/09.npz",
+      "bytes": 342368,
+      "sha256": "9fa2b1b422adfe62007f55750951b4c3e016e256fbc49d20cec82ea21872bb10"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/10.npz",
+      "bytes": 342357,
+      "sha256": "acd6562e6de773e13aab3753cf852f7e992a82207b021789ebbd9e3c4b1b9737"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/11.npz",
+      "bytes": 342308,
+      "sha256": "277872f3fafa5700898f98d3a5e4314391a8c539887da6027a9a5b96312ac93e"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/12.npz",
+      "bytes": 342289,
+      "sha256": "a0049e7dd737b3e7cbd4d68982763b80d87875bbc7af2a3429017cfe4702d97c"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/13.npz",
+      "bytes": 342572,
+      "sha256": "aa30cff746632181bcb19e99f159ed0c888890e474269dceaca0c78af2779dd6"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/14.npz",
+      "bytes": 341909,
+      "sha256": "9ce5bd75c55ca4252f0009191c294412e1c11cef9722ba1e71655644ccfc9121"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/15.npz",
+      "bytes": 341909,
+      "sha256": "9ce5bd75c55ca4252f0009191c294412e1c11cef9722ba1e71655644ccfc9121"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/16.npz",
+      "bytes": 341909,
+      "sha256": "9ce5bd75c55ca4252f0009191c294412e1c11cef9722ba1e71655644ccfc9121"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/17.npz",
+      "bytes": 342256,
+      "sha256": "c9da842ab5c664c6155e53a8a1bb4781bc55da5d41b059cd8e1c9922ef996bcd"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/18.npz",
+      "bytes": 344635,
+      "sha256": "04b56113f5dfcd61cb1f4fab225ddf288aa1347472647a948a7f2d8fb6ffdbf4"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/19.npz",
+      "bytes": 344635,
+      "sha256": "04b56113f5dfcd61cb1f4fab225ddf288aa1347472647a948a7f2d8fb6ffdbf4"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense/20.npz",
+      "bytes": 347141,
+      "sha256": "86198a1c33f6032dfde5e87e5d7ea1f519704b33faba67a436c715d6779a4cab"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/dense_manifest.jsonl",
+      "bytes": 11778,
+      "sha256": "2e2568b7c0bc5a85385091fbc4befb3918f45b949107917bb82d0bb0df9dbb34"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/gt.mp4",
+      "bytes": 1712121,
+      "sha256": "3cc44f10b3b3501ab9a2b5a10f518e741aa4610e9b02379ff4b036e37e78e5fb"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/image.jpg",
+      "bytes": 158921,
+      "sha256": "ab62b6e52d131de620bf1b1357996c3461b8623e620c8444fe43c01864972dca"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "55aa6f1341fb5320aed4a02ad48aa19ea8ceefc0f8db36bf820b23899bb96027"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/raw_player_frames.json",
+      "bytes": 288319,
+      "sha256": "11327fbbfcd11550f4a21d874534e7556eb30efc5d880c2b7afd113de1f0f96d"
+    },
+    {
+      "path": "samples/06/t2_p0006/window00/sample.json",
+      "bytes": 2352,
+      "sha256": "95539115c01f168e9147578f3d55800321fbb9d1373d1e6b57ed118827f3bdaf"
+    },
+    {
+      "path": "samples/06/t2_p0011/reference_output.mp4",
+      "bytes": 4610886,
+      "sha256": "5923f19bd96c5968b882ff9515083115e093191ea2ad006cd59324377dcb0dc3"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/00.npz",
+      "bytes": 180959,
+      "sha256": "88c226e53b073528ff9093a880d153c8323e15328a884b7dc91a54b1964914fe"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/01.npz",
+      "bytes": 180959,
+      "sha256": "88c226e53b073528ff9093a880d153c8323e15328a884b7dc91a54b1964914fe"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/02.npz",
+      "bytes": 321867,
+      "sha256": "a9c8cb737aa45a8cc3d7b7dc9643744eb49bb811243d4b00fa9a17d5b20c12af"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/03.npz",
+      "bytes": 340181,
+      "sha256": "a5d474601707eae2dc7ddcbbc518e4ae33de0a59d0451d99777322c5dbaf27b5"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/04.npz",
+      "bytes": 328680,
+      "sha256": "91846de99b9b6fc62421e25123438a07dcbc6d8a42a88a481155d3e9f126461e"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/05.npz",
+      "bytes": 333760,
+      "sha256": "50adfe33d304ce7d1314bae160f2867666da6aad8800219cdd89fdc82a4771dd"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/06.npz",
+      "bytes": 333992,
+      "sha256": "f04a452f7e27038a32fa6b72852a6a9c92de09b4e62b4dd4f9660a3ddd71e4c2"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/07.npz",
+      "bytes": 333993,
+      "sha256": "775a291d5e471953789c1c9fd54d615a3cfd7ffbcaece69f30d85d174a9da807"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/08.npz",
+      "bytes": 334119,
+      "sha256": "b745c9bcdaff939e54803958e45094f06b219c5dfeb6e9588d2d81e8b3fc065c"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/09.npz",
+      "bytes": 334119,
+      "sha256": "b2f7358c8b1aa188dc14a39dd12c27a55e5fd989f9f61a7064d74b15f42db323"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/10.npz",
+      "bytes": 334119,
+      "sha256": "b2f7358c8b1aa188dc14a39dd12c27a55e5fd989f9f61a7064d74b15f42db323"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/11.npz",
+      "bytes": 334118,
+      "sha256": "4bc9c9246fef024a494b818e29024137f83b5e10eebe15b7a8925568a36836fc"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/12.npz",
+      "bytes": 334120,
+      "sha256": "a76496a8fd2268a56624d56fc00213c74196c44cfbf050dc8240357c73a0eb57"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/13.npz",
+      "bytes": 334120,
+      "sha256": "13be5c18ece86ed58575923e6ef7c4617ed35e03bce782c8b23297f5e60a2f36"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/14.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/15.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/16.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/17.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/18.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/19.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense/20.npz",
+      "bytes": 334121,
+      "sha256": "55d2740b4a669a5b0c2f48510d5907f74a745e7dd7f45c6443f601ad786b2428"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/dense_manifest.jsonl",
+      "bytes": 11778,
+      "sha256": "7f87a6c7ef74de8dc17d2dde9a379b0969b4c37f21282eff4db1883a6fa579f9"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/gt.mp4",
+      "bytes": 1069559,
+      "sha256": "6095af75019bef54daa4cef52cf783c1fad6664cfc365faaf0e215c1574e160f"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/image.jpg",
+      "bytes": 153112,
+      "sha256": "bcb1b8a360c82e6c64a706493647160d38317a1ab1c66b4297b600ad5714301c"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "29bb45dcbf4a0c31464e1506658e43e45db49525bf9169161dc07186aaf868b0"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/raw_player_frames.json",
+      "bytes": 288002,
+      "sha256": "f46a8b8d9d915a3632b54bed140ee34b86c0f2430bf4d42685c2f32c5029915f"
+    },
+    {
+      "path": "samples/06/t2_p0011/window00/sample.json",
+      "bytes": 2352,
+      "sha256": "862cf92f226670f416edca2129784b83fb8adf6ae196a35436da190ea9661c89"
+    },
+    {
+      "path": "samples/07/t3_p0002/reference_output.mp4",
+      "bytes": 6266161,
+      "sha256": "370fe282f4c8aadb9a3805d12d513fce1d07fef788745f385d8697c5eb203dad"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/00.npz",
+      "bytes": 381599,
+      "sha256": "e301cee0cd4eb05d68edb4290754cf90e75a87b3ec0ca38254a8e915871a3e63"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/01.npz",
+      "bytes": 382155,
+      "sha256": "160d5ef0573489d1a8a10310ac10339d6be93074494bd8561021403f4f4de6aa"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/02.npz",
+      "bytes": 382008,
+      "sha256": "15b087e24bc2a60b4f496ab5b6d33426e7a0c1b75bf1a030485dda76afde48cb"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/03.npz",
+      "bytes": 383849,
+      "sha256": "0260178de42f05d87b7b5df59ecfaf5ffefd83360f816fe117a898c6cb8056bf"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/04.npz",
+      "bytes": 382811,
+      "sha256": "baac5e85ed2094118260ef203832fe331ad096a72b4aefd90fcbe24342688ce0"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/05.npz",
+      "bytes": 380771,
+      "sha256": "79f672ffe3dfeb48d80d403a7b05f9e253ee25e5429aab47ce5e88f7f7765b73"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/06.npz",
+      "bytes": 380640,
+      "sha256": "ddb510dbc9878ef35a8d6df55cfea4f15ef854539338d629e9888f69d425c57f"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/07.npz",
+      "bytes": 374488,
+      "sha256": "97a369944e0f68941c46dcef21bf31ea364d84cb08035a8c354984e8a66ba37d"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/08.npz",
+      "bytes": 307539,
+      "sha256": "2d65c2151135f6aaf9d75e432406c6851513cfc38dbb9e6cb054ee04411ae664"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/09.npz",
+      "bytes": 321250,
+      "sha256": "6f87e7b6dfd5b00b6ff395faccb1140504c199187560fb12fbfe01f7cea4586a"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/10.npz",
+      "bytes": 312249,
+      "sha256": "a18957fa6df17c8d788dc14d789cd4ca182b9e62f0e4ca0d38d728e3f6667569"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/11.npz",
+      "bytes": 306108,
+      "sha256": "aef831b8bd36399c91bf720b21bbfb5fdcc9985d7b4157e392b5d47dc50cc599"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/12.npz",
+      "bytes": 326529,
+      "sha256": "ca540a804818034d9fbf1bf1cc07f45f5e8c1a4093e0cb7077993b7ea471821f"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/13.npz",
+      "bytes": 322116,
+      "sha256": "27977c1d0897cb8360591fb552c5b686ec789fca66785c51d2cadc8392560c8e"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/14.npz",
+      "bytes": 336254,
+      "sha256": "c66e503d3d1e73ecf761a5c6be2a19e5b64650f5c90c8a2adcb29b9caf848cf9"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/15.npz",
+      "bytes": 349040,
+      "sha256": "0bc9858f777e355f4d481324102f6a21d21c23d401a09b3a40a2e0f634139bce"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/16.npz",
+      "bytes": 358952,
+      "sha256": "3c388432a6b561928c7115de96f79377a905fcf9f8429e73c2ea4f8ee1599545"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/17.npz",
+      "bytes": 363938,
+      "sha256": "127f9ca8812c999e1f6e04339d32852791db69c961b7539eb11b9f9e9fbdc47c"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/18.npz",
+      "bytes": 360262,
+      "sha256": "566ff9fc49372529e7d484b2e0a040d912dc85caf221eb1be6e2922c07333cd5"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/19.npz",
+      "bytes": 360951,
+      "sha256": "2c696dda99579ecf8e544fb8af8b33c57316b18617303ee482ca6e1e88190b01"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense/20.npz",
+      "bytes": 332620,
+      "sha256": "e3e9422f013d5418fdeb230c97fb14a40fe5c7671ee82d575fcca4a4b681fb5b"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/dense_manifest.jsonl",
+      "bytes": 11789,
+      "sha256": "7f6bdce30d242c4c4b78fa80059de6c6614b01524286b802820349fee5b1effb"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/gt.mp4",
+      "bytes": 2163771,
+      "sha256": "85a5442a0993bc5bf033c4ab8d9101c94bb3658e898fd49e3deac38ecb795500"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/image.jpg",
+      "bytes": 109052,
+      "sha256": "9f29744f95cd12cee6e55e2ca7c62eb34e617dfe554a029a6113f1137bcc5bf4"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "786bda776b28690c4964fe22a43ef09a494094a58ad53feb260ce6cd64fc720b"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/raw_player_frames.json",
+      "bytes": 285520,
+      "sha256": "a5839e9ec0dfb8156940f75806589cc4f81ef0b1d7c1d7b32f980addbb83ba04"
+    },
+    {
+      "path": "samples/07/t3_p0002/window00/sample.json",
+      "bytes": 2405,
+      "sha256": "4313ae2c45b25f60fd909971b5b4e83d18f19f36b5607001a8331dfb7aa94d7c"
+    },
+    {
+      "path": "samples/07/t3_p0004/reference_output.mp4",
+      "bytes": 6020310,
+      "sha256": "0d8756c7ea87e875e32716ddc0016692828e429b2f1b328828a8504db0aba217"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/00.npz",
+      "bytes": 334126,
+      "sha256": "36a56057989f353fa5adf56cd8bf5eda0537e81121eb506d6de66b65fe06bf01"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/01.npz",
+      "bytes": 387101,
+      "sha256": "6ffa56f00ba9f04c05b870d280a4150587bfd02fe646c20f0bdc531311379dba"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/02.npz",
+      "bytes": 388174,
+      "sha256": "6854ce2dae374245fa1c14dc570b48776c1f7f235a155b5d9cfd514095cf32f3"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/03.npz",
+      "bytes": 389851,
+      "sha256": "cd732152375b1fc5e1173de2ed8acb0ade61bb6b51800fcc47c265943a3a7c7d"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/04.npz",
+      "bytes": 389708,
+      "sha256": "ffe623e7fc06903c58d0a1eae087b1dd9d37f541e2d94bddebda9d5bd0ca9e9b"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/05.npz",
+      "bytes": 387751,
+      "sha256": "444911db5031c5cdb5a7275233ec7bca5c7ef5ae0ccce489071367adc8b2f189"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/06.npz",
+      "bytes": 386282,
+      "sha256": "63b618d162f3f967b3cc89ce3639143d6d00ea62b1ebbfeba310ccc081709ea1"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/07.npz",
+      "bytes": 376496,
+      "sha256": "31ace401a5693b8f5125a70cde0e2ec4de250910d0654eab578c779ce55f8ede"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/08.npz",
+      "bytes": 373786,
+      "sha256": "b29091d574ac08b33aad1c2e7f9ff6a5f7be6c1a2cd360001a0c4a688ed3d72f"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/09.npz",
+      "bytes": 348783,
+      "sha256": "e812a8f96bddf1182e05573edf9a3c428fe94d585dcc6b133434c0e5410cbff8"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/10.npz",
+      "bytes": 320668,
+      "sha256": "2b3ac6fd087f31bbecc81fa349fe125e2ea685c6696b419d948e939ac841a0d4"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/11.npz",
+      "bytes": 291315,
+      "sha256": "ff24c8322f22c53c7c539eeac80472c8e53d853db759aa6dd93840a84b9f1253"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/12.npz",
+      "bytes": 307022,
+      "sha256": "f3edbf2a4a88e4f1368868c8d764d9d59dc8f9d31fed30a92472120a3c7abd39"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/13.npz",
+      "bytes": 312002,
+      "sha256": "50274d101186c4f0ae8d9048e70a638d53e981d7fec3e1cde827be7c4c33ea11"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/14.npz",
+      "bytes": 329656,
+      "sha256": "a00139f64e5d04bbefa3b75bd60c82f794020561a7b94d312e4444e7aa0ac86c"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/15.npz",
+      "bytes": 341465,
+      "sha256": "02726f41500abbca52aada0a0530a70599bbf813e3c37c8e76af09e4b68c5b0e"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/16.npz",
+      "bytes": 321680,
+      "sha256": "aaa5bd4ba2f8018fc06a4bd9f11c21d7f7f5c680d47b107f0e5c35572e1efec1"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/17.npz",
+      "bytes": 325388,
+      "sha256": "af47aa45b52b41f1f899dcc7fb3ad6fdd62e155c476d28a9746c4671d1f567cb"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/18.npz",
+      "bytes": 321491,
+      "sha256": "20094990a92e55881eabe0a213944a2ec9feb8d045fb020a1c863a0b42b0e3eb"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/19.npz",
+      "bytes": 360046,
+      "sha256": "85ec7b68b770d63aecce896996910d349ea1ef16c130c3d12b3f8ff3b5cdca27"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense/20.npz",
+      "bytes": 323127,
+      "sha256": "c4b2546d239c22266bd7132e850f1f7bf948e6ccdbaad63fc4029b0b143e5164"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/dense_manifest.jsonl",
+      "bytes": 11789,
+      "sha256": "a6a8f1a5ff37bd5f397427f66bf8a7a097393975ee74bf88d0070ddd51c78bdb"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/gt.mp4",
+      "bytes": 2193980,
+      "sha256": "8427da97ff30dcf88e323784c8623d741727a9c51b19710728985488998fd013"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/image.jpg",
+      "bytes": 118605,
+      "sha256": "aafb32b9454a5e53dbcfe778a69186b9515aa1ad0a607112119bdeecbcfae0f0"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "bc4c710fd034c5ceafa50d37dd2e34681c1acc527eeb37afa02f61f8b39a6b92"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/raw_player_frames.json",
+      "bytes": 286089,
+      "sha256": "1a036c6e917436f0890006228742892ff951afaa8002bda162542a6571d019f3"
+    },
+    {
+      "path": "samples/07/t3_p0004/window00/sample.json",
+      "bytes": 2405,
+      "sha256": "86d7611415b643cb5a24cc4d10f98edcd55109455b43e2058d76b760257db7a3"
+    },
+    {
+      "path": "samples/07/t3_p0008/reference_output.mp4",
+      "bytes": 6505255,
+      "sha256": "cce7deeb2c52cc8a560b573546ee7835450a8503b849d9eb0d94d8313048df6e"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/00.npz",
+      "bytes": 382187,
+      "sha256": "34267c2c708f6532173f206a51e4b27ea6585a1ab2e0a28287596b738301f81c"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/01.npz",
+      "bytes": 381815,
+      "sha256": "26b8b49ab7b28549403a57c1d84a6c4cb41dbcf443ee16393b7d5667b416da66"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/02.npz",
+      "bytes": 383744,
+      "sha256": "33924a912a5b760736e4f5d1826a1ca4b44a3687563b3570fe1c9cc2d1eb73ed"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/03.npz",
+      "bytes": 379604,
+      "sha256": "c60cf3cc715841a5cdfe8e88f5f398d8aee59f19bbb3249d2e1cb691770af3af"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/04.npz",
+      "bytes": 368167,
+      "sha256": "211f06738ea938c0d88edc5cfb1a0493bded683ef181096b7292db28763966e7"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/05.npz",
+      "bytes": 363631,
+      "sha256": "84eb24f6dda929ec16595f12ae03aa5eb974420f414186c37e7c0828bc7cd9db"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/06.npz",
+      "bytes": 365392,
+      "sha256": "7fb073b8e4af2768c56d9fb30dd3f57113a4acce79575f96fdd13580586a342a"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/07.npz",
+      "bytes": 366393,
+      "sha256": "cdba5817bb8d0ec4257219057cfb6ed0637b825e4bb9c50c1ad54e2415f66609"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/08.npz",
+      "bytes": 349258,
+      "sha256": "26dce54b371727dbbe86af5d1759885377281b91e9b4a27647d7d2065fce3836"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/09.npz",
+      "bytes": 292372,
+      "sha256": "8aa1e766968a8fd1d95e821438f11d74de1dd17c1565f98d421a28d0564f02cf"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/10.npz",
+      "bytes": 323214,
+      "sha256": "16173abee0ddbc2008a4bcbbef3ee855c7c5bc1a3447cf1facc02fe1be495d85"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/11.npz",
+      "bytes": 328152,
+      "sha256": "77e2d94ed27d44526a772196bf603e1d5a6691ca31994c5c42d35888a8b60608"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/12.npz",
+      "bytes": 330897,
+      "sha256": "2a540764cc57b7fd7a5779a3bd491c9cbf37b03306af47287a5694aba5960fc5"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/13.npz",
+      "bytes": 345949,
+      "sha256": "f9d6a1737edb98ef9e1533518a48b6ebbf201b60e629b32a1b42e855a2f361e1"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/14.npz",
+      "bytes": 340511,
+      "sha256": "8dad8b6216b1c2d8edb0512e66c5a7190143eb5634d8d1c764cff5aff26e1c10"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/15.npz",
+      "bytes": 330739,
+      "sha256": "426e01fe8261ec13ef239b98e1a87f23e42749bb1fa8955ca59ec3616580636b"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/16.npz",
+      "bytes": 314092,
+      "sha256": "f3710e906c56b13dbb9170b9af06fb13f1496df985d2c1d91a66f74d7d44168d"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/17.npz",
+      "bytes": 353370,
+      "sha256": "918ee31af5d97bb1779d752453b562b5f9ad2ee5786f800583bbfda89bbe2d8f"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/18.npz",
+      "bytes": 355089,
+      "sha256": "1b9d3937df59d9e926bd7dbefe4b5d3a654a3843588bba8fbad6d59d9ec7fa6a"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/19.npz",
+      "bytes": 358972,
+      "sha256": "056e88568cf5a68ff66ab8c47318e1d8286de06ebb413e6b37885845394f8c7f"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense/20.npz",
+      "bytes": 325821,
+      "sha256": "c181081ef4287dc7dde3a90c8222bd943faffb6cc893eb788db5d53c22865e32"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/dense_manifest.jsonl",
+      "bytes": 11789,
+      "sha256": "506d791255ede83b95d32178238799c7ca3c873ccbd4828b56712a60911581a0"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/gt.mp4",
+      "bytes": 2303450,
+      "sha256": "39930187a308c50c32fcca89700327c4ae592f2b3aee60fa12a541d11be0adc1"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/image.jpg",
+      "bytes": 111315,
+      "sha256": "57e709db99e12554ed35036e1d563b48bb3506e3fc0a98baf7cb07ac23e4db02"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/intrinsics.npy",
+      "bytes": 1424,
+      "sha256": "52a6f27622e9531065c57f09efab17ee7ec42634e1d77ff30cc3ea3ed3e7da6e"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/poses.npy",
+      "bytes": 5312,
+      "sha256": "ef770a8b21b9b6ec6f02d23dd5d42b95449f9728c1417de71d1e27250f253929"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/prompt.txt",
+      "bytes": 59,
+      "sha256": "089a5a60240c0039494278736cb2dad5a3ba8db903010339ac88b3c802654628"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/raw_player_frames.json",
+      "bytes": 285564,
+      "sha256": "f4f2d9921502af8be66f49985194c7191d29dab9d260a5397b6fb030a8ae2c53"
+    },
+    {
+      "path": "samples/07/t3_p0008/window00/sample.json",
+      "bytes": 2405,
+      "sha256": "3021573442a42ab60ad9d928ae28d74657c1c1e425f4673262194449ea5b5a40"
+    }
+  ]
+}

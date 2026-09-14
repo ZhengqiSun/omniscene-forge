@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "historical_protocol_metadata_not_launcher_config",
+  "group": "07",
+  "path_base": "repository_root",
+  "data_root": "assets/demos/06_07",
+  "sample_windows": [
+    "assets/demos/06_07/samples/07/t3_p0002/window00",
+    "assets/demos/06_07/samples/07/t3_p0004/window00",
+    "assets/demos/06_07/samples/07/t3_p0008/window00"
+  ],
+  "weight_mapping": "configs/demo_reproduction/06_07/weights.json",
+  "checkpoint_profile": "historical_2700_2850_pair",
+  "seed": 20260629,
+  "split_label": null,
+  "whole_lineage_unseen_certified": false,
+  "solver": "unipc",
+  "sampling_steps": 70,
+  "shift": 3.0,
+  "cfg_low_high": [
+    5.0,
+    5.0
+  ],
+  "latent_frames": 21,
+  "chunk_size": 3,
+  "output_frames": 81,
+  "output_fps": 16,
+  "max_area": 399360,
+  "force_resize_context": false,
+  "input_image_size": [
+    832,
+    480
+  ],
+  "expected_generated_size": [
+    832,
+    464
+  ],
+  "dense_shape": [
+    7,
+    176,
+    320
+  ],
+  "dense_dtype": "float32",
+  "dense_encoder": "img1_mask_img2_player_v0",
+  "dense_channel_packing": [
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ]
+  ],
+  "state_condition": false,
+  "interaction_condition": false,
+  "gpu_reproduction_validated": false
+}
