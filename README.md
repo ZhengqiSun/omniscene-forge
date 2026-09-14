@@ -94,6 +94,10 @@ See the [interaction guide](docs/INTERACTION.md), [pipeline inputs and outputs](
 
 ## Validation and provenance
 
+### Demo 06/07 data preview
+
+[Six historical demo views](docs/demo_reproduction/06_07/README.md) are available as a separate Release download, with context images, camera arrays, dense conditions, GT and historical reference videos. This is a data-format preview, not a GPU-validated inference release; model-specific setup information is not provided.
+
 ```bash
 python scripts/check_codebase.py --help-smoke
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q
