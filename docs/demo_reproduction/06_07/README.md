@@ -1,6 +1,6 @@
-# Demo 06/07: data samples and checkpoint references
+# Demo 06/07: data samples
 
-This data-only preview contains two historical, author-selected multiview examples: six views, six input windows, and one shared LOW/HIGH checkpoint pair. **Checkpoint binaries are not included and no public download URL for those project checkpoints is provided.** This is not a validated one-command inference release.
+This data-only preview contains two historical, author-selected multiview examples: six views and six input windows. Model-specific setup information is not provided. This is not a validated one-command inference release.
 
 ## Download and inspect
 
@@ -16,7 +16,7 @@ cd assets/demos/06_07
 sha256sum -c samples_SHA256SUMS.txt
 ```
 
-`assets/` is intentionally ignored by Git. The extracted `samples/06/` and `samples/07/` directories contain three views each. `metadata/` contains the protocol descriptions and weight references; `docs/` contains the data-format and checkpoint guides.
+`assets/` is intentionally ignored by Git. The extracted `samples/06/` and `samples/07/` directories contain three views each. `metadata/` contains the data/protocol descriptions; `docs/` contains the data-format guide.
 
 | Demo | Views | Source interval | Seed | Reference generation |
 |---|---|---|---|---|
@@ -27,17 +27,16 @@ For 06, inspect how other players become visible as the views evolve. For 07, in
 
 ## What is included
 
-Each view supplies its original context JPEG, prompt, camera-to-world poses, intrinsics, 21 dense-condition NPZ files, a dense manifest, GT video, raw ego-stream JSON excerpt, sample metadata, and historical generated reference video. There are 180 original sample files: 126 dense NPZs, six GT videos, six reference generations, and 42 other input/metadata files. No state or interaction cache is required by these examples.
+Each view supplies its original context JPEG, prompt, camera-to-world poses, intrinsics, 21 dense-condition NPZ files, a dense manifest, GT video, raw ego-stream JSON excerpt, sample metadata, and historical generated reference video. There are 180 sample files: 126 dense NPZs, six GT videos, six reference generations, and 42 other input/metadata files. No state or interaction cache is required by these examples.
 
 - [Data format and timing](DATA_FORMAT.md)
-- [Required checkpoint files and Base dependency](WEIGHTS.md)
 - [Demo 06 protocol](../../../configs/demo_reproduction/06_07/demo06.json)
 - [Demo 07 protocol](../../../configs/demo_reproduction/06_07/demo07.json)
 - [Sample/file manifest](../../../provenance/demo_reproduction/06_07/samples_manifest.json)
 
 ## Validation and compatibility boundary
 
-The released input files are byte-preserved from the prepared sample packet. The six camera arrays, 126 dense arrays, frame mappings, GT/context alignment, and all 12 videos are checked locally. The two referenced inference-only checkpoints were previously checked tensor-by-tensor against their original training checkpoints; this release publishes their identity, not their bytes.
+The media and numerical inputs are byte-preserved from the prepared sample packet. Six sample JSON files have model-identification metadata omitted; their file hashes have been regenerated. The other 174 sample files are unchanged. The six camera arrays, 126 dense arrays, frame mappings, GT/context alignment, and all 12 videos were checked locally.
 
 The JSON recipes are **protocol metadata, not configurations accepted by an existing launcher**. They use repository-root-relative paths; sample-local manifests resolve paths relative to their own window directory. No implicit path rewriting is promised.
 

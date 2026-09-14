@@ -9,8 +9,6 @@
     "assets/demos/06_07/samples/06/t2_p0006/window00",
     "assets/demos/06_07/samples/06/t2_p0011/window00"
   ],
-  "weight_mapping": "configs/demo_reproduction/06_07/weights.json",
-  "checkpoint_profile": "historical_2700_2850_pair",
   "seed": 20260701,
   "split_label": "val",
   "whole_lineage_unseen_certified": false,

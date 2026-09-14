@@ -96,7 +96,7 @@ See the [interaction guide](docs/INTERACTION.md), [pipeline inputs and outputs](
 
 ### Demo 06/07 data preview
 
-[Six historical demo views](docs/demo_reproduction/06_07/README.md) are available as a separate Release download, with context images, camera arrays, dense conditions, GT and historical reference videos. The accompanying records identify their shared LOW2700/HIGH2850 checkpoints. Project checkpoint binaries are **not** included; this is a data-format/protocol preview, not a GPU-validated inference release.
+[Six historical demo views](docs/demo_reproduction/06_07/README.md) are available as a separate Release download, with context images, camera arrays, dense conditions, GT and historical reference videos. This is a data-format preview, not a GPU-validated inference release; model-specific setup information is not provided.
 
 ```bash
 python scripts/check_codebase.py --help-smoke

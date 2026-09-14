@@ -1,12 +1,11 @@
 {
   "schema_version": 1,
-  "release_kind": "data_and_weight_references_only",
+  "release_kind": "data_only",
   "release_tag": "demo-repro-06-07-v1",
-  "weight_binaries_included": false,
   "gpu_reproduction_validated": false,
   "data_license": "not_assigned",
   "sample_files": 180,
-  "sample_bytes": 89895706,
+  "sample_bytes": 89895394,
   "groups": [
     {
       "number": "06",
@@ -181,7 +180,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260701,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -333,7 +331,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260701,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -485,7 +482,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260701,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -637,7 +633,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260629,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -789,7 +784,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260629,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -941,7 +935,6 @@
       "gt_kind": "existing preprocessed reference clip, bytes unchanged",
       "raw_format_example": "raw_player_frames.json",
       "seed": 20260629,
-      "checkpoint_profile": "historical_2700_2850_pair",
       "solver": "unipc",
       "sampling_steps": 70,
       "shift": 3.0,
@@ -1107,8 +1100,8 @@
     },
     {
       "path": "samples/06/t2_p0003/window00/sample.json",
-      "bytes": 2352,
-      "sha256": "8a824ed42f02ffb2e68b40e379128fc4b4b907be41b50381d9ed4bdb136c10ee"
+      "bytes": 2300,
+      "sha256": "973886f9d50fa43c3f5d9411d6c8f7275e1ef671bfa9e506055ae7f9603e30b0"
     },
     {
       "path": "samples/06/t2_p0006/reference_output.mp4",
@@ -1257,8 +1250,8 @@
     },
     {
       "path": "samples/06/t2_p0006/window00/sample.json",
-      "bytes": 2352,
-      "sha256": "95539115c01f168e9147578f3d55800321fbb9d1373d1e6b57ed118827f3bdaf"
+      "bytes": 2300,
+      "sha256": "6926d383580b3bc64c2b9254e17d152e9c330b6a89118f99aee7594f0aa67446"
     },
     {
       "path": "samples/06/t2_p0011/reference_output.mp4",
@@ -1407,8 +1400,8 @@
     },
     {
       "path": "samples/06/t2_p0011/window00/sample.json",
-      "bytes": 2352,
-      "sha256": "862cf92f226670f416edca2129784b83fb8adf6ae196a35436da190ea9661c89"
+      "bytes": 2300,
+      "sha256": "1ba93322e9ccb11c9c10b7dcb18ee88f43da16aa7d3c7b5e28b36d90021a48ec"
     },
     {
       "path": "samples/07/t3_p0002/reference_output.mp4",
@@ -1557,8 +1550,8 @@
     },
     {
       "path": "samples/07/t3_p0002/window00/sample.json",
-      "bytes": 2405,
-      "sha256": "4313ae2c45b25f60fd909971b5b4e83d18f19f36b5607001a8331dfb7aa94d7c"
+      "bytes": 2353,
+      "sha256": "402b8709fc7d42c82ec053c060cb994426a1cedea4652b41edaabdf44d2952bb"
     },
     {
       "path": "samples/07/t3_p0004/reference_output.mp4",
@@ -1707,8 +1700,8 @@
     },
     {
       "path": "samples/07/t3_p0004/window00/sample.json",
-      "bytes": 2405,
-      "sha256": "86d7611415b643cb5a24cc4d10f98edcd55109455b43e2058d76b760257db7a3"
+      "bytes": 2353,
+      "sha256": "c895a91ddd745ba67d2663fb87eef26d73c17ed3670c4ab837c3f085d98d9399"
     },
     {
       "path": "samples/07/t3_p0008/reference_output.mp4",
@@ -1857,8 +1850,8 @@
     },
     {
       "path": "samples/07/t3_p0008/window00/sample.json",
-      "bytes": 2405,
-      "sha256": "3021573442a42ab60ad9d928ae28d74657c1c1e425f4673262194449ea5b5a40"
+      "bytes": 2353,
+      "sha256": "1588ee77fbdf941e5c2a95182ef6ced829158ef12657d85ac6b5687dea3b1f73"
     }
   ]
 }
