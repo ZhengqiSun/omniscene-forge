@@ -17,3 +17,7 @@
 CPU 测试可以验证本仓库的接口和组件逻辑，无法证明这些外部资产齐备，也无法证明研究指标达到历史记录。
 
 部分导入工具仍保留旧 mount 前缀，用于识别旧 manifest 的路径并做兼容转换；它们不应被当作新机器的挂载要求。`provenance/remaining_server_paths.json` 列出剩余字符串所在位置，用于迁移资产时逐项核对。
+
+## ABC 定性对比图素材
+
+[ABC 七行定性对比素材（0–5秒）](qualitative_comparisons/abc_20260914/README.md)：提供模型标注预览、原帧索引和 Release 下载入口，包含252张无框原帧、3张完整高清figure与6张地图/相机位置及yaw参考图。0秒为共享GT输入参考，七行由GT和六种方法组成；完整二进制素材置于Release附件。
